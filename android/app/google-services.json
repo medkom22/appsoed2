@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "714247919067",
+    "project_id": "appsoed-1b70e",
+    "storage_bucket": "appsoed-1b70e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714247919067:android:1cd7b554e712cdf7ac43fe",
+        "android_client_info": {
+          "package_name": "com.example.appsoed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714247919067-kviqd9lrtr84dr9ekfdcu8967fgn7cc2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf9SvW8Es-UCeKsJGD7185bFd5a90jGxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714247919067-kviqd9lrtr84dr9ekfdcu8967fgn7cc2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
