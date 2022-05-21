@@ -1,3 +1,4 @@
+import 'package:appsoed/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -13,11 +14,18 @@ class HomeView extends GetView<HomeController> {
         centerTitle: true,
       ),
       body: Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          ElevatedButton(
+            child: const Text('Sign In'),
+            onPressed: () {
+              Get.toNamed(Routes.SIGNIN);
+            },
+          )
+        ],
+      )),
     );
   }
 }
