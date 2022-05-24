@@ -41,6 +41,9 @@ class SignupView extends GetView<SignupController> {
                     vertical: 45,
                     horizontal: 24,
                   ),
+                  child: ListView(
+                    children: [],
+                  ),
                 ),
               )
             ],
