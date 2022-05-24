@@ -1,4 +1,4 @@
-import 'package:appsoed/app/routes/app_pages.dart';
+import '../../../routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -10,7 +10,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('HomeView'),
+        title: const Text('HomeView'),
         centerTitle: true,
       ),
       body: Center(
@@ -22,6 +22,12 @@ class HomeView extends GetView<HomeController> {
             child: const Text('Sign In'),
             onPressed: () {
               Get.toNamed(Routes.SIGNIN);
+            },
+          ),
+          ElevatedButton(
+            child: const Text('Profile Kabinet'),
+            onPressed: () {
+              Get.toNamed(Routes.PROFILE_KABINET);
             },
           )
         ],

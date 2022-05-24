@@ -1,3 +1,4 @@
+import '../views/views/profile_kabinet_view.dart';
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
@@ -17,7 +18,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.SIGNIN,
-      page: () => SigninView(),
+      page: () => const SigninView(),
       binding: SigninBinding(),
     ),
     GetPage(
@@ -27,8 +28,12 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SIGNUP,
-      page: () => SignupView(),
+      page: () => const SignupView(),
       binding: SignupBinding(),
+    ),
+    GetPage(
+      name: Routes.PROFILE_KABINET,
+      page: () => const ProfileKabinetView(),
     ),
   ];
 }

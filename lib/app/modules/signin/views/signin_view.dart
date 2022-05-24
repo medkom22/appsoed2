@@ -1,10 +1,8 @@
-import 'package:appsoed/app/routes/app_pages.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/signin_controller.dart';
 
 class SigninView extends GetView<SigninController> {
@@ -54,32 +52,6 @@ class SigninView extends GetView<SigninController> {
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
-                      TextField(
-                        keyboardType: TextInputType.emailAddress,
-                        textInputAction: TextInputAction.next,
-                        decoration: InputDecoration(
-                          labelText: 'Email',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      TextField(
-                        keyboardType: TextInputType.emailAddress,
-                        textInputAction: TextInputAction.next,
-                        decoration: InputDecoration(
-                          labelText: 'Email',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
                       TextField(
                         keyboardType: TextInputType.emailAddress,
                         textInputAction: TextInputAction.next,
