@@ -42,7 +42,7 @@ class SigninView extends GetView<SigninController> {
               Padding(
                 padding: EdgeInsets.only(
                   bottom: MediaQuery.of(context)
-                      .viewInsets
+                      .viewPadding
                       .bottom, //NOTE SOLVE: Mengatasi textfield yg tertutup keyboard
                 ),
                 child: Container(
@@ -54,6 +54,32 @@ class SigninView extends GetView<SigninController> {
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
+                      TextField(
+                        keyboardType: TextInputType.emailAddress,
+                        textInputAction: TextInputAction.next,
+                        decoration: InputDecoration(
+                          labelText: 'Email',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      TextField(
+                        keyboardType: TextInputType.emailAddress,
+                        textInputAction: TextInputAction.next,
+                        decoration: InputDecoration(
+                          labelText: 'Email',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
                       TextField(
                         keyboardType: TextInputType.emailAddress,
                         textInputAction: TextInputAction.next,
