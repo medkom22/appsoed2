@@ -1,3 +1,5 @@
+import 'package:appsoed/app/provider/launcer_provider.dart';
+import 'package:appsoed/app/widgets/back_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,6 +12,7 @@ class ProfileKabinetView extends GetView {
       body: SafeArea(
         child: Stack(
           children: [
+            //NOTE: BACKGROUND COLOR ORANGE AND YELLOW
             Container(
               color: const Color(0xffFDB731),
               width: Get.width,
@@ -27,6 +30,9 @@ class ProfileKabinetView extends GetView {
                 ),
               ),
             ),
+            // NOTE: END ====
+
+            // NOTE: white background containing content
             Container(
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.vertical(
@@ -43,6 +49,7 @@ class ProfileKabinetView extends GetView {
                   const SizedBox(
                     height: 20,
                   ),
+                  // NOTE: TITLE CONTENT
                   const Text(
                     'KABINET TITIK PIJAR',
                     textAlign: TextAlign.center,
@@ -52,6 +59,8 @@ class ProfileKabinetView extends GetView {
                       color: Colors.black,
                     ),
                   ),
+                  // NOTE: END TITLE CONTENT ========
+                  // NOTE: CONTENT
                   Container(
                     margin: const EdgeInsets.symmetric(
                       horizontal: 26,
@@ -94,6 +103,9 @@ class ProfileKabinetView extends GetView {
                       ],
                     ),
                   ),
+                  // NOTE: END CONTENT ===========
+
+                  // NOTE: MEDIA SOCIAL OF BEM
                   Container(
                     margin: const EdgeInsets.only(left: 26),
                     child: Column(
@@ -111,59 +123,122 @@ class ProfileKabinetView extends GetView {
                         ),
                         Wrap(
                           spacing: 8,
-                          children: [
-                            Image.asset(
-                              'assets/Instagram.png',
-                              width: 40,
-                              height: 40,
-                              fit: BoxFit.cover,
+                          children: const [
+                            SocialWidget(
+                              image: 'Instagram',
+                              link: 'https://instagram.com/bem_unsoed',
                             ),
-                            Image.asset(
-                              'assets/YouTube.png',
-                              width: 40,
-                              height: 40,
-                              fit: BoxFit.cover,
+                            SocialWidget(
+                              image: 'YouTube',
+                              link: 'https://m.youtube.com/c/BEMUnsoed',
                             ),
-                            Image.asset(
-                              'assets/Line.png',
-                              width: 40,
-                              height: 40,
-                              fit: BoxFit.cover,
+                            SocialWidget(
+                              image: 'Line',
+                              link:
+                                  'https://liff.line.me/1645278921-kWRPP32q/?accountId=uzf4935f',
                             ),
-                            Image.asset(
-                              'assets/Twitter.png',
-                              width: 40,
-                              height: 40,
-                              fit: BoxFit.cover,
+                            SocialWidget(
+                              image: 'Twitter',
+                              link: 'https://twitter.com/bem_unsoed',
                             ),
-                            Image.asset(
-                              'assets/Spotify.png',
-                              width: 40,
-                              height: 40,
-                              fit: BoxFit.cover,
-                            ),
-                            Image.asset(
-                              'assets/TikTok.png',
-                              width: 40,
-                              height: 40,
-                              fit: BoxFit.cover,
-                            ),
-                            Image.asset(
-                              'assets/Website.png',
-                              width: 40,
-                              height: 40,
-                              fit: BoxFit.cover,
-                            )
+                            SocialWidget(
+                                image: 'Spotify',
+                                link:
+                                    'https://open.spotify.com/show/4G1FeEt60JftSEGSx8uVDt?si=OVf1hSeOQ2iOhATTvyQTFA&utm_source=copy-link'),
+                            SocialWidget(
+                                image: 'TikTok',
+                                link: 'https://vt.tiktok.com/ZSd4JhVah/'),
+                            SocialWidget(
+                                image: 'Website',
+                                link: 'https://apps.bem-unsoed.com/'),
                           ],
                         )
                       ],
                     ),
-                  )
+                  ),
+                  // NOTE: END MEDIA SOCIAL BEM ============
+
+                  // NOTE: CONTACT US
+                  Container(
+                    margin:
+                        const EdgeInsets.only(left: 26, top: 28, bottom: 50),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Kontak Kami',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            elevation: 4,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            primary: const Color(0xffFDB731),
+                          ),
+                          child: const Text('Email BEM Unsoed'),
+                          onPressed: () {
+                            LauncherProvider.launcherURL(
+                              'mailto:bem.unsoed@gmail.com',
+                            );
+                          },
+                        )
+                      ],
+                    ),
+                  ),
+                  // NOTE: END CONTACT US ============
                 ],
               ),
             ),
+            // NOTE: END White Background =======
+
+            // NOTE: TOP CONTENT
+            Container(
+              margin: const EdgeInsets.only(top: 12),
+              alignment: Alignment.topCenter,
+              child: Image.asset(
+                'assets/logo-medkom.png',
+                width: 120,
+                height: 120,
+                fit: BoxFit.cover,
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(top: 24, left: 24),
+              child: BackButtonWidget(),
+            ),
+            // NOTE: END TOP CONTENT ==========
           ],
         ),
+      ),
+    );
+  }
+}
+
+class SocialWidget extends StatelessWidget {
+  final String image;
+  final String link;
+  const SocialWidget({
+    Key? key,
+    required this.image,
+    required this.link,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        LauncherProvider.launcherURL(link);
+      },
+      child: Image.asset(
+        'assets/$image.png',
+        width: 40,
+        height: 40,
+        fit: BoxFit.cover,
       ),
     );
   }
