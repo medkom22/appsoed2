@@ -7,7 +7,6 @@ import '../controllers/signin_controller.dart';
 
 class SigninView extends GetView<SigninController> {
   const SigninView({Key? key}) : super(key: key);
-//HALAMAN SIGN IN
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,6 +15,7 @@ class SigninView extends GetView<SigninController> {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              // NOTE: LOGO APP AND TEXT SIGN-IN
               const SizedBox(
                 height: 90,
               ),
@@ -37,11 +37,13 @@ class SigninView extends GetView<SigninController> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+              //NOTE: END LOGO APP AND TEXT SIGN-IN =========
+
               Padding(
                 padding: EdgeInsets.only(
                   bottom: MediaQuery.of(context)
                       .viewPadding
-                      .bottom, //NOTE SOLVE: Mengatasi textfield yg tertutup keyboard
+                      .bottom, //NOTE SOLVE: a Close Textfield Keyboard
                 ),
                 child: Container(
                   margin: const EdgeInsets.symmetric(
@@ -65,13 +67,42 @@ class SigninView extends GetView<SigninController> {
                       const SizedBox(
                         height: 20,
                       ),
-                      TextField(
-                        obscureText: true,
-                        keyboardType: TextInputType.visiblePassword,
-                        decoration: InputDecoration(
-                          labelText: 'Password',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
+                      Obx(
+                        () => TextField(
+                          obscureText: controller.isPassword.value,
+                          keyboardType: TextInputType.visiblePassword,
+                          decoration: InputDecoration(
+                            suffixIcon: IconButton(
+                              onPressed: () {
+                                controller.isPassword.value =
+                                    !controller.isPassword.value;
+                              },
+                              icon: Icon(
+                                controller.isPassword.value
+                                    ? Icons.visibility_off
+                                    : Icons.visibility,
+                              ),
+                            ),
+                            labelText: 'Password',
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Get.toNamed(Routes.FORGOT_PASSWORD);
+                        },
+                        child: const Text(
+                          'Forgot password?',
+                          textAlign: TextAlign.end,
+                          style: TextStyle(
+                            fontWeight: FontWeight.w300,
+                            color: Color(0xffDB1F1F),
                           ),
                         ),
                       ),
