@@ -1,5 +1,5 @@
-import 'package:appsoed/app/provider/launcer_provider.dart';
-import 'package:appsoed/app/widgets/back_button_widget.dart';
+import '../../provider/launcer_provider.dart';
+import '../../widgets/back_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

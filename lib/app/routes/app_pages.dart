@@ -1,4 +1,4 @@
-import 'package:appsoed/app/modules/signin/views/forgot_password_view.dart';
+import '../modules/signin/views/forgot_password_view.dart';
 
 import '../views/views/profile_kabinet_view.dart';
 import 'package:get/get.dart';

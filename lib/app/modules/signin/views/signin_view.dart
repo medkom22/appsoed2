@@ -39,6 +39,7 @@ class SigninView extends GetView<SigninController> {
               ),
               //NOTE: END LOGO APP AND TEXT SIGN-IN =========
 
+              //NOTE: TEXTFIELD AND FORGOT PASSWORD
               Padding(
                 padding: EdgeInsets.only(
                   bottom: MediaQuery.of(context)
@@ -110,6 +111,9 @@ class SigninView extends GetView<SigninController> {
                   ),
                 ),
               ),
+              //NOTE: END TEXTFIELD AND FORGOT PASSWORD =========
+
+              // NOTE: BUTTON SIGN-IN
               Container(
                 decoration: BoxDecoration(
                   color: const Color(0xffFDB731),
@@ -141,6 +145,9 @@ class SigninView extends GetView<SigninController> {
                   ),
                 ),
               ),
+              // NOTE: END BUTTON SIGN-IN =========
+
+              // NOTE: SIGN IN WITH GOOGLE ACCOUNT
               Container(
                 margin: const EdgeInsets.symmetric(
                   vertical: 55,
@@ -207,6 +214,9 @@ class SigninView extends GetView<SigninController> {
                   ],
                 ),
               ),
+              // NOTE:END SIGN IN WITH GOOGLE ACCOUNT ==========
+
+// NOTE: REGISTER ACCOUNT
               Text.rich(
                 TextSpan(
                   text: 'Belum memiliki akun? ',
@@ -228,8 +238,10 @@ class SigninView extends GetView<SigninController> {
                   ],
                 ),
               ),
+// NOTE: END REGISTER ACCOUNT ===========
+
               const SizedBox(
-                height: 75,
+                height: 50,
               ),
             ],
           ),
