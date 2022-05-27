@@ -1,3 +1,5 @@
+import 'package:appsoed/app/views/views/about_appsoed_view.dart';
+
 import '../modules/signin/views/forgot_password_view.dart';
 
 import '../views/views/profile_kabinet_view.dart';
@@ -40,6 +42,10 @@ class AppPages {
     GetPage(
       name: Routes.FORGOT_PASSWORD,
       page: () => ForgotPasswordView(),
+    ),
+    GetPage(
+      name: Routes.ABOUT_APPSOED,
+      page: () => const AboutAppsoedView(),
     ),
   ];
 }

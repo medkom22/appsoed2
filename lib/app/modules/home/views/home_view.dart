@@ -29,6 +29,12 @@ class HomeView extends GetView<HomeController> {
             onPressed: () {
               Get.toNamed(Routes.PROFILE_KABINET);
             },
+          ),
+          ElevatedButton(
+            child: const Text('About Appsoed'),
+            onPressed: () {
+              Get.toNamed(Routes.ABOUT_APPSOED);
+            },
           )
         ],
       )),
