@@ -18,7 +18,7 @@ class AboutAppsoedView extends GetView {
               'Tentang',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: Color(0xff373737),
               ),
@@ -30,12 +30,80 @@ class AboutAppsoedView extends GetView {
                 right: 24,
               ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset(
-                    'assets/appsoed-logo.png',
-                    width: 200,
-                    height: 200,
-                    fit: BoxFit.cover,
+                  Center(
+                    child: Image.asset(
+                      'assets/appsoed-logo.png',
+                      width: 200,
+                      height: 200,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  const Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Appsoed Pro 2.0',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  // NOTE: CONTENT
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        'Apa itu Apppsoed Pro',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Text(
+                        'Appsoed Pro adalah platform yang bertujuan untuk  mengintegrasikan sumber daya informasi seputar dunia perkuliahan, fasilitas kampus, kebijakan universitas, berkas administratif, arsip data, serta sarana menyampaikan aspirasi, kritik, keluhan yang ada di  Universitas Jenderal Soedirman demi memberikan kenyamanan kepada mahasiswa dan terwujudnya Kampus Universitas Jenderal Soedirman yang lebih baik.\n\n',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w300,
+                        ),
+                      ),
+                      Text(
+                        'Dikembangkan dan dikelola oleh : ',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Text(
+                        'Kementerian Media Komunikasi dan Informasi Universitas Jenderal Soedirman',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w300,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  const Center(
+                    child: Text(
+                      'version 2.0',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w300,
+                        color: Color(0xff9A9A9A),
+                      ),
+                    ),
                   )
                 ],
               ),
