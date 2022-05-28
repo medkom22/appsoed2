@@ -1,0 +1,52 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+void main(List<String> args) {
+  runApp(MaterialApp(
+    title: 'My Apps',
+    home: new MyApp(),
+  ));
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Color(0xffFFFFFF),
+        body: Center(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(top: 60, bottom: 60),
+                child: Text(
+                  'Notification',
+                  style: GoogleFonts.roboto(
+                    fontSize: 19,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Image.asset(
+                'assets/notification.png',
+                width: 297,
+                height: 348,
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 50),
+                child: Text(
+                  'No Notification Yet!',
+                  style: GoogleFonts.roboto(
+                    fontSize: 19,
+                    fontWeight: FontWeight.w300,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
