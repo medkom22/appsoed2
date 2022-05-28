@@ -8,6 +8,8 @@ abstract class Routes {
   static const SIGNUP = _Paths.SIGNUP;
   static const PROFILE_KABINET = _Paths.PROFILE_KABINET;
   static const SPLASH_SCREEN = _Paths.SPLASH_SCREEN;
+  static const FORGOT_PASSWORD = _Paths.FORGOT_PASSWORD;
+  static const ABOUT_APPSOED = _Paths.ABOUT_APPSOED;
 }
 
 abstract class _Paths {
@@ -17,4 +19,6 @@ abstract class _Paths {
   static const SIGNUP = '/signup';
   static const PROFILE_KABINET = '/profile-kabinet';
   static const SPLASH_SCREEN = '/splash_screen';
+  static const FORGOT_PASSWORD = '/forgot-password';
+  static const ABOUT_APPSOED = '/about-appsoed';
 }
