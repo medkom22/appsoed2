@@ -1,3 +1,4 @@
+import 'package:appsoed/app/widgets/back_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -42,6 +43,10 @@ class MyApp extends StatelessWidget {
                     fontWeight: FontWeight.w300,
                   ),
                 ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 24, left: 24),
+                child: BackButtonWidget(),
               ),
             ],
           ),
