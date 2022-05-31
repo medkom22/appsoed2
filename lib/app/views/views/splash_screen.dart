@@ -32,7 +32,7 @@ class _splash_screenState extends State<splash_screen> {
               padding: EdgeInsets.only(top: 100),
             ),
             Image.asset(
-              'assets/logo_appsoed.png',
+              'assets/appsoed-logo.png',
               width: 140,
               height: 140,
             ),

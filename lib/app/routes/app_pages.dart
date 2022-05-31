@@ -1,4 +1,6 @@
 import 'package:appsoed/app/views/views/about_appsoed_view.dart';
+import 'package:appsoed/app/views/views/notification_no.dart';
+import 'package:appsoed/app/views/views/splash_screen.dart';
 
 import '../modules/signin/views/forgot_password_view.dart';
 
@@ -46,6 +48,14 @@ class AppPages {
     GetPage(
       name: Routes.ABOUT_APPSOED,
       page: () => const AboutAppsoedView(),
+    ),
+    GetPage(
+      name: Routes.SPLASH_SCREEN,
+      page: () => splash_screen(),
+    ),
+    GetPage(
+      name: Routes.NOTIFICATION_VIEW,
+      page: () => const NotificationView(),
     ),
   ];
 }

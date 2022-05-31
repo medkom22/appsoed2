@@ -1,3 +1,4 @@
+import 'package:appsoed/app/routes/app_pages.dart';
 import 'package:badges/badges.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -132,7 +133,17 @@ class HomeView extends GetView<HomeController> {
                   )
                 ],
               );
-            })
+            }),
+            // NOTE: END CAROUSEL SLIDER =========
+
+            Center(
+              child: ElevatedButton(
+                child: const Text('Go To Code'),
+                onPressed: () {
+                  Get.toNamed(Routes.NOTIFICATION_VIEW);
+                },
+              ),
+            )
           ],
         ),
       ),

@@ -2,14 +2,9 @@ import 'package:appsoed/app/widgets/back_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-void main(List<String> args) {
-  runApp(MaterialApp(
-    title: 'My Apps',
-    home: new MyApp(),
-  ));
-}
+class NotificationView extends StatelessWidget {
+  const NotificationView({Key? key}) : super(key: key);
 
-class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

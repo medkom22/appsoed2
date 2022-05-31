@@ -10,6 +10,7 @@ abstract class Routes {
   static const SPLASH_SCREEN = _Paths.SPLASH_SCREEN;
   static const FORGOT_PASSWORD = _Paths.FORGOT_PASSWORD;
   static const ABOUT_APPSOED = _Paths.ABOUT_APPSOED;
+  static const NOTIFICATION_VIEW = _Paths.NOTIFICATION_VIEW;
 }
 
 abstract class _Paths {
@@ -21,4 +22,5 @@ abstract class _Paths {
   static const SPLASH_SCREEN = '/splash_screen';
   static const FORGOT_PASSWORD = '/forgot-password';
   static const ABOUT_APPSOED = '/about-appsoed';
+  static const NOTIFICATION_VIEW = '/notification-view';
 }
