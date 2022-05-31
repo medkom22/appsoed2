@@ -1,17 +1,17 @@
-import 'package:appsoed/app/views/views/about_appsoed_view.dart';
-import 'package:appsoed/app/views/views/notification_no.dart';
-
-import '../modules/signin/views/forgot_password_view.dart';
-
-import '../views/views/profile_kabinet_view.dart';
+import 'package:appsoed/app/views/views/splash_screen_view.dart';
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/signin/bindings/signin_binding.dart';
+import '../modules/signin/views/forgot_password_view.dart';
 import '../modules/signin/views/signin_view.dart';
 import '../modules/signup/bindings/signup_binding.dart';
 import '../modules/signup/views/signup_view.dart';
+
+import '../views/views/about_appsoed_view.dart';
+import '../views/views/notification_no.dart';
+import '../views/views/profile_kabinet_view.dart';
 
 part 'app_routes.dart';
 
@@ -51,6 +51,10 @@ class AppPages {
     GetPage(
       name: Routes.NOTIFICATION_VIEW,
       page: () => const NotificationView(),
+    ),
+    GetPage(
+      name: Routes.SPLASH_SCREEN,
+      page: () => const SplashScreenView(),
     ),
   ];
 }
