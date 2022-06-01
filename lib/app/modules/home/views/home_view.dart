@@ -140,7 +140,7 @@ class HomeView extends GetView<HomeController> {
               child: ElevatedButton(
                 child: const Text('Go To Code'),
                 onPressed: () {
-                  Get.toNamed(Routes.SPLASH_SCREEN);
+                  Get.toNamed(Routes.APPSOED_LOGIN);
                 },
               ),
             )

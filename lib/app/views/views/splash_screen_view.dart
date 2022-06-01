@@ -17,8 +17,8 @@ class _SplashScreenViewState extends State<SplashScreenView> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: Random().nextInt(5)), () {
-      Get.offNamed(Routes.HOME);
+    Timer(Duration(seconds: 2 + Random().nextInt(3)), () {
+      Get.offNamed(Routes.APPSOED_LOGIN);
     });
   }
 
@@ -31,11 +31,14 @@ class _SplashScreenViewState extends State<SplashScreenView> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  'assets/appsoed-logo.png',
-                  width: 140,
-                  height: 140,
-                  fit: BoxFit.cover,
+                Hero(
+                  tag: 'appsoed',
+                  child: Image.asset(
+                    'assets/appsoed-logo.png',
+                    width: 120,
+                    height: 120,
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 const SizedBox(
                   height: 25,

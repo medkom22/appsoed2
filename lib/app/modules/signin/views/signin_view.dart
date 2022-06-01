@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../routes/app_pages.dart';
+import '../../../widgets/main_button_widget.dart';
 import '../controllers/signin_controller.dart';
 
 class SigninView extends GetView<SigninController> {
@@ -114,37 +115,7 @@ class SigninView extends GetView<SigninController> {
               //NOTE: END TEXTFIELD AND FORGOT PASSWORD =========
 
               // NOTE: BUTTON SIGN-IN
-              Container(
-                decoration: BoxDecoration(
-                  color: const Color(0xffFDB731),
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 4,
-                      color: Colors.black.withOpacity(0.25),
-                      offset: const Offset(0, 4),
-                    )
-                  ],
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                width: Get.width,
-                margin: const EdgeInsets.symmetric(horizontal: 30),
-                height: 45,
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                  ),
-                  onPressed: () {},
-                  child: const Text(
-                    'Sign In',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
+              const MainButtonWidget(text: 'Sign In'),
               // NOTE: END BUTTON SIGN-IN =========
 
               // NOTE: SIGN IN WITH GOOGLE ACCOUNT
