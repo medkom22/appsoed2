@@ -1,6 +1,7 @@
 import 'package:appsoed/app/routes/app_pages.dart';
 import 'package:badges/badges.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,6 @@ import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
   HomeView({Key? key}) : super(key: key);
-
   final List<String> imgList = [
     'assets/S3.png',
     'assets/PORSOED.png',
@@ -18,7 +18,7 @@ class HomeView extends GetView<HomeController> {
     'assets/FOSA.png',
   ];
 
-  int _current = 0;
+  final int _current = 0;
   final CarouselController _controller = CarouselController();
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,21 @@ class HomeView extends GetView<HomeController> {
         )
         .toList();
     return Scaffold(
+// NOTE: BOTTOM NAVIGATION BAR
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.amber,
+        height: 50,
+        items: const [
+          Icon(Icons.home, size: 30),
+          Icon(Icons.newspaper, size: 30),
+          Icon(Icons.shopping_bag, size: 30),
+          Icon(Icons.comment, size: 30),
+          Icon(Icons.person, size: 30),
+        ],
+      ),
+
       body: SafeArea(
+        bottom: false,
         child: Column(
           children: [
             // NOTE: WELCOME USER AND NOTIFICATION ICON
@@ -136,14 +150,7 @@ class HomeView extends GetView<HomeController> {
             }),
             // NOTE: END CAROUSEL SLIDER =========
 
-            Center(
-              child: ElevatedButton(
-                child: const Text('Go To Code'),
-                onPressed: () {
-                  Get.toNamed(Routes.APPSOED_LOGIN);
-                },
-              ),
-            )
+            // NOTE : MAIN CONTENT
           ],
         ),
       ),
