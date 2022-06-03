@@ -1,6 +1,6 @@
-import 'package:appsoed/app/modules/home/views/notification_view.dart';
-import 'package:appsoed/app/views/views/appsoed_login_view.dart';
-import 'package:appsoed/app/views/views/splash_screen_view.dart';
+import '../modules/home/views/notification_view.dart';
+import '../views/views/appsoed_login_view.dart';
+import '../views/views/splash_screen_view.dart';
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';

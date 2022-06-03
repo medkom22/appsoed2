@@ -1,4 +1,4 @@
-import 'package:appsoed/app/provider/launcer_provider.dart';
+import '../provider/launcer_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
