@@ -11,6 +11,7 @@ abstract class Routes {
   static const FORGOT_PASSWORD = _Paths.FORGOT_PASSWORD;
   static const ABOUT_APPSOED = _Paths.ABOUT_APPSOED;
   static const APPSOED_LOGIN = _Paths.APPSOED_LOGIN;
+  static const NOTIFICATION_VIEW_HOME = _Paths.NOTIFICATION_VIEW_HOME;
 }
 
 abstract class _Paths {
@@ -23,4 +24,5 @@ abstract class _Paths {
   static const FORGOT_PASSWORD = '/forgot-password';
   static const ABOUT_APPSOED = '/about-appsoed';
   static const APPSOED_LOGIN = '/appsoed-login';
+  static const NOTIFICATION_VIEW_HOME = '/notification-view-home';
 }

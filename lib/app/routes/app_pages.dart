@@ -1,3 +1,4 @@
+import 'package:appsoed/app/modules/home/views/notification_view.dart';
 import 'package:appsoed/app/views/views/appsoed_login_view.dart';
 import 'package:appsoed/app/views/views/splash_screen_view.dart';
 import 'package:get/get.dart';
@@ -55,6 +56,10 @@ class AppPages {
     GetPage(
       name: Routes.APPSOED_LOGIN,
       page: () => const AppsoedLoginView(),
+    ),
+    GetPage(
+      name: Routes.NOTIFICATION_VIEW_HOME,
+      page: () => const NotificationView(),
     ),
   ];
 }
