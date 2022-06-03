@@ -1,3 +1,4 @@
+import 'package:appsoed/app/provider/launcer_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
@@ -29,6 +30,13 @@ class LiveChatWidget extends StatelessWidget {
                 ),
                 Lottie.network(
                   'https://assets7.lottiefiles.com/packages/lf20_78obvmke.json',
+                  frameBuilder: (context, child, composition) {
+                    if (composition != null) {
+                      return child;
+                    } else {
+                      return const CircularProgressIndicator();
+                    }
+                  },
                   width: double.infinity - (2 * 24),
                   height: 300,
                   fit: BoxFit.cover,
@@ -55,7 +63,9 @@ class LiveChatWidget extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      LauncherProvider.launcherURL('tel:089691944030');
+                    },
                     icon: const Icon(Icons.message),
                     label: const Text('Live Chat'),
                   ),

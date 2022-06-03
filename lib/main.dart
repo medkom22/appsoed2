@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'firebase_options.dart';
 
 void main() async {
+  //* FUNCTION TO PORTRAIT UP APP
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitUp],

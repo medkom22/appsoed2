@@ -17,7 +17,7 @@ class HomeView extends GetView<HomeController> {
     Container(
       color: Colors.lightBlue,
     ),
-    LiveChatWidget(),
+    const LiveChatWidget(),
     Container(
       color: Colors.cyan,
     ),
