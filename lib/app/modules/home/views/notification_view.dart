@@ -1,7 +1,7 @@
-import '../../../widgets/back_button_widget.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
+
+import '../../../widgets/back_button_widget.dart';
 
 class NotificationView extends GetView {
   const NotificationView({Key? key}) : super(key: key);

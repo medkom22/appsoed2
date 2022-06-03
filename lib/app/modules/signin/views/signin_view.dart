@@ -1,3 +1,4 @@
+import 'package:appsoed/app/auth/auth_controller.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -7,7 +8,8 @@ import '../../../widgets/main_button_widget.dart';
 import '../controllers/signin_controller.dart';
 
 class SigninView extends GetView<SigninController> {
-  const SigninView({Key? key}) : super(key: key);
+  SigninView({Key? key}) : super(key: key);
+  final authController = Get.find<AuthController>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,6 +59,7 @@ class SigninView extends GetView<SigninController> {
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
                       TextField(
+                        controller: controller.emailC,
                         keyboardType: TextInputType.emailAddress,
                         textInputAction: TextInputAction.next,
                         decoration: InputDecoration(
@@ -71,6 +74,7 @@ class SigninView extends GetView<SigninController> {
                       ),
                       Obx(
                         () => TextField(
+                          controller: controller.passC,
                           obscureText: controller.isPassword.value,
                           keyboardType: TextInputType.visiblePassword,
                           decoration: InputDecoration(
@@ -115,7 +119,12 @@ class SigninView extends GetView<SigninController> {
               //NOTE: END TEXTFIELD AND FORGOT PASSWORD =========
 
               // NOTE: BUTTON SIGN-IN
-              const MainButtonWidget(text: 'Sign In'),
+              MainButtonWidget(
+                  text: 'Sign In',
+                  navigator: () {
+                    authController.signInUser(
+                        controller.emailC.text, controller.passC.text);
+                  }),
               // NOTE: END BUTTON SIGN-IN =========
 
               // NOTE: SIGN IN WITH GOOGLE ACCOUNT

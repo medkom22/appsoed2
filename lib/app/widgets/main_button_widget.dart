@@ -3,8 +3,10 @@ import 'package:get/get.dart';
 
 class MainButtonWidget extends StatelessWidget {
   final String text;
+  final VoidCallback navigator;
   const MainButtonWidget({
     Key? key,
+    required this.navigator,
     required this.text,
   }) : super(key: key);
 
@@ -31,7 +33,7 @@ class MainButtonWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(30),
           ),
         ),
-        onPressed: () {},
+        onPressed: navigator,
         child: Text(
           text,
           style: const TextStyle(

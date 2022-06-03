@@ -1,12 +1,12 @@
+import 'package:appsoed/app/auth/auth_controller.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 
 import '../controllers/signup_controller.dart';
 
 class SignupView extends GetView<SignupController> {
-  const SignupView({Key? key}) : super(key: key);
-
+  SignupView({Key? key}) : super(key: key);
+  final authController = Get.find<AuthController>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,20 +48,21 @@ class SignupView extends GetView<SignupController> {
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
+                      // TextField(
+                      //   keyboardType: TextInputType.text,
+                      //   textInputAction: TextInputAction.next,
+                      //   decoration: InputDecoration(
+                      //     labelText: 'Nama',
+                      //     border: OutlineInputBorder(
+                      //       borderRadius: BorderRadius.circular(10),
+                      //     ),
+                      //   ),
+                      // ),
+                      // const SizedBox(
+                      //   height: 20,
+                      // ),
                       TextField(
-                        keyboardType: TextInputType.text,
-                        textInputAction: TextInputAction.next,
-                        decoration: InputDecoration(
-                          labelText: 'Nama',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      TextField(
+                        controller: controller.emailC,
                         keyboardType: TextInputType.emailAddress,
                         textInputAction: TextInputAction.next,
                         decoration: InputDecoration(
@@ -74,17 +75,28 @@ class SignupView extends GetView<SignupController> {
                       const SizedBox(
                         height: 20,
                       ),
-                      TextField(
-                        keyboardType: TextInputType.visiblePassword,
-                        textInputAction: TextInputAction.done,
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          labelText: 'Password',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
+                      Obx(() {
+                        return TextField(
+                          controller: controller.passC,
+                          keyboardType: TextInputType.visiblePassword,
+                          textInputAction: TextInputAction.done,
+                          obscureText: controller.isVisible.value,
+                          decoration: InputDecoration(
+                            suffixIcon: IconButton(
+                                onPressed: () {
+                                  controller.isVisible.value =
+                                      !controller.isVisible.value;
+                                },
+                                icon: Icon(controller.isVisible.value
+                                    ? Icons.visibility
+                                    : Icons.visibility_off)),
+                            labelText: 'Password',
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
                           ),
-                        ),
-                      ),
+                        );
+                      }),
                     ],
                   ),
                 ),
@@ -101,7 +113,10 @@ class SignupView extends GetView<SignupController> {
                     primary: const Color(0xffFDB731),
                   ),
                   child: const Text('Sign Up'),
-                  onPressed: () {},
+                  onPressed: () {
+                    authController.registerUser(
+                        controller.emailC.text, controller.passC.text);
+                  },
                 ),
               ),
               Container(

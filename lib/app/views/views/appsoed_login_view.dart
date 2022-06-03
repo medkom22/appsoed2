@@ -1,11 +1,13 @@
-import '../../widgets/main_button_widget.dart';
+import 'package:appsoed/app/auth/auth_controller.dart';
+import 'package:appsoed/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 
-class AppsoedLoginView extends GetView {
-  const AppsoedLoginView({Key? key}) : super(key: key);
+import '../../widgets/main_button_widget.dart';
 
+class AppsoedLoginView extends GetView {
+  AppsoedLoginView({Key? key}) : super(key: key);
+  final authController = Get.find<AuthController>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +39,12 @@ class AppsoedLoginView extends GetView {
               const SizedBox(
                 height: 70,
               ),
-              const MainButtonWidget(text: 'Masuk Sebagai Tamu'),
+              MainButtonWidget(
+                text: 'Masuk Sebagai Tamu',
+                navigator: () {
+                  authController.signinAnonym();
+                },
+              ),
               const SizedBox(
                 height: 12,
               ),
@@ -51,7 +58,11 @@ class AppsoedLoginView extends GetView {
               const SizedBox(
                 height: 12,
               ),
-              const MainButtonWidget(text: 'Sign In'),
+              MainButtonWidget(
+                  text: 'Sign In',
+                  navigator: () {
+                    Get.toNamed(Routes.SIGNIN);
+                  }),
             ],
           ),
         ),

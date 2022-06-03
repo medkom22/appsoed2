@@ -27,14 +27,14 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  google_fonts: ^3.0.0
-  cupertino_icons: ^1.0.2
+  badges: ^2.0.2
+  easy_splash_screen: ^1.0.3
 
   # Animations
   carousel_slider: ^4.1.1
+  cupertino_icons: ^1.0.2
   curved_navigation_bar: ^1.0.3
-  lottie: ^1.3.0
-  badges: ^2.0.2
+  firebase_auth: ^3.3.19
 
   # FIREBASE
   firebase_core: ^1.17.0
@@ -44,10 +44,11 @@ dependencies:
 
   # STATE MANAGEMENT
   get: ^4.6.3
+  google_fonts: ^3.0.0
+  lottie: ^1.3.0
 
   # Functional
   url_launcher: ^6.1.2
-  firebase_auth: ^3.3.19
 
 dev_dependencies:
   flutter_lints: ^2.0.0

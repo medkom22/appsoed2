@@ -1,13 +1,14 @@
+import 'package:appsoed/app/auth/auth_controller.dart';
 import 'package:badges/badges.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../modules/home/controllers/home_controller.dart';
-import '../routes/app_pages.dart';
 
 class HomeWidget extends StatelessWidget {
   final controller = Get.put(HomeController(), permanent: true);
+  final authController = Get.find<AuthController>();
 
   HomeWidget({Key? key}) : super(key: key);
   @override
@@ -46,9 +47,9 @@ class HomeWidget extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    'Selamat datang,\nNama User!',
-                    style: TextStyle(
+                  Text(
+                    'Selamat datang,\n${authController.auth.currentUser!.isAnonymous ? "Anonym" : "User"}',
+                    style: const TextStyle(
                       fontSize: 18,
                     ),
                   ),
@@ -64,8 +65,26 @@ class HomeWidget extends StatelessWidget {
                     ),
                     badgeColor: const Color(0xffF8A435),
                     child: GestureDetector(
-                      onTap: () {
-                        Get.toNamed(Routes.NOTIFICATION_VIEW_HOME);
+                      onTap: () async {
+// FIXME TESTING SIGNOUT
+                        Get.defaultDialog(
+                            barrierDismissible: true,
+                            title: 'Log Out!!',
+                            middleText: 'Yakin ingin log out ?',
+                            confirm: IconButton(
+                                onPressed: () {},
+                                icon: const Icon(Icons.check)),
+                            cancel: IconButton(
+                                onPressed: () {},
+                                icon: const Icon(Icons.remove)),
+                            onConfirm: () async {
+                              await authController.logOutUser();
+                            },
+                            onCancel: () {
+                              Get.back();
+                              Get.back();
+                            }).then((value) async {});
+                        // Get.toNamed(Routes.NOTIFICATION_VIEW_HOME);
                       },
                       child: Image.asset(
                         'assets/Icon-notifikasi.png',

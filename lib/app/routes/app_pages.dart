@@ -1,18 +1,17 @@
-import '../modules/home/views/notification_view.dart';
-import '../views/views/appsoed_login_view.dart';
-import '../views/views/splash_screen_view.dart';
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/home/views/notification_view.dart';
 import '../modules/signin/bindings/signin_binding.dart';
 import '../modules/signin/views/forgot_password_view.dart';
 import '../modules/signin/views/signin_view.dart';
 import '../modules/signup/bindings/signup_binding.dart';
 import '../modules/signup/views/signup_view.dart';
-
 import '../views/views/about_appsoed_view.dart';
+import '../views/views/appsoed_login_view.dart';
 import '../views/views/profile_kabinet_view.dart';
+import '../views/views/splash_screen_view.dart';
 
 part 'app_routes.dart';
 
@@ -24,7 +23,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.SIGNIN,
-      page: () => const SigninView(),
+      page: () => SigninView(),
       binding: SigninBinding(),
     ),
     GetPage(
@@ -34,7 +33,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SIGNUP,
-      page: () => const SignupView(),
+      page: () => SignupView(),
       binding: SignupBinding(),
     ),
     GetPage(
@@ -55,7 +54,7 @@ class AppPages {
     ),
     GetPage(
       name: Routes.APPSOED_LOGIN,
-      page: () => const AppsoedLoginView(),
+      page: () => AppsoedLoginView(),
     ),
     GetPage(
       name: Routes.NOTIFICATION_VIEW_HOME,
