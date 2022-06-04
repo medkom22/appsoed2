@@ -1,7 +1,8 @@
-import '../provider/launcer_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
+
+import '../provider/launcer_provider.dart';
 
 class LiveChatWidget extends StatelessWidget {
   const LiveChatWidget({Key? key}) : super(key: key);
@@ -30,6 +31,8 @@ class LiveChatWidget extends StatelessWidget {
                 ),
                 Lottie.network(
                   'https://assets7.lottiefiles.com/packages/lf20_78obvmke.json',
+                  errorBuilder: (context, error, stackTrace) =>
+                      const Text('Tolong check koneksi internet anda'),
                   frameBuilder: (context, child, composition) {
                     if (composition != null) {
                       return child;
