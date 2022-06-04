@@ -31,8 +31,9 @@ class LiveChatWidget extends StatelessWidget {
                 ),
                 Lottie.network(
                   'https://assets7.lottiefiles.com/packages/lf20_78obvmke.json',
-                  errorBuilder: (context, error, stackTrace) =>
-                      const Text('Tolong check koneksi internet anda'),
+                  errorBuilder: (context, error, stackTrace) {
+                    return const Text('Image sedang bermasalah');
+                  },
                   frameBuilder: (context, child, composition) {
                     if (composition != null) {
                       return child;

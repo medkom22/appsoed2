@@ -42,7 +42,7 @@ class AppPages {
     ),
     GetPage(
       name: Routes.FORGOT_PASSWORD,
-      page: () => const ForgotPasswordView(),
+      page: () => ForgotPasswordView(),
     ),
     GetPage(
       name: Routes.ABOUT_APPSOED,
