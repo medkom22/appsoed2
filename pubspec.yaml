@@ -28,16 +28,18 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   badges: ^2.0.2
-  easy_splash_screen: ^1.0.3
 
   # Animations
   carousel_slider: ^4.1.1
+  connectivity_plus: ^2.3.2
   cupertino_icons: ^1.0.2
   curved_navigation_bar: ^1.0.3
-  firebase_auth: ^3.3.19
+  easy_splash_screen: ^1.0.3
 
   # FIREBASE
   firebase_core: ^1.17.0
+  google_sign_in: ^5.3.2
+  firebase_auth: ^3.3.19
 
   flutter:
     sdk: flutter
@@ -51,10 +53,16 @@ dependencies:
   url_launcher: ^6.1.2
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.9.2
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
 
+# ICONS APP
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/appsoed-logo.png"
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.

@@ -1,9 +1,11 @@
+import 'package:appsoed/app/auth/auth_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ForgotPasswordView extends GetView {
-  const ForgotPasswordView({Key? key}) : super(key: key);
-
+  ForgotPasswordView({Key? key}) : super(key: key);
+  final authController = Get.find<AuthController>();
+  TextEditingController emailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,6 +40,7 @@ class ForgotPasswordView extends GetView {
                 height: 25,
               ),
               TextField(
+                controller: emailController,
                 decoration: InputDecoration(
                   labelText: 'Email',
                   border: OutlineInputBorder(
@@ -61,7 +64,9 @@ class ForgotPasswordView extends GetView {
                   primary: const Color(0xffFDB731),
                 ),
                 child: const Text('Submit'),
-                onPressed: () {},
+                onPressed: () {
+                  authController.forgotPassword(emailController.text);
+                },
               )
             ],
           ),
