@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 class ForgotPasswordView extends GetView {
   ForgotPasswordView({Key? key}) : super(key: key);
   final authController = Get.find<AuthController>();
-  TextEditingController emailController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

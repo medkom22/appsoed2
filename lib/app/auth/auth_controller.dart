@@ -88,7 +88,7 @@ class AuthController extends GetxController {
           password: password,
         );
 
-        Get.offAllNamed(Routes.HOME);
+        Get.back();
       } on FirebaseAuthException catch (e) {
         if (e.code == 'weak-password') {
           Get.snackbar('Wrong', 'The password provided is too weak.');

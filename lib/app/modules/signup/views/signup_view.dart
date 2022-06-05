@@ -48,19 +48,6 @@ class SignupView extends GetView<SignupController> {
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
-                      // TextField(
-                      //   keyboardType: TextInputType.text,
-                      //   textInputAction: TextInputAction.next,
-                      //   decoration: InputDecoration(
-                      //     labelText: 'Nama',
-                      //     border: OutlineInputBorder(
-                      //       borderRadius: BorderRadius.circular(10),
-                      //     ),
-                      //   ),
-                      // ),
-                      // const SizedBox(
-                      //   height: 20,
-                      // ),
                       TextField(
                         controller: controller.emailC,
                         keyboardType: TextInputType.emailAddress,
@@ -163,22 +150,27 @@ class SignupView extends GetView<SignupController> {
                     const SizedBox(
                       height: 11,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          width: 1,
-                          color: const Color(0xff979797),
+                    GestureDetector(
+                      onTap: () {
+                        authController.signInWithGoogle();
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 1,
+                            color: const Color(0xff979797),
+                          ),
+                          borderRadius: BorderRadius.circular(30),
                         ),
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      width: Get.width,
-                      height: 45,
-                      child: Center(
-                        child: Image.asset(
-                          'assets/google-logo.png',
-                          width: 28,
-                          height: 28,
-                          fit: BoxFit.cover,
+                        width: Get.width,
+                        height: 45,
+                        child: Center(
+                          child: Image.asset(
+                            'assets/google-logo.png',
+                            width: 28,
+                            height: 28,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),

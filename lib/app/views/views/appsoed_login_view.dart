@@ -10,6 +10,17 @@ class AppsoedLoginView extends GetView {
   final authController = Get.find<AuthController>();
   @override
   Widget build(BuildContext context) {
+    Future.delayed(
+      Duration.zero,
+      () {
+        Get.snackbar(
+          'WARNING',
+          'Pastikan jika login sebagai tamu hanya bisa dilakukan 1x jika lebih dari itu akan terjadi error',
+          duration: const Duration(seconds: 5),
+          backgroundColor: Colors.amber[100],
+        );
+      },
+    );
     return Scaffold(
         body: Stack(
       children: [

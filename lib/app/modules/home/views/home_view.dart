@@ -1,9 +1,10 @@
-import '../../../widgets/live_chat_widget.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../auth/auth_controller.dart';
 import '../../../widgets/home_widget.dart';
+import '../../../widgets/live_chat_widget.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -22,7 +23,7 @@ class HomeView extends GetView<HomeController> {
       color: Colors.cyan,
     ),
   ];
-
+  final authController = Get.find<AuthController>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,9 +77,11 @@ class HomeView extends GetView<HomeController> {
         );
       }),
 
-      body: Obx(() {
-        return widgetMenuPages.elementAt(controller.currentBottom.value);
-      }),
+      body: Obx(
+        () {
+          return widgetMenuPages.elementAt(controller.currentBottom.value);
+        },
+      ),
     );
   }
 }
