@@ -1,3 +1,4 @@
+import 'package:appsoed/app/views/views/gensoed_merch_view.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,9 +16,7 @@ class HomeView extends GetView<HomeController> {
     Container(
       color: Colors.amber,
     ),
-    Container(
-      color: Colors.lightBlue,
-    ),
+    const GensoedMerchView(),
     const LiveChatWidget(),
     Container(
       color: Colors.cyan,

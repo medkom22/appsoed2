@@ -30,7 +30,6 @@ class HomeWidget extends StatelessWidget {
     // * NAME USER :
     List<String> user = authController.auth.currentUser!.email!.split('@');
     String name = user.first;
-    print("USER : ${authController.auth.currentUser}");
     return StreamBuilder<ConnectivityResult>(
       stream: controller.connectivity.onConnectivityChanged,
       builder: (context, snapshot) {
