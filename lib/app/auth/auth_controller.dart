@@ -1,12 +1,17 @@
-import 'package:appsoed/app/routes/app_pages.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
+import '../routes/app_pages.dart';
+
+// NOTE: Ini merupakan file yang mengatur tentang jalannya autentifikasi
 class AuthController extends GetxController {
+  // *: variabel auth digunakan untuk menginisasi FirebaseAuth
   FirebaseAuth auth = FirebaseAuth.instance;
+  // *: variabel streamAuth digunakan untuk menjalakan fungsi authStateChanges yg mana fungsi ini berfungsi untuk mengecek apakah ada user atau tidak
   Stream<User?> get streamAuth => auth.authStateChanges();
 
+// *: Fungsi ini digunakan untuk melakukan reset password apabila lupa password
   Future forgotPassword(String email) async {
     if (email.isNotEmpty) {
       await auth.sendPasswordResetEmail(email: email);
@@ -18,24 +23,22 @@ class AuthController extends GetxController {
     }
   }
 
+// *: Fungsi ini digunakan untuk melakukan login dengan akun Google
   Future signInWithGoogle() async {
-    // Trigger the authentication flow
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
-    // Obtain the auth details from the request
     final GoogleSignInAuthentication? googleAuth =
         await googleUser?.authentication;
 
-    // Create a new credential
     final credential = GoogleAuthProvider.credential(
       accessToken: googleAuth?.accessToken,
       idToken: googleAuth?.idToken,
     );
-    // Once signed in, return the UserCredential
     await FirebaseAuth.instance.signInWithCredential(credential);
     Get.offAllNamed(Routes.HOME);
   }
 
+// *: Fungsi ini digunakan untuk melakukan login dengan ANONIM
   Future signinAnonym() async {
     try {
       await auth.signInAnonymously();
@@ -52,11 +55,13 @@ class AuthController extends GetxController {
     }
   }
 
+// *:Fungsi ini digunakan untuk melakukan Log Out
   Future logOutUser() async {
     await FirebaseAuth.instance.signOut();
     Get.offAllNamed(Routes.APPSOED_LOGIN);
   }
 
+// *Fungsi ini digunakan untuk melakukan Sign In email dan password
   Future signInUser(String email, String password) async {
     if (email.isNotEmpty && password.isNotEmpty) {
       try {
@@ -80,6 +85,7 @@ class AuthController extends GetxController {
     }
   }
 
+// *: Fungsi ini digunakan untuk melakukan Registrasi / Sign Up
   Future registerUser(String email, String password) async {
     if (email.isNotEmpty && password.isNotEmpty) {
       try {

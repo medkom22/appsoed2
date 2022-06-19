@@ -1,8 +1,8 @@
-import 'package:appsoed/app/auth/auth_controller.dart';
-import 'package:appsoed/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../auth/auth_controller.dart';
+import '../../routes/app_pages.dart';
 import '../../widgets/main_button_widget.dart';
 
 class AppsoedLoginView extends GetView {

@@ -1,7 +1,7 @@
-import 'package:appsoed/app/auth/auth_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../auth/auth_controller.dart';
 import '../controllers/signup_controller.dart';
 
 class SignupView extends GetView<SignupController> {

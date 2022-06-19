@@ -68,7 +68,7 @@ class LiveChatWidget extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      LauncherProvider.launcherURL('tel:089691944030');
+                      LauncherProvider.launcherURL('https://wa.link/hzec9z');
                     },
                     icon: const Icon(Icons.message),
                     label: const Text('Live Chat'),

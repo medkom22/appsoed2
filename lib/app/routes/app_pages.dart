@@ -8,6 +8,8 @@ import '../modules/signin/views/forgot_password_view.dart';
 import '../modules/signin/views/signin_view.dart';
 import '../modules/signup/bindings/signup_binding.dart';
 import '../modules/signup/views/signup_view.dart';
+import '../modules/user_profile/bindings/user_profile_binding.dart';
+import '../modules/user_profile/views/user_profile_view.dart';
 import '../views/views/about_appsoed_view.dart';
 import '../views/views/appsoed_login_view.dart';
 import '../views/views/profile_kabinet_view.dart';
@@ -15,6 +17,7 @@ import '../views/views/splash_screen_view.dart';
 
 part 'app_routes.dart';
 
+// NOTE: File ini digunakan untuk mengatur arus navigasi dari applikasi
 class AppPages {
   AppPages._();
 
@@ -50,7 +53,7 @@ class AppPages {
     ),
     GetPage(
       name: Routes.SPLASH_SCREEN,
-      page: () => const SplashScreenView(),
+      page: () => SplashScreenView(),
     ),
     GetPage(
       name: Routes.APPSOED_LOGIN,
@@ -59,6 +62,11 @@ class AppPages {
     GetPage(
       name: Routes.NOTIFICATION_VIEW_HOME,
       page: () => const NotificationView(),
+    ),
+    GetPage(
+      name: _Paths.USER_PROFILE,
+      page: () => UserProfileView(),
+      binding: UserProfileBinding(),
     ),
   ];
 }

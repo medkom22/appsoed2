@@ -1,4 +1,3 @@
-import 'package:appsoed/app/auth/auth_controller.dart';
 import 'package:badges/badges.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
@@ -6,13 +5,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
+import '../auth/auth_controller.dart';
 import '../modules/home/controllers/home_controller.dart';
 
 class HomeWidget extends StatelessWidget {
-  final controller = Get.put(HomeController(), permanent: true);
-  final authController = Get.find<AuthController>();
-
   HomeWidget({Key? key}) : super(key: key);
+
+  final authController = Get.find<AuthController>();
+  final controller = Get.put(HomeController(), permanent: true);
+
   @override
   Widget build(BuildContext context) {
     List<Widget> imageSliders = controller.imgList
@@ -28,8 +29,8 @@ class HomeWidget extends StatelessWidget {
         .toList();
 
     // * NAME USER :
-    List<String> user = authController.auth.currentUser!.email!.split('@');
-    String name = user.first;
+    List<String>? user = authController.auth.currentUser?.email?.split('@');
+    String? name = user?.first;
     return StreamBuilder<ConnectivityResult>(
       stream: controller.connectivity.onConnectivityChanged,
       builder: (context, snapshot) {
@@ -40,7 +41,7 @@ class HomeWidget extends StatelessWidget {
         } else {
           return WidgetConnectionSuccess(
               authController: authController,
-              name: name,
+              name: name ?? "Kosong",
               controller: controller,
               imageSliders: imageSliders);
         }
@@ -59,9 +60,9 @@ class WidgetConnectionSuccess extends StatelessWidget {
   }) : super(key: key);
 
   final AuthController authController;
-  final String name;
   final HomeController controller;
   final List<Widget> imageSliders;
+  final String name;
 
   @override
   Widget build(BuildContext context) {
@@ -245,13 +246,14 @@ class WidgetConnectionFailed extends StatelessWidget {
 }
 
 class MainContentWidget extends StatelessWidget {
-  final String items;
-  final String text;
   const MainContentWidget({
     Key? key,
     required this.text,
     required this.items,
   }) : super(key: key);
+
+  final String items;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -284,10 +286,6 @@ class MainContentWidget extends StatelessWidget {
         Text(
           text,
           textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontWeight: FontWeight.w300,
-            color: Color(0xff373737),
-          ),
         )
       ],
     );

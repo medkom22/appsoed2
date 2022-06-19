@@ -1,6 +1,7 @@
-import 'package:appsoed/app/auth/auth_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../../auth/auth_controller.dart';
 
 class ForgotPasswordView extends GetView {
   ForgotPasswordView({Key? key}) : super(key: key);

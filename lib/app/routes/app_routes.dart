@@ -1,6 +1,7 @@
 part of 'app_pages.dart';
 // DO NOT EDIT. This is code generated via package:get_cli/get_cli.dart
 
+// NOTE: file ini digunakan untuk menyimpan nama route dari setiap page
 abstract class Routes {
   Routes._();
   static const SIGNIN = _Paths.SIGNIN;
@@ -12,6 +13,7 @@ abstract class Routes {
   static const ABOUT_APPSOED = _Paths.ABOUT_APPSOED;
   static const APPSOED_LOGIN = _Paths.APPSOED_LOGIN;
   static const NOTIFICATION_VIEW_HOME = _Paths.NOTIFICATION_VIEW_HOME;
+  static const USER_PROFILE = _Paths.USER_PROFILE;
 }
 
 abstract class _Paths {
@@ -25,4 +27,5 @@ abstract class _Paths {
   static const ABOUT_APPSOED = '/about-appsoed';
   static const APPSOED_LOGIN = '/appsoed-login';
   static const NOTIFICATION_VIEW_HOME = '/notification-view-home';
+  static const USER_PROFILE = '/user-profile';
 }

@@ -29,10 +29,12 @@ class GensoedMerchView extends GetView {
                   color: Color(0xff373737),
                 ),
               ),
+              const SizedBox(),
               const SizedBox(
                 height: 50,
               ),
               GridView(
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
