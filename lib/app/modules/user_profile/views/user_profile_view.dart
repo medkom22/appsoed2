@@ -94,10 +94,13 @@ class UserProfileView extends GetView<UserProfileController> {
                           thickness: 0.8,
                           color: Color(0xffC4C4C4),
                         ),
-                        const ListTile(
-                          title: Text('FAQ'),
-                          trailing: Icon(FontAwesomeIcons.arrowRight),
-                          leading: Icon(FontAwesomeIcons.question),
+                        ListTile(
+                          onTap: () {
+                            Get.toNamed(Routes.FAQ);
+                          },
+                          title: const Text('FAQ'),
+                          trailing: const Icon(FontAwesomeIcons.arrowRight),
+                          leading: const Icon(FontAwesomeIcons.question),
                         ),
                         const Divider(
                           indent: 30,

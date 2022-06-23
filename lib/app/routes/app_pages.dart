@@ -1,3 +1,4 @@
+import 'package:appsoed/app/views/views/faq_view.dart';
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
@@ -67,6 +68,10 @@ class AppPages {
       name: _Paths.USER_PROFILE,
       page: () => UserProfileView(),
       binding: UserProfileBinding(),
+    ),
+    GetPage(
+      name: Routes.FAQ,
+      page: () => const FaqView(),
     ),
   ];
 }

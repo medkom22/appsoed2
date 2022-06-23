@@ -14,6 +14,7 @@ abstract class Routes {
   static const APPSOED_LOGIN = _Paths.APPSOED_LOGIN;
   static const NOTIFICATION_VIEW_HOME = _Paths.NOTIFICATION_VIEW_HOME;
   static const USER_PROFILE = _Paths.USER_PROFILE;
+  static const FAQ = _Paths.FAQ;
 }
 
 abstract class _Paths {
@@ -28,4 +29,5 @@ abstract class _Paths {
   static const APPSOED_LOGIN = '/appsoed-login';
   static const NOTIFICATION_VIEW_HOME = '/notification-view-home';
   static const USER_PROFILE = '/user-profile';
+  static const FAQ = '/faq';
 }

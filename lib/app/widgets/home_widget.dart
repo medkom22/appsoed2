@@ -98,7 +98,7 @@ class WidgetConnectionSuccess extends StatelessWidget {
                     alignment: Alignment.topRight,
                     shape: BadgeShape.circle,
                     badgeContent: const Text(
-                      '20',
+                      '0',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
