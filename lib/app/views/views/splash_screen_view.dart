@@ -9,6 +9,10 @@ import '../../auth/auth_controller.dart';
 import '../../modules/home/views/home_view.dart';
 import 'appsoed_login_view.dart';
 
+/// The SplashScreenView class is a StatelessWidget that uses a StreamBuilder to listen to the stream of
+/// the AuthController. If the stream is null, it will navigate to the AppsoedLoginView, otherwise it
+/// will navigate to the HomeView
+
 class SplashScreenView extends StatelessWidget {
   final authController = Get.find<AuthController>();
 

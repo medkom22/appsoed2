@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// It's a Material widget with a white background, a yellow arrow icon, and a circular border
 class BackButtonWidget extends StatelessWidget {
   const BackButtonWidget({Key? key}) : super(key: key);
 

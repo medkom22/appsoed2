@@ -4,6 +4,7 @@ import 'package:lottie/lottie.dart';
 
 import '../provider/launcer_provider.dart';
 
+/// This class is a stateless widget that displays a live chat
 class LiveChatWidget extends StatelessWidget {
   const LiveChatWidget({Key? key}) : super(key: key);
 

@@ -8,6 +8,7 @@ import '../routes/app_pages.dart';
 class AuthController extends GetxController {
   // *: variabel auth digunakan untuk menginisasi FirebaseAuth
   FirebaseAuth auth = FirebaseAuth.instance;
+
   // *: variabel streamAuth digunakan untuk menjalakan fungsi authStateChanges yg mana fungsi ini berfungsi untuk mengecek apakah ada user atau tidak
   Stream<User?> get streamAuth => auth.authStateChanges();
 

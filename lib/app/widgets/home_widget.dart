@@ -7,6 +7,10 @@ import 'package:lottie/lottie.dart';
 
 import '../auth/auth_controller.dart';
 import '../modules/home/controllers/home_controller.dart';
+import '../routes/app_pages.dart';
+
+/// The HomeWidget class is a StatelessWidget that has a HomeController and an AuthController as a
+/// dependency
 
 class HomeWidget extends StatelessWidget {
   HomeWidget({Key? key}) : super(key: key);
@@ -49,6 +53,9 @@ class HomeWidget extends StatelessWidget {
     );
   }
 }
+
+/// I have a carousel slider that is wrapped in a column, and the column is wrapped in a
+/// singlechildscrollview, and the singlechildscrollview is wrapped in a safearea
 
 class WidgetConnectionSuccess extends StatelessWidget {
   const WidgetConnectionSuccess({
@@ -100,9 +107,7 @@ class WidgetConnectionSuccess extends StatelessWidget {
                     badgeColor: const Color(0xffF8A435),
                     child: GestureDetector(
                       onTap: () async {
-                        // FIXME TESTING SIGNOUT
-                        await authController.logOutUser();
-                        // Get.toNamed(Routes.NOTIFICATION_VIEW_HOME);
+                        Get.toNamed(Routes.NOTIFICATION_VIEW_HOME);
                       },
                       child: Image.asset(
                         'assets/Icon-notifikasi.png',
@@ -228,6 +233,9 @@ class WidgetConnectionSuccess extends StatelessWidget {
   }
 }
 
+/// This class is a stateless widget that returns a center widget with a Lottie animation that is the
+/// width of the screen and 300 pixels high
+
 class WidgetConnectionFailed extends StatelessWidget {
   const WidgetConnectionFailed({
     Key? key,
@@ -244,6 +252,9 @@ class WidgetConnectionFailed extends StatelessWidget {
     );
   }
 }
+
+/// It's a stateless widget that takes two required parameters, text and items, and displays them in a
+/// column
 
 class MainContentWidget extends StatelessWidget {
   const MainContentWidget({

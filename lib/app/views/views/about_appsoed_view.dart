@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// A class that displays the About Appsoed page.
+
 class AboutAppsoedView extends GetView {
   const AboutAppsoedView({Key? key}) : super(key: key);
 

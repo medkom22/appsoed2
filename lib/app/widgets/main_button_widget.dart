@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// It's a stateless widget that takes in a text and a navigator function and returns a container with a
+/// text button inside it
 class MainButtonWidget extends StatelessWidget {
   final String text;
   final VoidCallback navigator;

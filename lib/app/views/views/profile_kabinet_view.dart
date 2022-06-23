@@ -1,7 +1,10 @@
-import '../../provider/launcer_provider.dart';
-import '../../widgets/back_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../provider/launcer_provider.dart';
+import '../../widgets/back_button_widget.dart';
+
+/// A class that displays the profile of the BEM Unsoed Medkom.
 
 class ProfileKabinetView extends GetView {
   const ProfileKabinetView({Key? key}) : super(key: key);
@@ -218,6 +221,9 @@ class ProfileKabinetView extends GetView {
     );
   }
 }
+
+/// This class is a stateless widget that takes in an image and a link and returns a GestureDetector
+/// that launches the link when tapped
 
 class SocialWidget extends StatelessWidget {
   final String image;

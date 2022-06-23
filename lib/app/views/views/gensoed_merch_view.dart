@@ -3,9 +3,7 @@ import 'package:get/get.dart';
 
 import '../../provider/launcer_provider.dart';
 
-// void main() {
-//   runApp(MyApp());
-// }
+/// The above class is a class that contains the code for the Gensoed Merch page.
 
 class GensoedMerchView extends GetView {
   const GensoedMerchView({Key? key}) : super(key: key);
@@ -115,6 +113,8 @@ class GensoedMerchView extends GetView {
     );
   }
 }
+
+/// A `StatelessWidget` that displays an image, an item name, and a price
 
 class GensoedItemWidget extends StatelessWidget {
   final String? imageUrl, item, price;

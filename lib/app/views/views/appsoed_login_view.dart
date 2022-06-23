@@ -5,22 +5,12 @@ import '../../auth/auth_controller.dart';
 import '../../routes/app_pages.dart';
 import '../../widgets/main_button_widget.dart';
 
+/// A view class that is used to display the Appsoed login page.
 class AppsoedLoginView extends GetView {
   AppsoedLoginView({Key? key}) : super(key: key);
   final authController = Get.find<AuthController>();
   @override
   Widget build(BuildContext context) {
-    Future.delayed(
-      Duration.zero,
-      () {
-        Get.snackbar(
-          'WARNING',
-          'Pastikan jika login sebagai tamu hanya bisa dilakukan 1x jika lebih dari itu akan terjadi error',
-          duration: const Duration(seconds: 5),
-          backgroundColor: Colors.amber[100],
-        );
-      },
-    );
     return Scaffold(
         body: Stack(
       children: [
