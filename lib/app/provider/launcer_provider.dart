@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -5,7 +7,9 @@ import 'package:url_launcher/url_launcher.dart';
 class LauncherProvider {
   static launcherURL(String url) async {
     try {
-      if (!await launchUrl(Uri.parse(url))) {
+      if (!await launchUrl(
+        Uri.parse(url),
+      )) {
         throw 'Something Wrong';
       }
     } catch (e) {
@@ -13,6 +17,18 @@ class LauncherProvider {
         title: 'Terjadi Kesalahan',
         middleText: 'Link tidak bisa dibuka',
       );
+    }
+  }
+
+  static launcherWA(String text, String number) async {
+    var whatsapp = number;
+    var whatsAppUrl = "whatsapp://send?phone=$whatsapp&text=$text";
+    if (Platform.isAndroid) {
+      if (await canLaunchUrl(Uri.parse(whatsAppUrl))) {
+        await launchUrl(Uri.parse(whatsAppUrl));
+      } else {
+        throw 'Could not launch $whatsAppUrl';
+      }
     }
   }
 }

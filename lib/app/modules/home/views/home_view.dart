@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 
 import '../../../auth/auth_controller.dart';
 import '../../../views/views/gensoed_merch_view.dart';
+import '../../../views/views/live_chat_widget.dart';
 import '../../../widgets/home_widget.dart';
-import '../../../widgets/live_chat_widget.dart';
 import '../../user_profile/views/user_profile_view.dart';
 import '../controllers/home_controller.dart';
 

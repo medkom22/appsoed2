@@ -15,6 +15,7 @@ abstract class Routes {
   static const NOTIFICATION_VIEW_HOME = _Paths.NOTIFICATION_VIEW_HOME;
   static const USER_PROFILE = _Paths.USER_PROFILE;
   static const FAQ = _Paths.FAQ;
+  static const RULES_MEDIA = _Paths.RULES_MEDIA;
 }
 
 abstract class _Paths {
@@ -30,4 +31,5 @@ abstract class _Paths {
   static const NOTIFICATION_VIEW_HOME = '/notification-view-home';
   static const USER_PROFILE = '/user-profile';
   static const FAQ = '/faq';
+  static const RULES_MEDIA = '/rules-media';
 }

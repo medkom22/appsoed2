@@ -13,6 +13,7 @@ import '../modules/user_profile/bindings/user_profile_binding.dart';
 import '../modules/user_profile/views/user_profile_view.dart';
 import '../views/views/about_appsoed_view.dart';
 import '../views/views/appsoed_login_view.dart';
+import '../views/views/medpart_page_2.dart';
 import '../views/views/profile_kabinet_view.dart';
 import '../views/views/splash_screen_view.dart';
 
@@ -72,6 +73,10 @@ class AppPages {
     GetPage(
       name: Routes.FAQ,
       page: () => const FaqView(),
+    ),
+    GetPage(
+      name: Routes.RULES_MEDIA,
+      page: () => const RulesMediaView(),
     ),
   ];
 }

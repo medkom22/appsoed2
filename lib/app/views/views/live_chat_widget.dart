@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
-import '../provider/launcer_provider.dart';
+import '../../provider/launcer_provider.dart';
 
 /// This class is a stateless widget that displays a live chat
 class LiveChatWidget extends StatelessWidget {
@@ -69,7 +69,9 @@ class LiveChatWidget extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      LauncherProvider.launcherURL('https://wa.link/hzec9z');
+                      LauncherProvider.launcherWA(
+                          'Hallo Adkesma saya ingin menyampaikan aspirasi saya',
+                          '+6289691944030');
                     },
                     icon: const Icon(Icons.message),
                     label: const Text('Live Chat'),
