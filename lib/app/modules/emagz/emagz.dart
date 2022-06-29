@@ -5,21 +5,40 @@ void main() { runApp(MyApp()); }
 class MyApp extends StatelessWidget {  
   @override  
   Widget build(BuildContext context) {  
-    return MaterialApp(  
-        theme: ThemeData(  
-          primarySwatch: Colors.green,  
-        ),  
-        home: TitlePage()  
-    );  
-  }  
-}  
-class TitlePage extends StatelessWidget {  
-  @override  
-  Widget build(BuildContext context) {  
-    return Scaffold(  
-      body: Center(  
-          child:Text("E-Magz")  
-      ),  
-    );  
-  }  
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            Container(
+              margin: const EdgeInsets.only(
+                top: 24,
+                left: 16,
+                right: 16,
+                bottom: 50,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text(
+                    'E-Magz',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 40,
+                    width: 40,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
+  
+
+
