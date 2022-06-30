@@ -16,6 +16,7 @@ abstract class Routes {
   static const USER_PROFILE = _Paths.USER_PROFILE;
   static const FAQ = _Paths.FAQ;
   static const RULES_MEDIA = _Paths.RULES_MEDIA;
+  static const NEWS_APP = _Paths.NEWS_APP;
 }
 
 abstract class _Paths {
@@ -32,4 +33,5 @@ abstract class _Paths {
   static const USER_PROFILE = '/user-profile';
   static const FAQ = '/faq';
   static const RULES_MEDIA = '/rules-media';
+  static const NEWS_APP = '/news-app';
 }
