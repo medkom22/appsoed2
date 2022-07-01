@@ -1,3 +1,4 @@
+import 'package:appsoed/app/modules/news_app/views/detail_news_view.dart';
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
@@ -84,6 +85,10 @@ class AppPages {
       name: _Paths.NEWS_APP,
       page: () => const NewsAppView(),
       binding: NewsAppBinding(),
+    ),
+    GetPage(
+      name: Routes.DETAIL_NEWS,
+      page: () => DetailNewsView(),
     ),
   ];
 }
