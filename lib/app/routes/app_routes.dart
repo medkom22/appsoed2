@@ -18,6 +18,7 @@ abstract class Routes {
   static const RULES_MEDIA = _Paths.RULES_MEDIA;
   static const NEWS_APP = _Paths.NEWS_APP;
   static const DETAIL_NEWS = _Paths.DETAIL_NEWS;
+  static const NOTIFICATION = _Paths.NOTIFICATION;
 }
 
 abstract class _Paths {
@@ -36,4 +37,5 @@ abstract class _Paths {
   static const RULES_MEDIA = '/rules-media';
   static const NEWS_APP = '/news-app';
   static const DETAIL_NEWS = '/detail-news';
+  static const NOTIFICATION = '/notification';
 }

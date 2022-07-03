@@ -1,10 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 
 import '../../../widgets/back_button_widget.dart';
 
-class NotificationView extends GetView {
+class NotificationView extends StatefulWidget {
   const NotificationView({Key? key}) : super(key: key);
+  static const String oneSignalAppId = 'ef65b75d-10bd-4486-b041-69b4dab714f2';
+
+  @override
+  State<NotificationView> createState() => _NotificationViewState();
+}
+
+class _NotificationViewState extends State<NotificationView> {
+  Future initPlatformState() async {
+    OneSignal.shared.setAppId(NotificationView.oneSignalAppId);
+    OneSignal.shared.promptUserForPushNotificationPermission().then((value) {
+      print(value);
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    initPlatformState();
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -1,10 +1,10 @@
-import 'package:appsoed/app/modules/news_app/views/detail_news_view.dart';
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/home/views/notification_view.dart';
 import '../modules/news_app/bindings/news_app_binding.dart';
+import '../modules/news_app/views/detail_news_view.dart';
 import '../modules/news_app/views/news_app_view.dart';
 import '../modules/signin/bindings/signin_binding.dart';
 import '../modules/signin/views/forgot_password_view.dart';
