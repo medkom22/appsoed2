@@ -31,25 +31,26 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Card Carousel App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       home: Scaffold(
-        appBar: AppBar(
-          title:Text("E-Magz")
-        ),
         body: Column(
           children: <Widget>[
+            Padding(padding: EdgeInsets.only(top:50),
+            child: Text('E Magz',
+              style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              ),
+            ),),
+   
             CarouselSlider(
               options: CarouselOptions(
-                height: 200.0,
-                autoPlay: true,
-                autoPlayInterval: Duration(seconds: 3),
-                autoPlayAnimationDuration: Duration(milliseconds: 800),
-                autoPlayCurve: Curves.fastOutSlowIn,
-                pauseAutoPlayOnTouch: true,
-                aspectRatio: 2.0,
+                height: 450.0,
+                autoPlay: false,
+                //autoPlayInterval: Duration(seconds: 3),
+                //autoPlayAnimationDuration: Duration(milliseconds: 800),
+               // autoPlayCurve: Curves.fastOutSlowIn,
+                //pauseAutoPlayOnTouch: true,
+                aspectRatio: 16/9,
                 onPageChanged: (index, reason) {
                   setState(() {
                     _currentIndex = index;
@@ -60,10 +61,11 @@ class _MyAppState extends State<MyApp> {
                 return Builder(
                   builder:(BuildContext context){
                     return Container(
-                      height: MediaQuery.of(context).size.height*0.30,
+                      padding: EdgeInsets.only(top: 40),
+                      height: MediaQuery.of(context).size.height*0.50,
                       width: MediaQuery.of(context).size.width,
                       child: Card(
-                        color: Colors.blueAccent,
+                        color: Colors.white,
                         child: card,
                       ),
                     );
@@ -75,12 +77,12 @@ class _MyAppState extends State<MyApp> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: map<Widget>(cardList, (index, url) {
                 return Container(
-                  width: 10.0,
-                  height: 10.0,
+                  width: 6.0,
+                  height: 8.0,
                   margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: _currentIndex == index ? Colors.blueAccent : Colors.grey,
+                    color: _currentIndex == index ? Colors.grey : Color(0xFFFEDB57),
                   ),
                 );
               }),
@@ -103,15 +105,18 @@ class Item1 extends StatelessWidget {
         crossAxisSpacing: 20,
         mainAxisSpacing: 20),
       children: [
-        Card(
-          child: Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/emagz1.PNG'),
-                fit: BoxFit.fitWidth,
+        GestureDetector(
+          onTap: () => 'lib\app\views\views\faq_view.dart',
+          child: Card(
+            child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(image: AssetImage('assets/emagz1.PNG'),
+                  fit: BoxFit.fitWidth,
+                ),
+                border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 25,))
               ),
-              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 35,))
-            ),
-          )     
+            )    
+          ),
         ),
         Card(
           child: Container(
@@ -119,7 +124,7 @@ class Item1 extends StatelessWidget {
               image: DecorationImage(image: AssetImage('assets/emagz2.PNG'),
                fit: BoxFit.fitWidth,
               ),
-              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 35,))
+              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 25,))
             ),
           ) 
         ),
@@ -129,7 +134,7 @@ class Item1 extends StatelessWidget {
               image: DecorationImage(image: AssetImage('assets/emagz3.PNG'),
                 fit: BoxFit.fitWidth,
               ),
-              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 35,))
+              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 25,))
             ),
           ) 
         ),
@@ -139,7 +144,7 @@ class Item1 extends StatelessWidget {
               image: DecorationImage(image: AssetImage('assets/emagz4.PNG'),
                 fit: BoxFit.fitWidth,
               ),
-              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 35,))
+              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 25,))
             ),
           ) 
         ),
@@ -162,10 +167,10 @@ class Item2 extends StatelessWidget {
         Card(
           child: Container(
             decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/emagz2.PNG'),
+              image: DecorationImage(image: AssetImage('assets/emagz5.PNG'),
                 fit: BoxFit.fitWidth,
               ),
-              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 35,))
+              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 25,))
             ),
           )     
         ),
@@ -175,7 +180,7 @@ class Item2 extends StatelessWidget {
               image: DecorationImage(image: AssetImage('assets/emagz2.PNG'),
                fit: BoxFit.fitWidth,
               ),
-              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 35,))
+              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 25,))
             ),
           ) 
         ),
@@ -185,17 +190,17 @@ class Item2 extends StatelessWidget {
               image: DecorationImage(image: AssetImage('assets/emagz2.PNG'),
                 fit: BoxFit.fitWidth,
               ),
-              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 35,))
+              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 25,))
             ),
           ) 
         ),
         Card(
           child: Container(
             decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/emagz2.PNG'),
+              image: DecorationImage(image: AssetImage('assets/emagz8.PNG'),
                 fit: BoxFit.fitWidth,
               ),
-              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 35,))
+              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 25,))
             ),
           ) 
         ),
@@ -222,17 +227,17 @@ class Item3 extends StatelessWidget {
               image: DecorationImage(image: AssetImage('assets/emagz2.PNG'),
                 fit: BoxFit.fitWidth,
               ),
-              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 35,))
+              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 25,))
             ),
           )     
         ),
         Card(
           child: Container(
             decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/emagz2.PNG'),
+              image: DecorationImage(image: AssetImage('assets/emagz10.PNG'),
                fit: BoxFit.fitWidth,
               ),
-              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 35,))
+              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 25,))
             ),
           ) 
         ),
@@ -242,7 +247,7 @@ class Item3 extends StatelessWidget {
               image: DecorationImage(image: AssetImage('assets/emagz2.PNG'),
                 fit: BoxFit.fitWidth,
               ),
-              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 35,))
+              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 25,))
             ),
           ) 
         ),
@@ -252,7 +257,7 @@ class Item3 extends StatelessWidget {
               image: DecorationImage(image: AssetImage('assets/emagz2.PNG'),
                 fit: BoxFit.fitWidth,
               ),
-              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 35,))
+              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 25,))
             ),
           ) 
         ),
@@ -276,40 +281,30 @@ class Item4 extends StatelessWidget {
         Card(
           child: Container(
             decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/emagz2.PNG'),
+              image: DecorationImage(image: AssetImage('assets/emagz13.PNG'),
                 fit: BoxFit.fitWidth,
               ),
-              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 35,))
+              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 25,))
             ),
           )     
         ),
         Card(
           child: Container(
             decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/emagz2.PNG'),
+              image: DecorationImage(image: AssetImage('assets/emagz14.PNG'),
                fit: BoxFit.fitWidth,
               ),
-              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 35,))
+              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 25,))
             ),
           ) 
         ),
         Card(
           child: Container(
             decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/emagz2.PNG'),
+              image: DecorationImage(image: AssetImage('assets/emagz15.PNG'),
                 fit: BoxFit.fitWidth,
               ),
-              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 35,))
-            ),
-          ) 
-        ),
-        Card(
-          child: Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage('assets/emagz2.PNG'),
-                fit: BoxFit.fitWidth,
-              ),
-              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 35,))
+              border: Border(bottom: BorderSide(color: Color(0xFFFEDB57), width: 25,))
             ),
           ) 
         ),
