@@ -10,86 +10,44 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp>{
   int _currentIndex=0;
 
-  List cardList=[
-    Item1(),
-    Item2(),
-    Item3(),
-    Item4()
-  ];
-
-  List<T> map<T>(List list, Function handler) {
-    List<T> result = [];
-    for (var i = 0; i < list.length; i++) {
-      result.add(handler(i, list[i]));
-    }
-    return result;
-  }
-
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  Widget build (BuildContext context){
+    return MaterialApp (
       home: Scaffold(
         body: Column(
           children: <Widget>[
-            Padding(padding: EdgeInsets.only(top:50),
+            Padding(padding: EdgeInsets.only(top:50, bottom: 30),
             child: Text('E Magz',
               style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
               ),
             ),),
-   
-            CarouselSlider(
-              options: CarouselOptions(
-                height: 450.0,
-                autoPlay: false,
-                //autoPlayInterval: Duration(seconds: 3),
-                //autoPlayAnimationDuration: Duration(milliseconds: 800),
-               // autoPlayCurve: Curves.fastOutSlowIn,
-                //pauseAutoPlayOnTouch: true,
-                aspectRatio: 16/9,
-                onPageChanged: (index, reason) {
-                  setState(() {
-                    _currentIndex = index;
-                  });
-                },
-              ),
-              items: cardList.map((card){
-                return Builder(
-                  builder:(BuildContext context){
-                    return Container(
-                      padding: EdgeInsets.only(top: 40),
-                      height: MediaQuery.of(context).size.height*0.50,
-                      width: MediaQuery.of(context).size.width,
-                      child: Card(
-                        color: Colors.white,
-                        child: card,
-                      ),
-                    );
-                  }
-                );
-              }).toList(),
+            
+          CarouselSlider(
+            options: CarouselOptions(
+              height: 400,
+              autoPlay: false,
+              onPageChanged: (index, reason) {
+                setState(() {
+                _currentIndex = index;
+                });
+              },
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: map<Widget>(cardList, (index, url) {
-                return Container(
-                  width: 6.0,
-                  height: 8.0,
-                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: _currentIndex == index ? Colors.grey : Color(0xFFFEDB57),
-                  ),
-                );
-              }),
-            ),
-          ],
+            items: [
+              Item1(),
+              Item2(),
+              Item3(),
+              Item4(),
+            ],
+
+          ),]
+          
         )
-      ),
+      )
     );
   }
 }
