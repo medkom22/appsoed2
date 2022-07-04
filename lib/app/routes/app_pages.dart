@@ -1,3 +1,4 @@
+import 'package:appsoed/app/views/views/komik_home_page.dart';
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
@@ -89,6 +90,10 @@ class AppPages {
     GetPage(
       name: Routes.DETAIL_NEWS,
       page: () => DetailNewsView(),
+    ),
+    GetPage(
+      name: Routes.KOMIK,
+      page: () => const HomePage(),
     ),
   ];
 }
