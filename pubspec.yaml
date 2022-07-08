@@ -28,7 +28,6 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   badges: ^2.0.2
-  carousel_slider: ^2.1.1
   connectivity_plus: ^2.3.2
   cupertino_icons: ^1.0.2
   curved_navigation_bar: ^1.0.3

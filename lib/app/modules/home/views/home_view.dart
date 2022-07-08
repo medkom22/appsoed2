@@ -1,3 +1,5 @@
+import 'package:appsoed/app/modules/news_app/controllers/news_app_controller.dart';
+import 'package:appsoed/app/modules/news_app/views/news_app_view.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,14 +16,13 @@ class HomeView extends GetView<HomeController> {
 
   final List<Widget> widgetMenuPages = [
     HomeWidget(),
-    Container(
-      color: Colors.amber,
-    ),
+    const NewsAppView(),
     const GensoedMerchView(),
     const LiveChatWidget(),
     UserProfileView(),
   ];
   final authController = Get.find<AuthController>();
+  final newsController = Get.put(NewsAppController(), permanent: true);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

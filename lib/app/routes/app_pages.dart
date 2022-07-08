@@ -1,9 +1,12 @@
-import 'package:appsoed/app/views/views/faq_view.dart';
+import 'package:appsoed/app/views/views/komik_home_page.dart';
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/home/views/notification_view.dart';
+import '../modules/news_app/bindings/news_app_binding.dart';
+import '../modules/news_app/views/detail_news_view.dart';
+import '../modules/news_app/views/news_app_view.dart';
 import '../modules/signin/bindings/signin_binding.dart';
 import '../modules/signin/views/forgot_password_view.dart';
 import '../modules/signin/views/signin_view.dart';
@@ -13,6 +16,7 @@ import '../modules/user_profile/bindings/user_profile_binding.dart';
 import '../modules/user_profile/views/user_profile_view.dart';
 import '../views/views/about_appsoed_view.dart';
 import '../views/views/appsoed_login_view.dart';
+import '../views/views/faq_view.dart';
 import '../views/views/medpart_page_2.dart';
 import '../views/views/profile_kabinet_view.dart';
 import '../views/views/splash_screen_view.dart';
@@ -77,6 +81,19 @@ class AppPages {
     GetPage(
       name: Routes.RULES_MEDIA,
       page: () => const RulesMediaView(),
+    ),
+    GetPage(
+      name: _Paths.NEWS_APP,
+      page: () => const NewsAppView(),
+      binding: NewsAppBinding(),
+    ),
+    GetPage(
+      name: Routes.DETAIL_NEWS,
+      page: () => DetailNewsView(),
+    ),
+    GetPage(
+      name: Routes.KOMIK,
+      page: () => const HomePage(),
     ),
   ];
 }
