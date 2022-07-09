@@ -65,16 +65,8 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/emagz1.PNG
-    - assets/emagz2.PNG
-    - assets/emagz3.PNG
-    - assets/emagz4.PNG
-    - assets/emagz5.PNG
-    - assets/emagz8.PNG
-    - assets/emagz10.PNG
-    - assets/emagz13.PNG
-    - assets/emagz14.PNG
-    - assets/emagz15.PNG
+    - comingsoon.png
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
