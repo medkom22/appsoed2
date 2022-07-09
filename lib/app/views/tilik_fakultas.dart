@@ -66,6 +66,266 @@ class TilikFakultasView extends GetView {
                       horizontal: 26,
                       vertical: 28,
                     ),
+
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        new SizedBox(
+                          //width: 550,
+                          //height: 40,
+                          child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              primary: const Color(0xffFDB731),
+                            ),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Fakultas Pertanian',
+                              style: TextStyle(color : Colors.white,),
+                            ),
+                            ),
+                            onPressed: () {},
+
+                          ),
+                        ),
+
+                        new SizedBox(
+                          //width: 550,
+                          //height: 40,
+                          child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              primary: const Color(0xffFDB731),
+                            ),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Fakultas Biologi',
+                              style: TextStyle(color : Colors.white,),
+                            ),
+                            ),
+                            onPressed: () {}
+                          ),
+                        ),
+
+                        new SizedBox(
+                          //width: 550,
+                          //height: 40,
+                          child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              primary: const Color(0xffFDB731),
+                            ),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Fakultas Ekonomi dan Bisnis',
+                              style: TextStyle(color : Colors.white,),
+                            ),
+                            ),
+                            onPressed: () {}
+                          ),
+                        ),
+                        
+                        new SizedBox(
+                          //width: 550,
+                          //height: 40,
+                          child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              primary: const Color(0xffFDB731),
+                            ),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Fakultas Hukum',
+                              style: TextStyle(color : Colors.white,),
+                            ),
+                            ),
+                            onPressed: () {}
+                          ),
+                        ),
+
+                        new SizedBox(
+                          //width: 550,
+                          //height: 40,
+                          child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              primary: const Color(0xffFDB731),
+                            ),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Fakultas Ilmu Sosial dan Ilmu Politik',
+                              style: TextStyle(color : Colors.white,),
+                            ),
+                            ),
+                            onPressed: () {}
+                          ),
+                        ),
+
+                        new SizedBox(
+                          //width: 550,
+                          //height: 40,
+                          child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              primary: const Color(0xffFDB731),
+                            ),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Fakultas Kedokteran',
+                              style: TextStyle(color : Colors.white,),
+                            ),
+                            ),
+                            onPressed: () {}
+                          ),
+                        ),
+
+                        new SizedBox(
+                          //width: 550,
+                          //height: 40,
+                          child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              primary: const Color(0xffFDB731),
+                            ),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Fakultas Teknik',
+                              style: TextStyle(color : Colors.white,),
+                            ),
+                            ),
+                            onPressed: () {}
+                          ),
+                        ),
+
+                        new SizedBox(
+                          //width: 550,
+                          //height: 40,
+                          child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              primary: const Color(0xffFDB731),
+                            ),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Fakultas Ilmu-Ilmu Kesehatan',
+                              style: TextStyle(color : Colors.white,),
+                            ),
+                            ),
+                            onPressed: () {}
+                          ),
+                        ),
+
+                        new SizedBox(
+                          //width: 550,
+                          //height: 40,
+                          child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              primary: const Color(0xffFDB731),
+                            ),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Fakultas Ilmu Budaya',
+                              style: TextStyle(color : Colors.white,),
+                            ),
+                            ),
+                            onPressed: () {}
+                          ),
+                        ),
+
+                        new SizedBox(
+                          //width: 550,
+                          //height: 40,
+                          child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              primary: const Color(0xffFDB731),
+                            ),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Fakultas MIPA',
+                              style: TextStyle(color : Colors.white,),
+                            ),
+                            ),
+                            onPressed: () {}
+                          ),
+                        ),
+
+                        new SizedBox(
+                          //width: 550,
+                          //height: 40,
+                          child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              primary: const Color(0xffFDB731),
+                            ),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Fakultas Perikanan dan Ilmu Kelautan',
+                              style: TextStyle(color : Colors.white,),
+                            ),
+                            ),
+                            onPressed: () {}
+                          ),
+                        ),
+                        
+                        new SizedBox(
+                          //width: 550,
+                          //height: 40,
+                          child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              primary: const Color(0xffFDB731),
+                            ),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text('Fakultas Peternakan',
+                              style: TextStyle(color : Colors.white,),
+                            ),
+                            ),
+                            onPressed: () {}
+                          ),
+                        ),
+
+                      ],
+
+                    ),
                   ),
                 ],
               ),
