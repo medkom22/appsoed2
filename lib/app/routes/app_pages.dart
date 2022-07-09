@@ -20,6 +20,7 @@ import '../views/views/faq_view.dart';
 import '../views/views/medpart_page_2.dart';
 import '../views/views/profile_kabinet_view.dart';
 import '../views/views/splash_screen_view.dart';
+import '../views/views/tilik_fakultas.dart';
 
 part 'app_routes.dart';
 
@@ -94,6 +95,10 @@ class AppPages {
     GetPage(
       name: Routes.KOMIK,
       page: () => const HomePage(),
+    ),
+    GetPage(
+      name: Routes.TILIK_FAKULTAS,
+      page: () => const TilikFakultasView(),
     ),
   ];
 }

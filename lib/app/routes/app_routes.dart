@@ -20,6 +20,7 @@ abstract class Routes {
   static const DETAIL_NEWS = _Paths.DETAIL_NEWS;
   static const NOTIFICATION = _Paths.NOTIFICATION;
   static const KOMIK = _Paths.KOMIK;
+  static const TILIK_FAKULTAS = _Paths.TILIK_FAKULTAS;
 }
 
 abstract class _Paths {
@@ -40,4 +41,5 @@ abstract class _Paths {
   static const DETAIL_NEWS = '/detail-news';
   static const NOTIFICATION = '/notification';
   static const KOMIK = '/komik';
+  static const TILIK_FAKULTAS = '/tilik_fakultas';
 }
