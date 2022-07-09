@@ -60,7 +60,7 @@ class TilikFakultasView extends GetView {
                   const SizedBox(
                     height: 20,
                   ),
-                  // NOTE: CONTENT
+                  // NOTE: BUTTON FAKULTAS
                   Container(
                     margin: const EdgeInsets.symmetric(
                       horizontal: 26,
@@ -322,15 +322,29 @@ class TilikFakultasView extends GetView {
                             onPressed: () {}
                           ),
                         ),
-
                       ],
 
                     ),
                   ),
+                  //=========END OF BUTTON FAKULTAS==========
                 ],
               ),
             ),
-            // White Background =======
+            // ====== End White Background =======
+
+            //TITLE DAN BACKBUTTON
+            Container(
+              margin: const EdgeInsets.only(top: 20),
+              alignment: Alignment.topCenter,
+              child: Text(
+                'Tilik Fakultas',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18
+                ),
+              ),
+            ),
           ],
         ),
       ),
