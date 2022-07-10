@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../widgets/back_button_widget.dart';
+//import 'package:appsoed/back_button_widget.dart';
 
 void main() {
   runApp(TilikFakultasView());
@@ -347,10 +347,10 @@ class TilikFakultasView extends GetView {
                 ),
               ),
             ),
-            const Padding(
+            /*const Padding(
               padding: EdgeInsets.only(top: 24, left: 24),
               child: BackButtonWidget(),
-            ),
+            ),*/
           ],
         ),
       ),
