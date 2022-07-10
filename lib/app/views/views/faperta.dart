@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../provider/launcer_provider.dart';
 //import 'package:appsoed/back_button_widget.dart';
 
 void main() {
@@ -129,8 +130,77 @@ class FapertaView extends GetView {
               ),
               //END OF DESKRIPSI FAKULTAS
 
-  
-                ],
+              //BARIS MEDIA SOSIAL FAKULTAS
+              Container(
+                    margin: const EdgeInsets.only(left: 26),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Media Sosial',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Wrap(
+                          spacing: 8,
+                          children: const [
+                            SocialWidget(
+                              image: 'Instagram',
+                              link: 'https://instagram.com/faperta.unsoed',
+                            ),
+                            SocialWidget(
+                              image: 'YouTube',
+                              link: 'https://www.youtube.com/channel/UC1Vbgi5BLI_7N3KzrpaBrtw',
+                            ),
+                            /*SocialWidget(
+                              image: 'Line',
+                              link:
+                                  'https://liff.line.me/1645278921-kWRPP32q/?accountId=uzf4935f',
+                            ),*/
+                            SocialWidget(
+                              image: 'Twitter',
+                              link: 'https://twitter.com/faperta_unsoed',
+                            ),
+                            /*SocialWidget(
+                                image: 'Spotify',
+                                link:
+                                    'https://open.spotify.com/show/4G1FeEt60JftSEGSx8uVDt?si=OVf1hSeOQ2iOhATTvyQTFA&utm_source=copy-link'),
+                            SocialWidget(
+                                image: 'TikTok',
+                                link: 'https://vt.tiktok.com/ZSd4JhVah/'),*/
+                            SocialWidget(
+                                image: 'Website',
+                                link: 'http://faperta.unsoed.ac.id/'),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                  //END OF MEDIA SOSIAL FAKULTAS
+
+                  //LOKASI FAKULTAS
+                  Container(
+                    margin:
+                        const EdgeInsets.only(left: 26, top: 28, bottom: 50),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Lokasi',
+                          style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ]
               ),
             ),
             // ====== End White Background =======
@@ -156,6 +226,31 @@ class FapertaView extends GetView {
         ),
       ),
     )
+    );
+  }
+}
+
+class SocialWidget extends StatelessWidget {
+  final String image;
+  final String link;
+  const SocialWidget({
+    Key? key,
+    required this.image,
+    required this.link,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        LauncherProvider.launcherURL(link);
+      },
+      child: Image.asset(
+        'assets/$image.png',
+        width: 40,
+        height: 40,
+        fit: BoxFit.cover,
+      ),
     );
   }
 }
