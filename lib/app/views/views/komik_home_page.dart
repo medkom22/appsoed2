@@ -1,4 +1,3 @@
-import 'package:appsoed/app/views/views/komik_page_1.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,40 +17,62 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Komik',
-            style: TextStyle(
-              fontSize: 19,
-              fontWeight: FontWeight.bold,
-              color: Color(0xff373737),
-            ),
-            textAlign: TextAlign.center,
-          ),
-          elevation: 0,
-          backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: const Text('Komik'),
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        elevation: 2,
+        centerTitle: true,
+      ),
+      body: SafeArea(
+        child: ListView(
+          children: imgList
+              .map(
+                (e) => Container(
+                  height: 300,
+                  margin: const EdgeInsets.only(
+                    top: 24,
+                    left: 16,
+                    right: 16,
+                    bottom: 30,
+                  ),
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(e),
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ),
+              )
+              .toList(),
         ),
-        body: Center(
-            child: ListView.builder(
-                shrinkWrap: true,
-                itemCount: imgList.length,
-                itemBuilder: (context, index) {
-                  return GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => const PageSatu()));
-                        MainAxisAlignment.center;
-                      },
-                      child: Row(
-                        children: <Widget>[
-                          Container(
-                            width: 300,
-                            height: 300,
-                            child: Image.asset(imgList[index]),
-                            alignment: Alignment.center,
-                          ),
-                        ],
-                      ));
-                })));
+      ),
+
+      // body: Center(
+      //   child: ListView.builder(
+      //     shrinkWrap: true,
+      //     itemCount: imgList.length,
+      //     itemBuilder: (context, index) {
+      //       return GestureDetector(
+      //         onTap: () {
+      //           Navigator.of(context).push(
+      //               MaterialPageRoute(builder: (context) => const PageSatu()));
+      //           MainAxisAlignment.center;
+      //         },
+      //         child: Row(
+      //           children: <Widget>[
+      //             Container(
+      //               width: 300,
+      //               height: 300,
+      //               alignment: Alignment.center,
+      //               child: Image.asset(imgList[index]),
+      //             ),
+      //           ],
+      //         ),
+      //       );
+      //     },
+      //   ),
+      // ),
+    );
   }
 }
