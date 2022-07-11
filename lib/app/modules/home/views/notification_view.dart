@@ -31,6 +31,7 @@ class _NotificationViewState extends State<NotificationView> {
       body: SafeArea(
         child: Column(
           children: [
+            ///NOTE: Header Notification
             Container(
               margin: const EdgeInsets.only(
                 top: 24,
