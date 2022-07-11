@@ -44,14 +44,9 @@ dependencies:
   getwidget: ^3.0.1
   google_sign_in: ^5.4.0
   lottie: ^1.3.0
-<<<<<<< HEAD
-  url_launcher: ^6.1.2
   vertical_card_pager: ^1.5.0
-=======
   onesignal_flutter: ^3.3.2
   url_launcher: ^6.1.4
->>>>>>> 6724e7c6b2d5e0a6e05a14c6bee56fd994429024
-
 dev_dependencies:
   flutter_launcher_icons: ^0.9.3
   flutter_lints: ^2.0.1

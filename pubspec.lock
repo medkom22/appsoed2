@@ -36,8 +36,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
-<<<<<<< HEAD
-=======
   carousel_slider:
     dependency: "direct main"
     description:
@@ -45,7 +43,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.1.1"
->>>>>>> 6724e7c6b2d5e0a6e05a14c6bee56fd994429024
   characters:
     dependency: transitive
     description:
@@ -67,8 +64,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0"
-<<<<<<< HEAD
-=======
   cloud_firestore:
     dependency: "direct main"
     description:
@@ -90,7 +85,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.6.19"
->>>>>>> 6724e7c6b2d5e0a6e05a14c6bee56fd994429024
   collection:
     dependency: transitive
     description:
@@ -407,6 +401,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.5.0"
+  onesignal_flutter:
+    dependency: "direct main"
+    description:
+      name: onesignal_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.3.2"
   path:
     dependency: transitive
     description:
