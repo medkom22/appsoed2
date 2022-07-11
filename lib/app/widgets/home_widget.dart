@@ -1,3 +1,5 @@
+import 'package:appsoed/app/views/views/komik_home_page.dart';
+import 'package:appsoed/app/views/views/medpart_page_2.dart';
 import 'package:badges/badges.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
@@ -188,38 +190,50 @@ class WidgetConnectionSuccess extends StatelessWidget {
             Wrap(
               runSpacing: 22,
               spacing: 20,
-              children: const [
+              children: [
                 MainContentWidget(
                   items: 'emagz',
                   text: 'E-Magz',
+                  onTap: () {},
                 ),
                 MainContentWidget(
                   items: 'tilikfakultas',
                   text: 'Tilik\nFakultas',
+                  onTap: () {},
                 ),
                 MainContentWidget(
                   items: 'binggo',
                   text: 'Binggo',
+                  onTap: () {},
                 ),
                 MainContentWidget(
                   text: 'Data At\nUnsoed',
                   items: 'dataatunsoed',
+                  onTap: () {},
                 ),
                 MainContentWidget(
                   items: 'layananunsoed',
                   text: 'Layanan\nUnsoed',
+                  onTap: () {},
                 ),
                 MainContentWidget(
                   items: 'infoukm',
                   text: 'Info UKM',
+                  onTap: () {},
                 ),
                 MainContentWidget(
                   items: 'komik',
                   text: 'Komik',
+                  onTap: () {
+                    Get.to(() => const HomePage());
+                  },
                 ),
                 MainContentWidget(
                   text: 'Media\nPartner',
                   items: 'mediapartner',
+                  onTap: () {
+                    Get.to(() => const RulesMediaView());
+                  },
                 ),
               ],
             )
@@ -257,21 +271,22 @@ class WidgetConnectionFailed extends StatelessWidget {
 /// column
 
 class MainContentWidget extends StatelessWidget {
-  const MainContentWidget({
+  final String items;
+  final String text;
+  VoidCallback onTap;
+  MainContentWidget({
     Key? key,
+    required this.onTap,
     required this.text,
     required this.items,
   }) : super(key: key);
-
-  final String items;
-  final String text;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         GestureDetector(
-          onTap: () {},
+          onTap: onTap,
           child: SizedBox(
             height: 60,
             width: 60,

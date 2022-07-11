@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(EmagzView());
-}
-
 class EmagzView extends StatefulWidget {
   const EmagzView({Key? key}) : super(key: key);
   @override
@@ -11,7 +7,6 @@ class EmagzView extends StatefulWidget {
 }
 
 class _EmagzViewState extends State<EmagzView> {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,10 +15,8 @@ class _EmagzViewState extends State<EmagzView> {
         primarySwatch: Colors.yellow,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title:Text("E-Magz")
-        ),
-      body: Column(
+        appBar: AppBar(title: const Text("E-Magz")),
+        body: Column(
           children: [
             Container(
               margin: const EdgeInsets.only(
