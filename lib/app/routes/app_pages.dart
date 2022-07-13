@@ -1,3 +1,5 @@
+
+import 'package:appsoed/app/views/views/ukm.dart';
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
@@ -96,11 +98,6 @@ class AppPages {
     GetPage(
       name: Routes.TILIK_FAKULTAS,
       page: () => const TilikFakultasView(),
-    ),
-    GetPage(
-      name: _Paths.KOMIK,
-      page: () => const KomikView(),
-      binding: KomikBinding(),
     ),
   ];
 }
