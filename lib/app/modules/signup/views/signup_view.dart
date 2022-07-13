@@ -70,13 +70,14 @@ class SignupView extends GetView<SignupController> {
                           obscureText: controller.isVisible.value,
                           decoration: InputDecoration(
                             suffixIcon: IconButton(
-                                onPressed: () {
-                                  controller.isVisible.value =
-                                      !controller.isVisible.value;
-                                },
-                                icon: Icon(controller.isVisible.value
-                                    ? Icons.visibility
-                                    : Icons.visibility_off)),
+                              onPressed: () {
+                                controller.isVisible.value =
+                                    !controller.isVisible.value;
+                              },
+                              icon: Icon(controller.isVisible.value
+                                  ? Icons.visibility
+                                  : Icons.visibility_off),
+                            ),
                             labelText: 'Password',
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),

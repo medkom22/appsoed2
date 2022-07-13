@@ -47,32 +47,6 @@ class _HomePageState extends State<HomePage> {
               .toList(),
         ),
       ),
-
-      // body: Center(
-      //   child: ListView.builder(
-      //     shrinkWrap: true,
-      //     itemCount: imgList.length,
-      //     itemBuilder: (context, index) {
-      //       return GestureDetector(
-      //         onTap: () {
-      //           Navigator.of(context).push(
-      //               MaterialPageRoute(builder: (context) => const PageSatu()));
-      //           MainAxisAlignment.center;
-      //         },
-      //         child: Row(
-      //           children: <Widget>[
-      //             Container(
-      //               width: 300,
-      //               height: 300,
-      //               alignment: Alignment.center,
-      //               child: Image.asset(imgList[index]),
-      //             ),
-      //           ],
-      //         ),
-      //       );
-      //     },
-      //   ),
-      // ),
     );
   }
 }

@@ -1,10 +1,12 @@
-import 'package:appsoed/app/views/views/komik_home_page.dart';
+
 import 'package:appsoed/app/views/views/ukm.dart';
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/home/views/notification_view.dart';
+import '../modules/komik/bindings/komik_binding.dart';
+import '../modules/komik/views/komik_view.dart';
 import '../modules/news_app/bindings/news_app_binding.dart';
 import '../modules/news_app/views/detail_news_view.dart';
 import '../modules/news_app/views/news_app_view.dart';
@@ -94,16 +96,8 @@ class AppPages {
       page: () => DetailNewsView(),
     ),
     GetPage(
-      name: Routes.KOMIK,
-      page: () => const HomePage(),
-    ),
-    GetPage(
       name: Routes.TILIK_FAKULTAS,
       page: () => const TilikFakultasView(),
-    ),
-    GetPage(
-      name: Routes.INFO_UKM_PAGE_SATU,
-      page: () => UKMView(),
     ),
   ];
 }
