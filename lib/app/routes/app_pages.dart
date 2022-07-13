@@ -1,4 +1,5 @@
 import 'package:appsoed/app/views/views/komik_home_page.dart';
+import 'package:appsoed/app/views/views/ukm.dart';
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
@@ -99,6 +100,10 @@ class AppPages {
     GetPage(
       name: Routes.TILIK_FAKULTAS,
       page: () => const TilikFakultasView(),
+    ),
+    GetPage(
+      name: Routes.INFO_UKM_PAGE_SATU,
+      page: () => UKMView(),
     ),
   ];
 }

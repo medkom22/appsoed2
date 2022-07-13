@@ -21,6 +21,7 @@ abstract class Routes {
   static const NOTIFICATION = _Paths.NOTIFICATION;
   static const KOMIK = _Paths.KOMIK;
   static const TILIK_FAKULTAS = _Paths.TILIK_FAKULTAS;
+  static const INFO_UKM_PAGE_SATU = _Paths.INFO_UKM_PAGE_SATU;
 }
 
 abstract class _Paths {
@@ -42,4 +43,5 @@ abstract class _Paths {
   static const NOTIFICATION = '/notification';
   static const KOMIK = '/komik';
   static const TILIK_FAKULTAS = '/tilik_fakultas';
+  static const INFO_UKM_PAGE_SATU = '/info_ukm_page_satu';
 }
