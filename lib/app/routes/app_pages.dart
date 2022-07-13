@@ -1,12 +1,11 @@
+import 'package:appsoed/app/modules/komik/views/detail_komik_view.dart';
+import 'package:appsoed/app/modules/komik/views/komik_view.dart';
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/home/views/notification_view.dart';
-import '../modules/info_ukm/bindings/info_ukm_binding.dart';
-import '../modules/info_ukm/views/info_ukm_view.dart';
 import '../modules/komik/bindings/komik_binding.dart';
-import '../modules/komik/views/komik_view.dart';
 import '../modules/news_app/bindings/news_app_binding.dart';
 import '../modules/news_app/views/detail_news_view.dart';
 import '../modules/news_app/views/news_app_view.dart';
@@ -24,7 +23,6 @@ import '../views/views/medpart_page_2.dart';
 import '../views/views/profile_kabinet_view.dart';
 import '../views/views/splash_screen_view.dart';
 import '../views/views/tilik_fakultas.dart';
-import '../views/views/ukm.dart';
 
 part 'app_routes.dart';
 
@@ -101,9 +99,13 @@ class AppPages {
       page: () => const TilikFakultasView(),
     ),
     GetPage(
-      name: _Paths.INFO_UKM,
-      page: () => const InfoUkmView(),
-      binding: InfoUkmBinding(),
+      name: Routes.KOMIK,
+      page: () => const KomikView(),
+      binding: KomikBinding(),
+    ),
+    GetPage(
+      name: Routes.DETAIL_KOMIK,
+      page: () => DetailKomikView(),
     ),
   ];
 }
