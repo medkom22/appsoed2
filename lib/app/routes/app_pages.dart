@@ -22,7 +22,6 @@ import '../views/views/faq_view.dart';
 import '../views/views/medpart_page_2.dart';
 import '../views/views/profile_kabinet_view.dart';
 import '../views/views/splash_screen_view.dart';
-import '../views/views/tilik_fakultas.dart';
 
 part 'app_routes.dart';
 
@@ -93,10 +92,6 @@ class AppPages {
     GetPage(
       name: Routes.DETAIL_NEWS,
       page: () => DetailNewsView(),
-    ),
-    GetPage(
-      name: Routes.TILIK_FAKULTAS,
-      page: () => const TilikFakultasView(),
     ),
     GetPage(
       name: Routes.KOMIK,

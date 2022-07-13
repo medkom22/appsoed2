@@ -1,4 +1,3 @@
-import 'package:appsoed/app/views/views/faperta.dart';
 import 'package:badges/badges.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -164,14 +163,7 @@ class WidgetConnectionSuccess extends StatelessWidget {
                 MainContentWidget(
                   items: 'emagz',
                   text: 'E-Magz',
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const FapertaView(),
-                      ),
-                    );
-                  },
+                  onTap: () {},
                 ),
                 MainContentWidget(
                   items: 'tilikfakultas',
