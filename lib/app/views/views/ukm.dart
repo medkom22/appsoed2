@@ -53,11 +53,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/umaka.png",
                   ),
+                  height: 200,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 200,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -127,11 +127,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/sef.png",
                   ),
+                  height: 200,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 200,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -201,11 +201,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/ukki.jpg",
                   ),
+                  height: 200,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 200,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -275,11 +275,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/srt.png",
                   ),
+                  height: 200,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 200,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -349,11 +349,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/bkc.jpg",
                   ),
+                  height: 200,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 200,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -423,11 +423,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/usman.png",
                   ),
+                  height: 200,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 200,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -499,11 +499,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/seigokan.jpg",
                   ),
+                  height: 200,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 200,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -566,11 +566,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/taekwondo.jpg",
                   ),
+                  height: 200,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 200,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -633,11 +633,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/voli.jpg",
                   ),
+                  height: 200,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 200,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -700,11 +700,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/bultangkis.png",
                   ),
+                  height: 200,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 200,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -766,11 +766,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/gbs.png",
                   ),
+                  height: 180,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 180,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -842,11 +842,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/racana.png",
                   ),
+                  height: 180,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 180,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -908,11 +908,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/psht.jpg",
                   ),
+                  height: 200,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 200,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -983,11 +983,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/pmi.png",
                   ),
+                  height: 200,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 200,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -1059,11 +1059,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/merpatiputih.jpg",
                   ),
+                  height: 200,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 200,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -1126,11 +1126,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/menwa.png",
                   ),
+                  height: 180,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 180,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -1201,11 +1201,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/ubb.png",
                   ),
+                  height: 200,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 200,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -1276,11 +1276,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/pmkp.jpg",
                   ),
+                  height: 170,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 170,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -1351,11 +1351,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/sketsa.jpg",
                   ),
+                  height: 180,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 180,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -1427,11 +1427,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/uplmpa.jpg",
                   ),
+                  height: 180,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 180,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -1502,11 +1502,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/catur.jpg",
                   ),
+                  height: 180,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 180,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -1568,11 +1568,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/panjattebing.jpg",
                   ),
+                  height: 200,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 200,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -1634,11 +1634,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/marchingband.png",
                   ),
+                  height: 180,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 180,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -1700,11 +1700,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/ukmpr.png",
                   ),
+                  height: 200,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 200,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -1773,11 +1773,11 @@ class _UKMViewState extends State<UKMView> {
                   image: const AssetImage(
                     "assets/kempo.jpg",
                   ),
+                  height: 200,
+                  fit: BoxFit.contain,
                   child: InkWell(
                     onTap: () {},
                   ),
-                  height: 200,
-                  fit: BoxFit.contain,
                 ),
               ],
             ),

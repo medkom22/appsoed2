@@ -196,7 +196,9 @@ class WidgetConnectionSuccess extends StatelessWidget {
                 MainContentWidget(
                   items: 'infoukm',
                   text: 'Info UKM',
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(Routes.INFO_UKM);
+                  },
                 ),
                 MainContentWidget(
                   items: 'komik',
