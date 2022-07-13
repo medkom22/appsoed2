@@ -1,5 +1,6 @@
-import 'package:appsoed/app/widgets/back_button_widget.dart';
 import 'package:flutter/material.dart';
+
+import '../../widgets/back_button_widget.dart';
 
 class RulesMediaView extends StatelessWidget {
   const RulesMediaView({Key? key}) : super(key: key);

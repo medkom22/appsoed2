@@ -1,6 +1,7 @@
-import 'package:appsoed/app/modules/komik/model/komik_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../model/komik_model.dart';
 
 class DetailKomikView extends StatelessWidget {
   KomikModel data = Get.arguments;

@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 class DetailNewsView extends StatelessWidget {
   DetailNewsView({Key? key}) : super(key: key);
-  Map<String, dynamic> data = Get.parameters;
+  final Map<String, dynamic> data = Get.parameters;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,5 +1,3 @@
-import 'package:appsoed/app/modules/news_app/controllers/news_app_controller.dart';
-import 'package:appsoed/app/modules/news_app/views/news_app_view.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,6 +6,8 @@ import '../../../auth/auth_controller.dart';
 import '../../../views/views/gensoed_merch_view.dart';
 import '../../../views/views/live_chat_widget.dart';
 import '../../../widgets/home_widget.dart';
+import '../../news_app/controllers/news_app_controller.dart';
+import '../../news_app/views/news_app_view.dart';
 import '../../user_profile/views/user_profile_view.dart';
 import '../controllers/home_controller.dart';
 

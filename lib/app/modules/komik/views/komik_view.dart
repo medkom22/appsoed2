@@ -1,9 +1,9 @@
-import 'package:appsoed/app/modules/komik/model/komik_model.dart';
-import 'package:appsoed/app/modules/komik/views/detail_komik_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controllers/komik_controller.dart';
+import '../model/komik_model.dart';
+import 'detail_komik_view.dart';
 
 class KomikView extends GetView<KomikController> {
   const KomikView({Key? key}) : super(key: key);

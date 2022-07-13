@@ -33,7 +33,6 @@ class HomeWidget extends StatelessWidget {
       stream: controller.connectivity.onConnectivityChanged,
       builder: (context, snapshot) {
         ConnectivityResult? data = snapshot.data;
-
         if (data == null || data == ConnectivityResult.none) {
           return const WidgetConnectionFailed();
         } else {
@@ -48,8 +47,3 @@ class HomeWidget extends StatelessWidget {
     );
   }
 }
-
-/// I have a carousel slider that is wrapped in a column, and the column is wrapped in a
-/// singlechildscrollview, and the singlechildscrollview is wrapped in a safearea
-
-

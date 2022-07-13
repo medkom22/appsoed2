@@ -1,8 +1,9 @@
 import 'dart:convert';
 
-import 'package:appsoed/app/modules/komik/model/komik_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+
+import '../model/komik_model.dart';
 
 class KomikController extends GetxController {
   Future getDataLocal(BuildContext context) async {
