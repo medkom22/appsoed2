@@ -1,3 +1,4 @@
+import 'package:appsoed/app/views/views/media_partner_view.dart';
 import 'package:get/get.dart';
 
 import '../modules/home/bindings/home_binding.dart';
@@ -101,6 +102,10 @@ class AppPages {
     GetPage(
       name: Routes.DETAIL_KOMIK,
       page: () => DetailKomikView(),
+    ),
+    GetPage(
+      name: Routes.MEDIA_PARTNER,
+      page: () => const MediaPartnerView(),
     ),
   ];
 }

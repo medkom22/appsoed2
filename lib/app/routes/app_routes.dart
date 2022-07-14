@@ -22,6 +22,7 @@ abstract class Routes {
   static const KOMIK = _Paths.KOMIK;
   static const DETAIL_KOMIK = _Paths.DETAIL_KOMIK;
   static const INFO_UKM = _Paths.INFO_UKM;
+  static const MEDIA_PARTNER = _Paths.MEDIA_PARTNER;
 }
 
 abstract class _Paths {
@@ -44,4 +45,5 @@ abstract class _Paths {
   static const KOMIK = '/komik';
   static const DETAIL_KOMIK = '/detail-komik';
   static const INFO_UKM = '/info-ukm';
+  static const MEDIA_PARTNER = '/media-partner';
 }

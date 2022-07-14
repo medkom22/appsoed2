@@ -1,4 +1,3 @@
-import 'package:badges/badges.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -7,7 +6,6 @@ import 'package:lottie/lottie.dart';
 import '../auth/auth_controller.dart';
 import '../modules/home/controllers/home_controller.dart';
 import '../routes/app_pages.dart';
-import '../views/views/medpart_page_2.dart';
 import 'content_widget.dart';
 
 // TODO: CONNECTION FAILED
@@ -67,26 +65,14 @@ class WidgetConnectionSuccess extends StatelessWidget {
                       fontSize: 18,
                     ),
                   ),
-                  Badge(
-                    alignment: Alignment.topRight,
-                    shape: BadgeShape.circle,
-                    badgeContent: const Text(
-                      '0',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    badgeColor: const Color(0xffF8A435),
-                    child: GestureDetector(
-                      onTap: () async {
-                        Get.toNamed(Routes.NOTIFICATION_VIEW_HOME);
-                      },
-                      child: Image.asset(
-                        'assets/Icon-notifikasi.png',
-                        width: 30,
-                        height: 30,
-                      ),
+                  GestureDetector(
+                    onTap: () async {
+                      Get.toNamed(Routes.NOTIFICATION_VIEW_HOME);
+                    },
+                    child: Image.asset(
+                      'assets/Icon-notifikasi.png',
+                      width: 30,
+                      height: 30,
                     ),
                   )
                 ],
@@ -203,9 +189,7 @@ class WidgetConnectionSuccess extends StatelessWidget {
                   text: 'Media\nPartner',
                   items: 'mediapartner',
                   onTap: () {
-                    Get.to(
-                      () => const RulesMediaView(),
-                    );
+                    Get.toNamed(Routes.MEDIA_PARTNER);
                   },
                 ),
               ],
