@@ -1,3 +1,6 @@
+import 'package:appsoed/app/modules/info_ukm/views/info_ukm_view.dart';
+import 'package:appsoed/app/modules/komik/views/detail_komik_view.dart';
+import 'package:appsoed/app/modules/komik/views/komik_view.dart';
 import 'package:appsoed/app/views/views/media_partner_view.dart';
 import 'package:get/get.dart';
 
@@ -106,6 +109,10 @@ class AppPages {
     GetPage(
       name: Routes.MEDIA_PARTNER,
       page: () => const MediaPartnerView(),
+    ),
+    GetPage(
+      name: Routes.INFO_UKM,
+      page: () => const InfoUkmView(),
     ),
   ];
 }
