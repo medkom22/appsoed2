@@ -1,3 +1,4 @@
+import 'package:appsoed/app/modules/info_ukm/views/info_ukm_view.dart';
 import 'package:appsoed/app/modules/komik/views/detail_komik_view.dart';
 import 'package:appsoed/app/modules/komik/views/komik_view.dart';
 import 'package:get/get.dart';
@@ -106,6 +107,10 @@ class AppPages {
     GetPage(
       name: Routes.DETAIL_KOMIK,
       page: () => DetailKomikView(),
+    ),
+    GetPage(
+      name: Routes.INFO_UKM,
+      page: () => InfoUkmView(),
     ),
   ];
 }
