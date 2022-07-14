@@ -53,7 +53,7 @@ class InfoUkmView extends GetView<InfoUkmController> {
                                 image: AssetImage(
                                   model.image.toString(),
                                 ),
-                                height: 200,
+                                height: 180,
                                 fit: BoxFit.contain,
                                 child: InkWell(
                                   onTap: () {},
