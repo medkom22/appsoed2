@@ -11,7 +11,16 @@ class KomikView extends GetView<KomikController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('KomikView'),
+        title: const Text(
+          'Komik',
+          style: TextStyle(
+            fontSize: 19,
+            fontWeight: FontWeight.bold,
+            color: Color(0xff373737),
+          ),
+        ),
+        elevation: 0,
+        backgroundColor: Colors.white,
         centerTitle: true,
       ),
       body: FutureBuilder(

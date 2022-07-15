@@ -12,6 +12,7 @@ class ProfileKabinetView extends GetView {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Stack(
           children: [
@@ -41,7 +42,7 @@ class ProfileKabinetView extends GetView {
                 borderRadius: const BorderRadius.vertical(
                   top: Radius.circular(30),
                 ),
-                color: Colors.lightGreen[50],
+                color: Colors.white,
               ),
               margin: const EdgeInsets.only(
                 top: 150,
