@@ -154,7 +154,9 @@ class WidgetConnectionSuccess extends StatelessWidget {
                 MainContentWidget(
                   items: 'tilikfakultas',
                   text: 'Tilik\nFakultas',
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(Routes.FAKULTAS);
+                  },
                 ),
                 MainContentWidget(
                   items: 'binggo',

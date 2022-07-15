@@ -1,12 +1,12 @@
-import 'package:appsoed/app/modules/info_ukm/views/info_ukm_view.dart';
-import 'package:appsoed/app/modules/komik/views/detail_komik_view.dart';
-import 'package:appsoed/app/modules/komik/views/komik_view.dart';
-import 'package:appsoed/app/views/views/media_partner_view.dart';
+import 'package:appsoed/app/modules/fakultas/views/detail_fakultas_view.dart';
 import 'package:get/get.dart';
 
+import '../modules/fakultas/bindings/fakultas_binding.dart';
+import '../modules/fakultas/views/fakultas_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/home/views/notification_view.dart';
+import '../modules/info_ukm/views/info_ukm_view.dart';
 import '../modules/komik/bindings/komik_binding.dart';
 import '../modules/komik/views/detail_komik_view.dart';
 import '../modules/komik/views/komik_view.dart';
@@ -23,6 +23,7 @@ import '../modules/user_profile/views/user_profile_view.dart';
 import '../views/views/about_appsoed_view.dart';
 import '../views/views/appsoed_login_view.dart';
 import '../views/views/faq_view.dart';
+import '../views/views/media_partner_view.dart';
 import '../views/views/medpart_page_2.dart';
 import '../views/views/profile_kabinet_view.dart';
 import '../views/views/splash_screen_view.dart';
@@ -113,6 +114,15 @@ class AppPages {
     GetPage(
       name: Routes.INFO_UKM,
       page: () => const InfoUkmView(),
+    ),
+    GetPage(
+      name: _Paths.FAKULTAS,
+      page: () => const FakultasView(),
+      binding: FakultasBinding(),
+    ),
+    GetPage(
+      name: Routes.DETAIL_FAKULTAS,
+      page: () => DetailFakultasView(),
     ),
   ];
 }
