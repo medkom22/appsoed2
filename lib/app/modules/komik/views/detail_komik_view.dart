@@ -11,7 +11,16 @@ class DetailKomikView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('DetailKomikView'),
+        title: const Text(
+          'Komik',
+          style: TextStyle(
+            fontSize: 19,
+            fontWeight: FontWeight.bold,
+            color: Color(0xff373737),
+          ),
+        ),
+        elevation: 0,
+        backgroundColor: Colors.white,
         centerTitle: true,
       ),
       body: ListView(

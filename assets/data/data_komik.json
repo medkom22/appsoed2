@@ -30,6 +30,18 @@
         "assets/3_3.png",
         "assets/3_4.png"
       ]
+    },
+    {
+      "id": 4,
+      "image": "assets/cover4.png",
+      "list_image": [
+        "assets/4_1.png",
+        "assets/4_2.png",
+        "assets/4_3.png",
+        "assets/4_4.png",
+        "assets/4_5.png"
+      ]
     }
+    
   ]
 }
