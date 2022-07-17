@@ -1,6 +1,8 @@
 import 'package:appsoed/app/modules/fakultas/model/fakultas_model.dart';
+import 'package:appsoed/app/views/views/profile_kabinet_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+//import '../../provider/launcer_provider.dart';
 //import 'package:appsoed/back_button_widget.dart';
 
 /*void main(){
@@ -98,7 +100,7 @@ class DetailFakultasView extends GetView {
 
                           //BARIS MEDIA SOSIAL FAKULTAS
                           Container(
-                            margin: const EdgeInsets.only(left:26),
+                            margin:  EdgeInsets.only(top: 28, bottom: 50),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -111,10 +113,106 @@ class DetailFakultasView extends GetView {
                                 ),
                                 const SizedBox(
                                     height: 10,
-                                  )
+                                  ),
+                                Wrap(
+                                  spacing: 8,
+                                  children: [
+                                    SocialWidget(
+                                      image: 'Instagram', 
+                                      link: '${fakultas.instagram}'
+                                    ),
+                                    SocialWidget(
+                                      image: 'YouTube', 
+                                      link: ''
+                                    ),
+                                    SocialWidget(
+                                      image: 'Line', 
+                                      link: ''
+                                    ),
+                                    SocialWidget(
+                                      image: 'Twitter', 
+                                      link: ''
+                                    ),
+                                     SocialWidget(
+                                      image: 'Spotify', 
+                                      link: ''
+                                    ),
+                                     SocialWidget(
+                                      image: 'TikTok', 
+                                      link: ''
+                                    ),
+                                    SocialWidget(
+                                      image: 'Website', 
+                                      link: '${fakultas.website}'
+                                    ),
+                                  ],
+                                )
+                              ],
+                            )
+                          ),
+                          //END OF MEDIA SOSIAL FAKULTAS
+
+                          //LOKASI FAKULTAS
+                          Container(
+                            margin: 
+                              const EdgeInsets.only(top: 28, bottom: 50),
+                            child : Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Lokasi',
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Container(
+                                  width: double.infinity,
+                                  height: 300,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      fit: BoxFit.contain,
+                                      image: AssetImage(
+                                        fakultas.imageLocation.toString(),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )
+                          ),
+                          //END OF LOKASI FAKULTAS
+
+                          //GALERI FAKULATAS
+                          Container(
+                            margin: 
+                              const EdgeInsets.only(top: 28, bottom: 50),
+                            child : Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Galeri',
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Container(
+                                  width: double.infinity,
+                                  height: 300,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      fit: BoxFit.contain,
+                                      image: AssetImage(
+                                        fakultas.gallery.toString(),
+                                      ),
+                                    ),
+                                  ),
+                                ),
                               ],
                             )
                           )
+                          //END OF GALERI FAKULTAS
                         ],
                       ),
                     )
@@ -147,3 +245,29 @@ class DetailFakultasView extends GetView {
     );
   }
 }
+
+class SocialWidget extends StatelessWidget {
+  final String image;
+  final String link;
+  const SocialWidget({
+    Key? key,
+    required this.image,
+    required this.link,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      /*onTap: () {
+        LauncherProvider.launcherURL(link);
+      },*/
+      child: Image.asset(
+        'assets/$image.png',
+        width: 40,
+        height: 40,
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+}
+
