@@ -56,7 +56,7 @@ class FakultasView extends GetView<FakultasController> {
                 ),
                 //NOTE : BUTTON FAKULTAS
                 child: ListView.builder(
-                padding: EdgeInsets.only(top: 20, left: 13, right: 13),
+                padding: EdgeInsets.only(top: 20, left: 13, right: 13, bottom: 20),
                  shrinkWrap: true,
                   itemCount: dataFakultas.length,
                   itemBuilder: (BuildContext context, int index) {
