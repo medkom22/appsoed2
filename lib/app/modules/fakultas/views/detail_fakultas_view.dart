@@ -166,18 +166,23 @@ class DetailFakultasView extends GetView {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                Container(
-                                  width: double.infinity,
-                                  height: 300,
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      fit: BoxFit.contain,
-                                      image: AssetImage(
-                                        fakultas.imageLocation.toString(),
+                                GestureDetector(
+                                  onTap: () {
+                                      LauncherProvider.launcherURL(${fakultas.lokasi});
+                                    },
+                                    child: Container(
+                                       width: double.infinity,
+                                       height: 300,
+                                       decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          fit: BoxFit.contain,
+                                          image: AssetImage(
+                                            fakultas.imageLocation.toString(),
+                                          ),
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ),
+                                )
                               ],
                             )
                           ),
