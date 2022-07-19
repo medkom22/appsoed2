@@ -5,7 +5,7 @@ import '../../../widgets/back_button_widget.dart';
 
 class NotificationView extends StatefulWidget {
   const NotificationView({Key? key}) : super(key: key);
-  static const String oneSignalAppId = 'ef65b75d-10bd-4486-b041-69b4dab714f2';
+  static const String oneSignalAppId = 'd83fd836-b172-482f-9989-08b2909d1c1b';
 
   @override
   State<NotificationView> createState() => _NotificationViewState();
@@ -31,6 +31,7 @@ class _NotificationViewState extends State<NotificationView> {
       body: SafeArea(
         child: Column(
           children: [
+            ///NOTE: Header Notification
             Container(
               margin: const EdgeInsets.only(
                 top: 24,

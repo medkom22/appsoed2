@@ -117,13 +117,14 @@ class SigninView extends GetView<SigninController> {
                 ),
               ),
               //NOTE: END TEXTFIELD AND FORGOT PASSWORD =========
-
               // NOTE: BUTTON SIGN-IN
               MainButtonWidget(
                   text: 'Sign In',
                   navigator: () {
                     authController.signInUser(
-                        controller.emailC.text, controller.passC.text);
+                      controller.emailC.text,
+                      controller.passC.text,
+                    );
                   }),
               // NOTE: END BUTTON SIGN-IN =========
 

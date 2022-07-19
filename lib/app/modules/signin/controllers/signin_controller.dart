@@ -6,4 +6,12 @@ class SigninController extends GetxController {
   TextEditingController passC = TextEditingController();
 
   var isPassword = true.obs;
+
+  //dispose controller
+  @override
+  void dispose() {
+    super.dispose();
+    emailC.dispose();
+    passC.dispose();
+  }
 }

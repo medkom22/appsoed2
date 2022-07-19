@@ -11,4 +11,12 @@ class SignupController extends GetxController {
     passC.text = '';
     super.onClose();
   }
+
+  @override
+  void dispose() {
+    super.dispose();
+    //dispose controller
+    emailC.dispose();
+    passC.dispose();
+  }
 }

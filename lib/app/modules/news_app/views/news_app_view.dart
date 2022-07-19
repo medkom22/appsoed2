@@ -1,4 +1,4 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -8,52 +8,116 @@ class NewsAppView extends GetView<NewsAppController> {
   const NewsAppView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: NestedScrollView(
-        headerSliverBuilder: (context, innerBoxIsScrolled) => [
-          SliverAppBar(
-            floating: true,
-            pinned: true,
-            elevation: 0,
-            expandedHeight: 200,
-            backgroundColor: Colors.white,
-            flexibleSpace: FlexibleSpaceBar(
-              title: const Text(
-                'Titik Pijar News',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Titik Pijar News'),
+          centerTitle: true,
+          foregroundColor: Colors.black,
+          backgroundColor: Colors.white,
+          bottom: const TabBar(
+            labelColor: Colors.black,
+            tabs: [
+              Tab(
+                text: 'Press Release',
               ),
-              centerTitle: true,
-              background: Image.network(
-                'https://images.unsplash.com/photo-1479920252409-6e3d8e8d4866?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-                fit: BoxFit.cover,
+              Tab(
+                text: 'Weekly Report',
               ),
-            ),
+            ],
           ),
-        ],
-        body: StreamBuilder<QuerySnapshot>(
-            builder:
-                (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-              final data = snapshot.data;
-              if (snapshot.connectionState == ConnectionState.active) {
-                List items = [];
-                return ListView.builder(
-                  itemCount: items.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Text(snapshot.data!.docs.toString());
-                  },
-                );
-              } else {
-                return const Center(
-                  child: CircularProgressIndicator(),
-                );
-              }
-            },
-            stream: controller.documentStream),
+        ),
+        body: SafeArea(
+          child: TabBarView(
+            children: [
+              NewsCustomWidget(controller: controller.getPress()),
+              NewsCustomWidget(controller: controller.getWeekly()),
+            ],
+          ),
+        ),
       ),
+    );
+  }
+}
+
+//TODO: WIDGET FOR NEWS APP
+class NewsCustomWidget extends StatelessWidget {
+  final Future controller;
+  const NewsCustomWidget({
+    Key? key,
+    required this.controller,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder(
+      future: controller,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        if (snapshot.data == null ||
+            snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        } else {
+          return ListView.separated(
+            separatorBuilder: (context, index) => const SizedBox(
+              height: 16,
+            ),
+            itemCount: snapshot.data.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 4,
+                      child: CachedNetworkImage(
+                        imageUrl: snapshot.data[index]['image'],
+                        height: 100,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 12,
+                    ),
+                    Expanded(
+                      flex: 6,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            snapshot.data[index]['title'],
+                          ),
+                          const SizedBox(
+                            height: 4,
+                          ),
+                          Row(
+                            children: [
+                              const Icon(
+                                Icons.access_time,
+                                color: Colors.amber,
+                                size: 14,
+                              ),
+                              Text(
+                                snapshot.data[index]['tanggal'],
+                                style: const TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
+          );
+        }
+      },
     );
   }
 }

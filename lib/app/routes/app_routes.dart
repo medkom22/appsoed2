@@ -19,6 +19,12 @@ abstract class Routes {
   static const NEWS_APP = _Paths.NEWS_APP;
   static const DETAIL_NEWS = _Paths.DETAIL_NEWS;
   static const NOTIFICATION = _Paths.NOTIFICATION;
+  static const KOMIK = _Paths.KOMIK;
+  static const DETAIL_KOMIK = _Paths.DETAIL_KOMIK;
+  static const INFO_UKM = _Paths.INFO_UKM;
+  static const MEDIA_PARTNER = _Paths.MEDIA_PARTNER;
+  static const FAKULTAS = _Paths.FAKULTAS;
+  static const DETAIL_FAKULTAS = _Paths.DETAIL_FAKULTAS;
 }
 
 abstract class _Paths {
@@ -38,4 +44,10 @@ abstract class _Paths {
   static const NEWS_APP = '/news-app';
   static const DETAIL_NEWS = '/detail-news';
   static const NOTIFICATION = '/notification';
+  static const KOMIK = '/komik';
+  static const DETAIL_KOMIK = '/detail-komik';
+  static const INFO_UKM = '/info-ukm';
+  static const MEDIA_PARTNER = '/media-partner';
+  static const FAKULTAS = '/fakultas';
+  static const DETAIL_FAKULTAS = '/detail-fakultas';
 }

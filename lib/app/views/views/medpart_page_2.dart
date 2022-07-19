@@ -1,5 +1,6 @@
-import 'package:appsoed/app/widgets/back_button_widget.dart';
 import 'package:flutter/material.dart';
+
+import '../../widgets/back_button_widget.dart';
 
 class RulesMediaView extends StatelessWidget {
   const RulesMediaView({Key? key}) : super(key: key);
@@ -14,17 +15,25 @@ class RulesMediaView extends StatelessWidget {
             const SizedBox(
               height: 24,
             ),
-            const Padding(
-              padding: EdgeInsets.only(top: 24, left: 24),
-              child: BackButtonWidget(),
-            ),
-            const Center(
-              child: Text(
-                'Rules Media Partner BEM Unsoed 2022',
-                style: TextStyle(
-                  fontSize: 19,
-                  fontWeight: FontWeight.bold,
-                ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const BackButtonWidget(),
+                  const Center(
+                    child: Text(
+                      'Rules Media Partner\nBEM Unsoed 2022',
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 19,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Container(),
+                ],
               ),
             ),
             const SizedBox(
