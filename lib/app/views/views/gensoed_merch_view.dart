@@ -42,24 +42,64 @@ class GensoedMerchView extends GetView {
                 ),
                 children: const <Widget>[
                   GensoedItemWidget(
-                    imageUrl: 'jaket_gensoed',
-                    item: 'Jaket Gensoed',
+                    imageUrl: 'paket1',
+                    item: 'Paket 1',
+                    price: '270.000',
+                  ),
+                  GensoedItemWidget(
+                    imageUrl: 'paket2',
+                    item: 'Paket 2',
+                    price: '220.000',
+                  ),
+                  GensoedItemWidget(
+                    imageUrl: 'paket3',
+                    item: 'Paket 3',
                     price: '130.000',
                   ),
                   GensoedItemWidget(
-                    imageUrl: 'paket_berlima',
-                    item: 'Paket ber-5',
-                    price: '625.000',
+                    imageUrl: 'paket4',
+                    item: 'Paket Ber-3',
+                    price: '445.000',
                   ),
                   GensoedItemWidget(
-                    imageUrl: 'paket_bertiga',
-                    item: 'Paket ber-3',
-                    price: '380.000',
+                    imageUrl: 'paket5',
+                    item: 'Paket 5',
+                    price: '250.000',
+                  ),
+                  GensoedItemWidget(
+                    imageUrl: 'paket6',
+                    item: 'Paket 6',
+                    price: '205.000',
+                  ),
+                  GensoedItemWidget(
+                    imageUrl: 'kaos',
+                    item: 'Kaos/T-shirt',
+                    price: '75.000-80.000',
+                  ),
+                  GensoedItemWidget(
+                    imageUrl: 'request',
+                    item: 'CO Request Lengan Panjang',
+                    price: '5.000',
+                  ),
+                  GensoedItemWidget(
+                    imageUrl: 'jaket_gensoed',
+                    item: 'Jaket Gensoed',
+                    price: '155.000',
+                  ),
+                  GensoedItemWidget(
+                    imageUrl: 'stiker',
+                    item: 'Stiker Gensoed',
+                    price: '4.000',
+                  ),
+                  GensoedItemWidget(
+                    imageUrl: 'ganci',
+                    item: 'Gantungan Kunci Gensoed',
+                    price: '8.000-10.000',
                   ),
                   GensoedItemWidget(
                     imageUrl: 'totebag',
                     item: 'Totebag Gensoed',
-                    price: '30.000',
+                    price: '60.000',
                   ),
                 ],
               ),
