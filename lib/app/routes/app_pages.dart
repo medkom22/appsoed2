@@ -28,6 +28,7 @@ import '../views/views/media_partner_view.dart';
 import '../views/views/medpart_page_2.dart';
 import '../views/views/profile_kabinet_view.dart';
 import '../views/views/splash_screen_view.dart';
+import '../modules/layanan_unsoed/screens_layanan/home_layanan.dart';
 
 part 'app_routes.dart';
 
@@ -122,9 +123,14 @@ class AppPages {
       page: () => DetailFakultasView(),
     ),
     GetPage(
+<<<<<<< Updated upstream
       name: _Paths.TODOLIST,
       page: () => const TodolistView(),
       binding: TodolistBinding(),
+=======
+      name: Routes.LAYANAN_UNSOED,
+      page: () => const LayananUnsoed(),
+>>>>>>> Stashed changes
     ),
   ];
 }

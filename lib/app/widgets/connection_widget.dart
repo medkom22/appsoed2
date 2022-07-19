@@ -164,7 +164,9 @@ class WidgetConnectionSuccess extends StatelessWidget {
                 MainContentWidget(
                   items: 'layananunsoed',
                   text: 'Layanan\nUnsoed',
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(Routes.LAYANAN_UNSOED);
+                  },
                 ),
                 MainContentWidget(
                   items: 'infoukm',
