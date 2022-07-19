@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../../provider/launcer_provider.dart';
 import '../../widgets/back_button_widget.dart';
+import '../../widgets/social_widget.dart';
 
 /// A class that displays the profile of the BEM Unsoed Medkom.
 
@@ -38,8 +39,8 @@ class ProfileKabinetView extends GetView {
 
             // NOTE: white background containing content
             Container(
-              decoration: BoxDecoration(
-                borderRadius: const BorderRadius.vertical(
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.vertical(
                   top: Radius.circular(30),
                 ),
                 color: Colors.white,
@@ -226,27 +227,3 @@ class ProfileKabinetView extends GetView {
 /// This class is a stateless widget that takes in an image and a link and returns a GestureDetector
 /// that launches the link when tapped
 
-class SocialWidget extends StatelessWidget {
-  final String image;
-  final String link;
-  const SocialWidget({
-    Key? key,
-    required this.image,
-    required this.link,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        LauncherProvider.launcherURL(link);
-      },
-      child: Image.asset(
-        'assets/$image.png',
-        width: 40,
-        height: 40,
-        fit: BoxFit.cover,
-      ),
-    );
-  }
-}
