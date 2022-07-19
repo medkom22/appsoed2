@@ -11,7 +11,6 @@ import '../modules/komik/bindings/komik_binding.dart';
 import '../modules/komik/views/detail_komik_view.dart';
 import '../modules/komik/views/komik_view.dart';
 import '../modules/news_app/bindings/news_app_binding.dart';
-import '../modules/news_app/views/detail_news_view.dart';
 import '../modules/news_app/views/news_app_view.dart';
 import '../modules/signin/bindings/signin_binding.dart';
 import '../modules/signin/views/forgot_password_view.dart';
@@ -94,10 +93,7 @@ class AppPages {
       page: () => const NewsAppView(),
       binding: NewsAppBinding(),
     ),
-    GetPage(
-      name: Routes.DETAIL_NEWS,
-      page: () => DetailNewsView(),
-    ),
+
     GetPage(
       name: Routes.KOMIK,
       page: () => const KomikView(),

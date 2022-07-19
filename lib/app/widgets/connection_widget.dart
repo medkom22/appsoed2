@@ -147,27 +147,13 @@ class WidgetConnectionSuccess extends StatelessWidget {
               children: [
                 //NOTE: DARI CONTENT WIDGET
                 MainContentWidget(
-                  items: 'emagz',
-                  text: 'E-Magz',
-                  onTap: () {},
-                ),
-                MainContentWidget(
                   items: 'tilikfakultas',
                   text: 'Tilik\nFakultas',
                   onTap: () {
                     Get.toNamed(Routes.FAKULTAS);
                   },
                 ),
-                MainContentWidget(
-                  items: 'binggo',
-                  text: 'Binggo',
-                  onTap: () {},
-                ),
-                MainContentWidget(
-                  text: 'Data At\nUnsoed',
-                  items: 'dataatunsoed',
-                  onTap: () {},
-                ),
+
                 MainContentWidget(
                   items: 'layananunsoed',
                   text: 'Layanan\nUnsoed',
