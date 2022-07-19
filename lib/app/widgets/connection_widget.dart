@@ -146,6 +146,13 @@ class WidgetConnectionSuccess extends StatelessWidget {
               spacing: 20,
               children: [
                 //NOTE: DARI CONTENT WIDGET
+                // MainContentWidget(
+                //   onTap: () {
+                //     Get.toNamed(Routes.TODOLIST);
+                //   },
+                //   text: 'To do list',
+                //   items: 'tilikfakultas',
+                // ),
                 MainContentWidget(
                   items: 'tilikfakultas',
                   text: 'Tilik\nFakultas',
@@ -181,7 +188,8 @@ class WidgetConnectionSuccess extends StatelessWidget {
                   },
                 ),
               ],
-            )
+            ),
+
             // NOTE: END MAIN CONTENT =============
           ],
         ),

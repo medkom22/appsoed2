@@ -1,7 +1,7 @@
-import 'package:appsoed/app/modules/fakultas/views/detail_fakultas_view.dart';
 import 'package:get/get.dart';
 
 import '../modules/fakultas/bindings/fakultas_binding.dart';
+import '../modules/fakultas/views/detail_fakultas_view.dart';
 import '../modules/fakultas/views/fakultas_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
@@ -17,6 +17,8 @@ import '../modules/signin/views/forgot_password_view.dart';
 import '../modules/signin/views/signin_view.dart';
 import '../modules/signup/bindings/signup_binding.dart';
 import '../modules/signup/views/signup_view.dart';
+import '../modules/todolist/bindings/todolist_binding.dart';
+import '../modules/todolist/views/todolist_view.dart';
 import '../modules/user_profile/bindings/user_profile_binding.dart';
 import '../modules/user_profile/views/user_profile_view.dart';
 import '../views/views/about_appsoed_view.dart';
@@ -93,7 +95,6 @@ class AppPages {
       page: () => const NewsAppView(),
       binding: NewsAppBinding(),
     ),
-
     GetPage(
       name: Routes.KOMIK,
       page: () => const KomikView(),
@@ -119,6 +120,11 @@ class AppPages {
     GetPage(
       name: Routes.DETAIL_FAKULTAS,
       page: () => DetailFakultasView(),
+    ),
+    GetPage(
+      name: _Paths.TODOLIST,
+      page: () => const TodolistView(),
+      binding: TodolistBinding(),
     ),
   ];
 }

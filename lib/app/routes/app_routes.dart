@@ -25,6 +25,7 @@ abstract class Routes {
   static const MEDIA_PARTNER = _Paths.MEDIA_PARTNER;
   static const FAKULTAS = _Paths.FAKULTAS;
   static const DETAIL_FAKULTAS = _Paths.DETAIL_FAKULTAS;
+  static const TODOLIST = _Paths.TODOLIST;
 }
 
 abstract class _Paths {
@@ -50,4 +51,5 @@ abstract class _Paths {
   static const MEDIA_PARTNER = '/media-partner';
   static const FAKULTAS = '/fakultas';
   static const DETAIL_FAKULTAS = '/detail-fakultas';
+  static const TODOLIST = '/todolist';
 }
