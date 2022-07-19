@@ -56,8 +56,8 @@ class DetailFakultasView extends GetView {
                     '${fakultas.title}',
                     textAlign: TextAlign.center,
                     style: const TextStyle(
-                      fontSize: 23,
-                      fontWeight: FontWeight.w600,
+                      fontSize: 19,
+                      fontWeight: FontWeight.bold,
                       color: Color(0xff373737),
                     ),
                   ),
@@ -82,8 +82,9 @@ class DetailFakultasView extends GetView {
                           textAlign: TextAlign.justify,
                           style: const TextStyle(
                             fontSize: 16,
-                            color: Color(0xff505050),
+                            color: Color(0xff373737),
                             wordSpacing: 10,
+                            fontWeight: FontWeight.w300,
                           ),
                         ),
                         //END OF DESKRIPSI FAKULTAS
@@ -99,6 +100,7 @@ class DetailFakultasView extends GetView {
                                 style: TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
+                                  color: Color(0xff373737),
                                 ),
                               ),
                               const SizedBox(
@@ -138,8 +140,9 @@ class DetailFakultasView extends GetView {
                               const Text(
                                 'Lokasi',
                                 style: TextStyle(
-                                  fontSize: 17,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.bold,
+                                  color: Color(0xff373737),
                                 ),
                               ),
                               GestureDetector(
@@ -174,8 +177,9 @@ class DetailFakultasView extends GetView {
                               const Text(
                                 'Galeri',
                                 style: TextStyle(
-                                  fontSize: 17,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.bold,
+                                  color: Color(0xff373737),
                                 ),
                               ),
                               SizedBox(
@@ -213,7 +217,7 @@ class DetailFakultasView extends GetView {
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
-                  fontSize: 18,
+                  fontSize: 20,
                 ),
               ),
               /*Padding(

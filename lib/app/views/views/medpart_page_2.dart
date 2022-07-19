@@ -29,6 +29,7 @@ class RulesMediaView extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 19,
                         fontWeight: FontWeight.bold,
+                        color: Color(0xff373737),
                       ),
                     ),
                   ),
@@ -55,7 +56,8 @@ class RulesMediaView extends StatelessWidget {
                 'Syarat dan Ketentuan : ',
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
-                  fontSize: 15,
+                  fontSize: 16,
+                  color: Color(0xff373737),
                 ),
               ),
             ),
@@ -71,6 +73,7 @@ class RulesMediaView extends StatelessWidget {
                 style: TextStyle(
                   fontWeight: FontWeight.w300,
                   fontSize: 14,
+                  color: Color(0xff373737),
                 ),
               ),
             ),
@@ -91,6 +94,7 @@ class RulesMediaView extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w300,
+                  color: Color(0xff373737),
                 ),
               ),
             ),
@@ -111,6 +115,7 @@ class RulesMediaView extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w300,
+                  color: Color(0xff373737),
                 ),
               ),
             ),
@@ -131,6 +136,7 @@ class RulesMediaView extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w300,
+                  color: Color(0xff373737),
                 ),
               ),
             ),
@@ -151,6 +157,7 @@ class RulesMediaView extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w300,
+                  color: Color(0xff373737),
                 ),
               ),
             ),

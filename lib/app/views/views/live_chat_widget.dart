@@ -25,6 +25,7 @@ class LiveChatWidget extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
+                    color: Color(0xff373737),
                   ),
                 ),
                 const SizedBox(
@@ -53,6 +54,7 @@ class LiveChatWidget extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w300,
+                      color: Color(0xff373737),
                     ),
                     textAlign: TextAlign.center,
                   ),

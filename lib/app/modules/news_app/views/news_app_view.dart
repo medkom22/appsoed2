@@ -14,12 +14,19 @@ class NewsAppView extends GetView<NewsAppController> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Titik Pijar News'),
+          title: const Text(
+            'Titik Pijar News',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Color(0xff373737),
+            ),
+          ),
           centerTitle: true,
-          foregroundColor: Colors.black,
+          foregroundColor: const Color(0xff373737),
           backgroundColor: Colors.white,
           bottom: const TabBar(
-            labelColor: Colors.black,
+            labelColor: Color(0xff373737),
             tabs: [
               Tab(
                 text: 'Press Release',
@@ -105,6 +112,9 @@ class NewsCustomWidget extends StatelessWidget {
                           children: [
                             Text(
                               snapshot.data![index]['title'],
+                              style: const TextStyle(
+                                color: Color(0xff373737),
+                              ),
                             ),
                             const SizedBox(
                               height: 4,

@@ -59,9 +59,9 @@ class ProfileKabinetView extends GetView {
                     'KABINET TITIK PIJAR',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: Color(0xff373737),
                     ),
                   ),
                   // NOTE: END TITLE CONTENT ========
@@ -77,7 +77,7 @@ class ProfileKabinetView extends GetView {
                           'Titik merupakan tempat berkumpul. Mendekap satu sama lain menjadi sebuah kesatuan yang tidak terpisahkan. Responsif dalam pergerakan, menebar kebaikan bagi sekitar, juga menemani langkah seraya tumbuh pada tiap derapnya.\n',
                           style: TextStyle(
                             fontSize: 16,
-                            color: Color(0xff505050),
+                            color: Color(0xff373737),
                             wordSpacing: 10,
                           ),
                         ),
@@ -85,7 +85,7 @@ class ProfileKabinetView extends GetView {
                           'Ketika semua cahaya-cahaya berada di satu titik, ia akan menghasilkan nyala yang amat terang. Saling berpijar menciptakan sinar penuh kehangatan yang menerangi dunia.\n',
                           style: TextStyle(
                             fontSize: 16,
-                            color: Color(0xff505050),
+                            color: Color(0xff373737),
                             wordSpacing: 10,
                           ),
                         ),
@@ -93,7 +93,7 @@ class ProfileKabinetView extends GetView {
                           'Kita semua punya cahaya yang tersimpan. Cahaya karya, ketulusan, tanggung jawab, dan kekuatan. Nyalakanlah, buatlah ia berpijar.\n',
                           style: TextStyle(
                             fontSize: 16,
-                            color: Color(0xff505050),
+                            color: Color(0xff373737),
                             wordSpacing: 10,
                           ),
                         ),
@@ -121,6 +121,7 @@ class ProfileKabinetView extends GetView {
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
+                            color: Color(0xff373737),
                           ),
                         ),
                         const SizedBox(
@@ -175,6 +176,7 @@ class ProfileKabinetView extends GetView {
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
+                            color: Color(0xff373737),
                           ),
                         ),
                         ElevatedButton(

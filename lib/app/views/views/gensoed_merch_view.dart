@@ -22,7 +22,7 @@ class GensoedMerchView extends GetView {
                 'Gensoed Merch',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 19,
                   fontWeight: FontWeight.bold,
                   color: Color(0xff373737),
                 ),

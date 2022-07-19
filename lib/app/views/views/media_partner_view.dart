@@ -55,7 +55,7 @@ class MediaPartnerView extends StatelessWidget {
                     'Connect with Us',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 19,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
                     ),
@@ -96,7 +96,9 @@ class MediaPartnerView extends StatelessWidget {
                                 const Text(
                                   'S&K Medpart',
                                   style: TextStyle(
-                                      fontSize: 12, color: Colors.black),
+                                    fontSize: 12,
+                                    color: Color(0xff373737),
+                                  ),
                                 ),
                               ],
                             ),
@@ -117,7 +119,9 @@ class MediaPartnerView extends StatelessWidget {
                                 Text(
                                   'Unggah File',
                                   style: TextStyle(
-                                      fontSize: 12, color: Colors.black),
+                                    fontSize: 12,
+                                    color: Color(0xff373737),
+                                  ),
                                 ),
                               ],
                             ),
@@ -136,7 +140,7 @@ class MediaPartnerView extends StatelessWidget {
                             labelText: 'Nama',
                             labelStyle: const TextStyle(
                               fontSize: 14,
-                              color: Colors.black,
+                              color: Color(0xff373737),
                             ),
                           ),
                           style: const TextStyle(
@@ -156,7 +160,7 @@ class MediaPartnerView extends StatelessWidget {
                             labelText: 'Email',
                             labelStyle: const TextStyle(
                               fontSize: 14,
-                              color: Colors.black,
+                              color: Color(0xff373737),
                             ),
                           ),
                           style: const TextStyle(
@@ -177,7 +181,7 @@ class MediaPartnerView extends StatelessWidget {
                             labelText: 'Masukkan Pesan...',
                             labelStyle: const TextStyle(
                               fontSize: 14,
-                              color: Colors.black,
+                              color: Color(0xff373737),
                             ),
                           ),
                           style: const TextStyle(
@@ -224,7 +228,7 @@ class MediaPartnerView extends StatelessWidget {
               child: const Text(
                 'Media Partner\nBEM Unsoed',
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),

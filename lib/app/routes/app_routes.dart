@@ -25,11 +25,8 @@ abstract class Routes {
   static const MEDIA_PARTNER = _Paths.MEDIA_PARTNER;
   static const FAKULTAS = _Paths.FAKULTAS;
   static const DETAIL_FAKULTAS = _Paths.DETAIL_FAKULTAS;
-<<<<<<< Updated upstream
   static const TODOLIST = _Paths.TODOLIST;
-=======
   static const LAYANAN_UNSOED = _Paths.LAYANAN_UNSOED;
->>>>>>> Stashed changes
 }
 
 abstract class _Paths {
@@ -55,9 +52,6 @@ abstract class _Paths {
   static const MEDIA_PARTNER = '/media-partner';
   static const FAKULTAS = '/fakultas';
   static const DETAIL_FAKULTAS = '/detail-fakultas';
-<<<<<<< Updated upstream
   static const TODOLIST = '/todolist';
-=======
   static const LAYANAN_UNSOED = '/layanan-unsoed';
->>>>>>> Stashed changes
 }

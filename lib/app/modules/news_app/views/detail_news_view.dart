@@ -87,7 +87,7 @@ class DetailNewsView extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: Color(0xff373737),
                     ),
                   ),
                   const Divider(
@@ -110,7 +110,8 @@ class DetailNewsView extends StatelessWidget {
                     deskripsi,
                     style: const TextStyle(
                       fontSize: 16,
-                      color: Colors.black,
+                      fontWeight: FontWeight.w300,
+                      color: Color(0xff373737),
                     ),
                   ),
                   const SizedBox(
@@ -127,6 +128,7 @@ class DetailNewsView extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
+                          color: Color(0xff373737),
                         ),
                       ),
                       const SizedBox(

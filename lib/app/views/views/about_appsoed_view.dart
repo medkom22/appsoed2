@@ -19,7 +19,7 @@ class AboutAppsoedView extends GetView {
               'Tentang',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 20,
                 fontWeight: FontWeight.bold,
                 color: Color(0xff373737),
               ),
@@ -49,8 +49,9 @@ class AboutAppsoedView extends GetView {
                     child: Text(
                       'Appsoed Pro 2.0',
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 18,
                         fontWeight: FontWeight.w600,
+                        color: Color(0xff373737),
                       ),
                     ),
                   ),
@@ -66,6 +67,7 @@ class AboutAppsoedView extends GetView {
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w500,
+                          color: Color(0xff373737),
                         ),
                       ),
                       SizedBox(
@@ -76,6 +78,7 @@ class AboutAppsoedView extends GetView {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w300,
+                          color: Color(0xff373737),
                         ),
                       ),
                       Text(
@@ -83,6 +86,7 @@ class AboutAppsoedView extends GetView {
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w500,
+                          color: Color(0xff373737),
                         ),
                       ),
                       Text(
@@ -90,6 +94,7 @@ class AboutAppsoedView extends GetView {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w300,
+                          color: Color(0xff373737),
                         ),
                       ),
                     ],

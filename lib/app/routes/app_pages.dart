@@ -123,14 +123,13 @@ class AppPages {
       page: () => DetailFakultasView(),
     ),
     GetPage(
-<<<<<<< Updated upstream
       name: _Paths.TODOLIST,
       page: () => const TodolistView(),
       binding: TodolistBinding(),
-=======
+    ),
+    GetPage(
       name: Routes.LAYANAN_UNSOED,
       page: () => const LayananUnsoed(),
->>>>>>> Stashed changes
     ),
   ];
 }

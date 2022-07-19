@@ -14,7 +14,7 @@ class KomikView extends GetView<KomikController> {
         title: const Text(
           'Komik',
           style: TextStyle(
-            fontSize: 19,
+            fontSize: 20,
             fontWeight: FontWeight.bold,
             color: Color(0xff373737),
           ),
