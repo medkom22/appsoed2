@@ -1,4 +1,4 @@
-package com.example.appsoed
+package com.bem_unsoed.appsoed
 
 import io.flutter.embedding.android.FlutterActivity
 
