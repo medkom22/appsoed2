@@ -1,5 +1,6 @@
-import 'package:appsoed/presentation/page/get_started_page.dart';
+import 'package:appsoed/presentation/page/sign_in_view.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 class AppWidget extends StatelessWidget {
@@ -24,8 +25,10 @@ class AppWidget extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       title: 'Appsoed Pro',
-      home: const GetStartedPage(),
-      theme: ThemeData(),
+      home: const SignInPage(),
+      theme: ThemeData(
+        textTheme: GoogleFonts.poppinsTextTheme(),
+      ),
     );
   }
 }

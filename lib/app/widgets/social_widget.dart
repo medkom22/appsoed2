@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../provider/launcer_provider.dart';
-
 class SocialWidget extends StatelessWidget {
   final String image;
   final String link;
@@ -14,9 +12,7 @@ class SocialWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        LauncherProvider.launcherURL(link);
-      },
+      onTap: () {},
       child: Image.asset(
         'assets/$image.png',
         width: 40,

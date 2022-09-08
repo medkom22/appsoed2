@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../provider/launcer_provider.dart';
 import '../../widgets/back_button_widget.dart';
 import '../../widgets/social_widget.dart';
 
@@ -182,16 +181,16 @@ class ProfileKabinetView extends GetView {
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             elevation: 4,
+                            backgroundColor: const Color(0xffFDB731),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30),
                             ),
-                            primary: const Color(0xffFDB731),
                           ),
                           child: const Text('Email BEM Unsoed'),
                           onPressed: () {
-                            LauncherProvider.launcherURL(
-                              'mailto:bem.unsoed@gmail.com',
-                            );
+                            // LauncherProvider.launcherURL(
+                            //   'mailto:bem.unsoed@gmail.com',
+                            // );
                           },
                         )
                       ],
