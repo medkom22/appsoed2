@@ -1,4 +1,6 @@
+import 'package:appsoed/presentation/provider/sign_in_notifier.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
@@ -35,30 +37,34 @@ class SignInPage extends StatelessWidget {
               margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 45),
               width: double.infinity,
               height: 55,
-              child: OutlinedButton.icon(
-                style: OutlinedButton.styleFrom(
-                  foregroundColor: Colors.black,
-                  side: const BorderSide(
+              child: Consumer<SignInNotifier>(
+                builder: (context, value, child) => OutlinedButton.icon(
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: Colors.black,
+                    side: const BorderSide(
+                      color: Colors.black,
+                      width: 1,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  icon: const Icon(
+                    Icons.email,
                     color: Colors.black,
-                    width: 1,
                   ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
-                icon: const Icon(
-                  Icons.email,
-                  color: Colors.black,
-                ),
-                onPressed: () {},
-                label: const Text(
-                  'Sign In with Google',
-                  style: TextStyle(
-                    fontSize: 20,
+                  onPressed: () async {
+                    value.signInGoogle(context);
+                  },
+                  label: const Text(
+                    'Sign In with Google',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
