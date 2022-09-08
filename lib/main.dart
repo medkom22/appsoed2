@@ -2,7 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:change_app_package_name/change_app_package_name.dart';
 
 import 'firebase_options.dart';
 import 'my_app.dart';
