@@ -2,7 +2,6 @@
 // import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 
-// import '../../../widgets/back_button_widget.dart';
 // import '../../../widgets/social_widget.dart';
 
 // class DetailNewsView extends StatelessWidget {

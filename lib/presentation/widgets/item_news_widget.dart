@@ -1,3 +1,5 @@
+import 'package:appsoed/common/navigator.dart';
+import 'package:appsoed/presentation/page/detail_titik_pijar.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -24,24 +26,29 @@ class ItemNewsWidget extends StatelessWidget {
               NewsModel data = NewsModel.fromMap(snapshot.data[index].data());
 
               return GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigation.pushWithData(const DetailTitikPijar(), data);
+                },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12),
                   child: Row(
                     children: [
                       Expanded(
                         flex: 4,
-                        child: CachedNetworkImage(
-                          imageUrl: data.image.toString(),
-                          errorWidget: (context, url, error) => const Icon(
-                            Icons.error,
-                            color: Colors.red,
+                        child: Hero(
+                          tag: data.image.toString(),
+                          child: CachedNetworkImage(
+                            imageUrl: data.image.toString(),
+                            errorWidget: (context, url, error) => const Icon(
+                              Icons.error,
+                              color: Colors.red,
+                            ),
+                            placeholder: (context, url) => const Center(
+                              child: CircularProgressIndicator(),
+                            ),
+                            height: 100,
+                            fit: BoxFit.cover,
                           ),
-                          placeholder: (context, url) => const Center(
-                            child: CircularProgressIndicator(),
-                          ),
-                          height: 100,
-                          fit: BoxFit.cover,
                         ),
                       ),
                       const SizedBox(
