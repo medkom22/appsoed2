@@ -1,4 +1,6 @@
 import 'package:appsoed/common/constant.dart';
+import 'package:appsoed/common/navigator.dart';
+import 'package:appsoed/presentation/page/titik_pijar_news.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/item_widget.dart';
@@ -69,7 +71,11 @@ class HomePage extends StatelessWidget {
         children: [
           ItemWidget(
             icon: Icons.newspaper,
-            onPress: () {},
+            onPress: () {
+              Navigation.pushReplacement(
+                const TitikPijarNews(),
+              );
+            },
             text: 'Titik Pijar\nNews',
           ),
           ItemWidget(

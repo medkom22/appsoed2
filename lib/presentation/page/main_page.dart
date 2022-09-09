@@ -16,10 +16,10 @@ class MainPage extends StatelessWidget {
       bottomNavigationBar: ConvexAppBar(
         initialActiveIndex: provider.currentIndex,
         backgroundColor: orangeColor,
-        color: Colors.black,
+        color: blackColor,
         items: const [
           TabItem(icon: Icons.home, title: 'Home'),
-          TabItem(icon: Icons.settings, title: 'Settings'),
+          TabItem(icon: Icons.chat_bubble, title: 'Menfess'),
         ],
         onTap: provider.changeIndex,
       ),

@@ -1,54 +1,54 @@
-import 'package:appsoed/app/modules/news_app/views/detail_news_view.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+// import 'package:appsoed/app/modules/news_app/views/detail_news_view.dart';
+// import 'package:cached_network_image/cached_network_image.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:flutter/material.dart';
+// import 'package:get/get.dart';
 
-import '../controllers/news_app_controller.dart';
+// import '../controllers/news_app_controller.dart';
 
-class NewsAppView extends GetView<NewsAppController> {
-  const NewsAppView({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Titik Pijar News',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Color(0xff373737),
-            ),
-          ),
-          centerTitle: true,
-          foregroundColor: const Color(0xff373737),
-          backgroundColor: Colors.white,
-          bottom: const TabBar(
-            labelColor: Color(0xff373737),
-            tabs: [
-              Tab(
-                text: 'Press Release',
-              ),
-              Tab(
-                text: 'Weekly Report',
-              ),
-            ],
-          ),
-        ),
-        body: SafeArea(
-          child: TabBarView(
-            children: [
-              NewsCustomWidget(controller: controller.getPress()),
-              NewsCustomWidget(controller: controller.getWeekly()),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+// class NewsAppView extends GetView<NewsAppController> {
+//   const NewsAppView({Key? key}) : super(key: key);
+//   @override
+//   Widget build(BuildContext context) {
+//     return DefaultTabController(
+//       length: 2,
+//       child: Scaffold(
+//         appBar: AppBar(
+//           title: const Text(
+//             'Titik Pijar News',
+//             style: TextStyle(
+//               fontSize: 20,
+//               fontWeight: FontWeight.bold,
+//               color: Color(0xff373737),
+//             ),
+//           ),
+//           centerTitle: true,
+//           foregroundColor: const Color(0xff373737),
+//           backgroundColor: Colors.white,
+//           bottom: const TabBar(
+//             labelColor: Color(0xff373737),
+//             tabs: [
+//               Tab(
+//                 text: 'Press Release',
+//               ),
+//               Tab(
+//                 text: 'Weekly Report',
+//               ),
+//             ],
+//           ),
+//         ),
+//         body: SafeArea(
+//           child: TabBarView(
+//             children: [
+//               NewsCustomWidget(controller: controller.getPress()),
+//               NewsCustomWidget(controller: controller.getWeekly()),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 //TODO: WIDGET FOR NEWS APP
 class NewsCustomWidget extends StatelessWidget {
