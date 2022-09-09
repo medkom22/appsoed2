@@ -5,8 +5,8 @@ class FireStoreRepository {
   FireStoreRepository(this.instance);
 
   //create realtime read
-  Stream<List<DocumentSnapshot>> getPress() {
-    CollectionReference collection = instance.collection('press');
+  Stream<List<DocumentSnapshot>> getCloud(String params) {
+    CollectionReference collection = instance.collection(params);
     return collection.snapshots().map((event) => event.docs);
   }
 }

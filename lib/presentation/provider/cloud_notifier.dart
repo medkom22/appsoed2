@@ -7,6 +7,10 @@ class CloudNotifier extends ChangeNotifier {
   CloudNotifier(this.repository);
 
   Stream<List<DocumentSnapshot>> getPress() {
-    return repository.getPress();
+    return repository.getCloud('press');
+  }
+
+  Stream<List<DocumentSnapshot>> getWeekly() {
+    return repository.getCloud('weekly');
   }
 }

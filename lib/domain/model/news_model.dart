@@ -1,13 +1,13 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
-class PressModel {
+class NewsModel {
   String? title;
   String? tanggal;
   String? penulis;
   String? image;
   String? deskripsi;
-  PressModel({
+  NewsModel({
     this.title,
     this.tanggal,
     this.penulis,
@@ -15,14 +15,14 @@ class PressModel {
     this.deskripsi,
   });
 
-  PressModel copyWith({
+  NewsModel copyWith({
     String? title,
     String? tanggal,
     String? penulis,
     String? image,
     String? deskripsi,
   }) {
-    return PressModel(
+    return NewsModel(
       title: title ?? this.title,
       tanggal: tanggal ?? this.tanggal,
       penulis: penulis ?? this.penulis,
@@ -41,8 +41,8 @@ class PressModel {
     };
   }
 
-  factory PressModel.fromMap(Map<String, dynamic> map) {
-    return PressModel(
+  factory NewsModel.fromMap(Map<String, dynamic> map) {
+    return NewsModel(
       title: map['title'] != null ? map['title'] as String : null,
       tanggal: map['tanggal'] != null ? map['tanggal'] as String : null,
       penulis: map['penulis'] != null ? map['penulis'] as String : null,
@@ -53,16 +53,16 @@ class PressModel {
 
   String toJson() => json.encode(toMap());
 
-  factory PressModel.fromJson(String source) =>
-      PressModel.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory NewsModel.fromJson(String source) =>
+      NewsModel.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
-    return 'PressModel(title: $title, tanggal: $tanggal, penulis: $penulis, image: $image, deskripsi: $deskripsi)';
+    return 'NewsModel(title: $title, tanggal: $tanggal, penulis: $penulis, image: $image, deskripsi: $deskripsi)';
   }
 
   @override
-  bool operator ==(covariant PressModel other) {
+  bool operator ==(covariant NewsModel other) {
     if (identical(this, other)) return true;
 
     return other.title == title &&
