@@ -1,13 +1,83 @@
+import 'package:appsoed/common/constant.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/item_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Home Page'),
+    return Scaffold(
+      body: SafeArea(
+        child: ListView(
+          children: [
+            _headerContent(),
+            _carouselContent(),
+            _itemContent(),
+          ],
+        ),
+      ),
+    );
+  }
+
+  _headerContent() {
+    return Container(
+      margin: const EdgeInsets.only(
+        right: 24,
+        left: 24,
+        top: 30,
+        bottom: 30,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            'Selamat Datang',
+            style: TextStyle(
+              fontWeight: medium,
+              fontSize: 18,
+            ),
+          ),
+          Icon(
+            Icons.home,
+            size: 36,
+            color: blackColor,
+            semanticLabel: 'Home',
+          ),
+        ],
+      ),
+    );
+  }
+
+  _carouselContent() {
+    return const Placeholder(
+      fallbackHeight: 300,
+    );
+  }
+
+  _itemContent() {
+    return Container(
+      margin: const EdgeInsets.only(
+        top: 30,
+        left: 24,
+        right: 24,
+      ),
+      child: Wrap(
+        spacing: 16,
+        runSpacing: 18,
+        children: [
+          ItemWidget(
+            icon: Icons.newspaper,
+            onPress: () {},
+            text: 'Titik Pijar\nNews',
+          ),
+          ItemWidget(
+            icon: Icons.newspaper_outlined,
+            onPress: () {},
+            text: 'Indo News',
+          ),
+        ],
       ),
     );
   }
