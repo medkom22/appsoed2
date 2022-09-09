@@ -10,4 +10,8 @@ class Navigation {
       ),
     );
   }
+
+  static void back() {
+    navigatorKey.currentState!.pop();
+  }
 }
