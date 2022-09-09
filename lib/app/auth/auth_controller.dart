@@ -2,8 +2,6 @@
 // import 'package:get/get.dart';
 // import 'package:google_sign_in/google_sign_in.dart';
 
-// import '../routes/app_pages.dart';
-
 // // NOTE: Ini merupakan file yang mengatur tentang jalannya autentifikasi
 // class AuthController extends GetxController {
 //   // *: variabel auth digunakan untuk menginisasi FirebaseAuth

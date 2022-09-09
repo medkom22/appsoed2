@@ -1,11 +1,10 @@
-import 'package:appsoed/injector.dart' as di;
-import 'package:appsoed/presentation/page/sign_in_page.dart';
+import 'package:appsoed/presentation/page/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-import 'provider/sign_in_notifier.dart';
+import '../common/navigator.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
@@ -13,12 +12,9 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          create: (_) => di.locator<SignInNotifier>(),
-        ),
-      ],
+      providers: const [],
       child: MaterialApp(
+        navigatorKey: navigatorKey,
         builder: (context, child) => ResponsiveWrapper.builder(
           child,
           maxWidth: 1200,
@@ -35,7 +31,7 @@ class AppWidget extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         title: 'Appsoed Pro',
-        home: const SignInPage(),
+        home: const HomePage(),
         theme: ThemeData(
           textTheme: GoogleFonts.poppinsTextTheme(),
         ),
