@@ -1,5 +1,6 @@
 import 'package:appsoed/common/constant.dart';
 import 'package:appsoed/common/navigator.dart';
+import 'package:appsoed/presentation/page/jokes_page.dart';
 import 'package:appsoed/presentation/page/titik_pijar_news.dart';
 import 'package:flutter/material.dart';
 
@@ -79,9 +80,13 @@ class HomePage extends StatelessWidget {
             text: 'Titik Pijar\nNews',
           ),
           ItemWidget(
-            icon: Icons.newspaper_outlined,
-            onPress: () {},
-            text: 'Indo News',
+            icon: Icons.emoji_emotions,
+            onPress: () {
+              Navigation.push(
+                const JokesPage(),
+              );
+            },
+            text: 'Jokes ',
           ),
         ],
       ),

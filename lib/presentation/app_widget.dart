@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import '../common/navigator.dart';
+import 'provider/jokes_notifier.dart';
 import 'provider/main_notifier.dart';
 
 class AppWidget extends StatelessWidget {
@@ -21,6 +22,9 @@ class AppWidget extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (_) => di.locator<CloudNotifier>(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => di.locator<JokesNotifier>(),
         ),
       ],
       child: MaterialApp(

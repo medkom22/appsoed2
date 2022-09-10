@@ -227,4 +227,3 @@
 
 // /// This class is a stateless widget that takes in an image and a link and returns a GestureDetector
 // /// that launches the link when tapped
-
