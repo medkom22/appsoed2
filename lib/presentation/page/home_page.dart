@@ -88,6 +88,11 @@ class HomePage extends StatelessWidget {
             },
             text: 'Jokes ',
           ),
+          ItemWidget(
+            icon: Icons.chat_bubble,
+            onPress: () {},
+            text: 'Adkesma\nChat',
+          )
         ],
       ),
     );

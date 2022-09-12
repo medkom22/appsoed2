@@ -38,6 +38,7 @@ class ItemWidget extends StatelessWidget {
           textAlign: TextAlign.center,
           style: TextStyle(
             fontWeight: medium,
+            fontSize: 16,
           ),
         )
       ],
