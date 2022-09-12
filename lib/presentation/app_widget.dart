@@ -1,6 +1,7 @@
 import 'package:appsoed/injector.dart' as di;
 import 'package:appsoed/presentation/page/main_page.dart';
 import 'package:appsoed/presentation/provider/cloud_notifier.dart';
+import 'package:appsoed/presentation/provider/launcher_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -17,6 +18,9 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider(
+          create: (_) => di.locator<LauncherNotifier>(),
+        ),
         ChangeNotifierProvider(
           create: (_) => MainNotifier(),
         ),

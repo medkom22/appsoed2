@@ -1,11 +1,14 @@
 import 'package:appsoed/common/constant.dart';
+import 'package:appsoed/presentation/provider/launcher_notifier.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class AdkesmaPage extends StatelessWidget {
   const AdkesmaPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<LauncherNotifier>(context, listen: false);
     return Scaffold(
       backgroundColor: whiteColor,
       body: SafeArea(
@@ -50,23 +53,31 @@ class AdkesmaPage extends StatelessWidget {
                   height: 50,
                   width: double.infinity,
                   margin: const EdgeInsets.symmetric(horizontal: 24),
-                  child: ElevatedButton.icon(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: orangeColor.withOpacity(0.8),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                    ),
-                    onPressed: () {},
-                    icon: const Icon(Icons.message),
-                    label: Text(
-                      'Live Chat',
-                      style: TextStyle(
-                        fontWeight: bold,
-                        color: whiteColor,
-                        fontSize: 16,
-                      ),
-                    ),
+                  child: Consumer<LauncherNotifier>(
+                    builder: (context, value, child) {
+                      return value.isLoading
+                          ? const CircularProgressIndicator()
+                          : ElevatedButton.icon(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: orangeColor.withOpacity(0.8),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                              ),
+                              onPressed: () {
+                                value.getWALauncher();
+                              },
+                              icon: const Icon(Icons.message),
+                              label: Text(
+                                'Live Chat',
+                                style: TextStyle(
+                                  fontWeight: bold,
+                                  color: whiteColor,
+                                  fontSize: 16,
+                                ),
+                              ),
+                            );
+                    },
                   ),
                 )
               ],
