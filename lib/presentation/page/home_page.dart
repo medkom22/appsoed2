@@ -1,5 +1,6 @@
 import 'package:appsoed/common/constant.dart';
 import 'package:appsoed/common/navigator.dart';
+import 'package:appsoed/presentation/page/adkesma_page.dart';
 import 'package:appsoed/presentation/page/jokes_page.dart';
 import 'package:appsoed/presentation/page/titik_pijar_news.dart';
 import 'package:flutter/material.dart';
@@ -90,7 +91,9 @@ class HomePage extends StatelessWidget {
           ),
           ItemWidget(
             icon: Icons.chat_bubble,
-            onPress: () {},
+            onPress: () {
+              Navigation.push(const AdkesmaPage());
+            },
             text: 'Adkesma\nChat',
           )
         ],
