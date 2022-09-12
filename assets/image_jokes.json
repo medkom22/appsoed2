@@ -1,0 +1,10 @@
+{
+    "status": 200,
+    "end_point": "/api/image/random",
+    "method": "GET",
+    "data": {
+        "url": "https://akcdn.detik.net.id/community/media/visual/2020/01/23/27a09431-acd8-457a-be85-03caa08fff69.jpeg?a=1",
+        "source": "https://detik.com"
+    }
+}
+

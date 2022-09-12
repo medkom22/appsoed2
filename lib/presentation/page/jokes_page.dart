@@ -17,13 +17,25 @@ class JokesPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Consumer<JokesNotifier>(builder: (context, jokes, child) {
-              if (jokes.isLoading) {
+              if (jokes.isTextLoading) {
                 return const CircularProgressIndicator();
               } else {
                 return ElevatedButton(
                   child: const Text('Text Jokes'),
                   onPressed: () {
                     jokes.getTextJoke(context);
+                  },
+                );
+              }
+            }),
+            Consumer<JokesNotifier>(builder: (context, jokes, child) {
+              if (jokes.isImgLoading) {
+                return const CircularProgressIndicator();
+              } else {
+                return ElevatedButton(
+                  child: const Text('Image Jokes'),
+                  onPressed: () {
+                    jokes.getImgJokes(context);
                   },
                 );
               }
