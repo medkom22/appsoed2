@@ -1,3 +1,4 @@
+import 'package:appsoed/presentation/page/profile_page.dart';
 import 'package:flutter/material.dart';
 
 import '../page/home_page.dart';
@@ -17,5 +18,6 @@ class MainNotifier extends ChangeNotifier {
         child: Text('Settings'),
       ),
     ),
+    const ProfilePage(),
   ];
 }

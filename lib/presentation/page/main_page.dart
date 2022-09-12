@@ -20,6 +20,7 @@ class MainPage extends StatelessWidget {
         items: const [
           TabItem(icon: Icons.home, title: 'Home'),
           TabItem(icon: Icons.chat_bubble, title: 'Menfess'),
+          TabItem(icon: Icons.info, title: 'Profile'),
         ],
         onTap: provider.changeIndex,
       ),
