@@ -1,12 +1,15 @@
 import 'package:appsoed/common/constant.dart';
+import 'package:appsoed/presentation/provider/todo_notifier.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class TodoPage extends StatelessWidget {
   const TodoPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<TodoNotifier>(context, listen: false);
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -15,37 +18,48 @@ class TodoPage extends StatelessWidget {
           end: Alignment.bottomCenter,
         ),
       ),
-      child: Scaffold(
-        body: _emptyContent(),
-        floatingActionButton: SizedBox(
-          height: 75,
-          width: 75,
-          child: FloatingActionButton(
-            backgroundColor: whiteColor,
-            onPressed: () {},
-            child: Icon(
-              Icons.add,
-              color: blueColor,
-              size: 36,
+      child: Consumer<TodoNotifier>(
+        builder: (context, value, child) => Scaffold(
+          body: value.todo.isEmpty
+              ? _emptyContent()
+              : Container(
+                  child: const Text('Data Masuk'),
+                ),
+          floatingActionButton: SizedBox(
+            height: 75,
+            width: 75,
+            child: Consumer<TodoNotifier>(
+              builder: (context, value, child) => FloatingActionButton(
+                backgroundColor: whiteColor,
+                onPressed: () {
+                  value.addData();
+                },
+                child: Icon(
+                  Icons.add,
+                  color: blueColor,
+                  size: 36,
+                ),
+              ),
             ),
           ),
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        backgroundColor: Colors.transparent,
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          elevation: 0,
+          floatingActionButtonLocation:
+              FloatingActionButtonLocation.centerFloat,
           backgroundColor: Colors.transparent,
-          title: Text(
-            'DAILY TASK',
-            style: TextStyle(
-              color: blackColor,
-              fontWeight: bold,
-              fontSize: 20,
-              letterSpacing: 8.0,
+          appBar: AppBar(
+            automaticallyImplyLeading: false,
+            elevation: 0,
+            backgroundColor: Colors.transparent,
+            title: Text(
+              'DAILY TASK',
+              style: TextStyle(
+                color: blackColor,
+                fontWeight: bold,
+                fontSize: 20,
+                letterSpacing: 8.0,
+              ),
             ),
+            centerTitle: true,
           ),
-          centerTitle: true,
         ),
       ),
     );

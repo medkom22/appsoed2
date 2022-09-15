@@ -2,6 +2,7 @@ import 'package:appsoed/injector.dart' as di;
 import 'package:appsoed/presentation/page/main_page.dart';
 import 'package:appsoed/presentation/provider/cloud_notifier.dart';
 import 'package:appsoed/presentation/provider/launcher_notifier.dart';
+import 'package:appsoed/presentation/provider/todo_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -28,6 +29,9 @@ class AppWidget extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (_) => di.locator<JokesNotifier>(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => TodoNotifier(),
         ),
       ],
       child: MaterialApp(
