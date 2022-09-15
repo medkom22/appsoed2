@@ -3,6 +3,7 @@ import 'package:appsoed/common/navigator.dart';
 import 'package:appsoed/presentation/page/adkesma_page.dart';
 import 'package:appsoed/presentation/page/jokes_page.dart';
 import 'package:appsoed/presentation/page/titik_pijar_news.dart';
+import 'package:appsoed/presentation/page/todo_page.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/item_widget.dart';
@@ -97,6 +98,15 @@ class HomePage extends StatelessWidget {
               );
             },
             text: 'Adkesma\nChat',
+          ),
+          ItemWidget(
+            icon: Icons.assignment,
+            onPress: () {
+              Navigation.push(
+                const TodoPage(),
+              );
+            },
+            text: 'TodoList',
           )
         ],
       ),
