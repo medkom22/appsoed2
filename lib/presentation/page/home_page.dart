@@ -74,7 +74,7 @@ class HomePage extends StatelessWidget {
           ItemWidget(
             icon: Icons.newspaper,
             onPress: () {
-              Navigation.pushReplacement(
+              Navigation.push(
                 const TitikPijarNews(),
               );
             },
@@ -92,7 +92,9 @@ class HomePage extends StatelessWidget {
           ItemWidget(
             icon: Icons.chat_bubble,
             onPress: () {
-              Navigation.push(const AdkesmaPage());
+              Navigation.push(
+                const AdkesmaPage(),
+              );
             },
             text: 'Adkesma\nChat',
           )
