@@ -20,7 +20,6 @@ dependencies:
   flutter_native_splash: ^2.2.9
   freezed_annotation: ^2.1.0
   get_it: ^7.2.0
-  google_fonts: ^3.0.1
   http: ^0.13.5
   intl: ^0.17.0
   json_annotation: ^4.6.0
@@ -46,6 +45,10 @@ flutter:
 
   assets:
     - assets/
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/Poppins-Regular.ttf
 
 flutter_native_splash:
   # This package generates native code to customize Flutter's default white native splash screen

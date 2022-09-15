@@ -3,7 +3,6 @@ import 'package:appsoed/presentation/page/main_page.dart';
 import 'package:appsoed/presentation/provider/cloud_notifier.dart';
 import 'package:appsoed/presentation/provider/launcher_notifier.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
@@ -51,7 +50,7 @@ class AppWidget extends StatelessWidget {
         title: 'Appsoed Pro',
         home: const MainPage(),
         theme: ThemeData(
-          textTheme: GoogleFonts.poppinsTextTheme(),
+          fontFamily: 'Poppins',
         ),
       ),
     );
