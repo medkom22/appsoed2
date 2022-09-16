@@ -20,20 +20,14 @@ class TodoPage extends StatelessWidget {
       ),
       child: Consumer<TodoNotifier>(
         builder: (context, value, child) => Scaffold(
-          body: value.todo.isEmpty
-              ? _emptyContent()
-              : Container(
-                  child: const Text('Data Masuk'),
-                ),
+          body: _emptyContent(),
           floatingActionButton: SizedBox(
             height: 75,
             width: 75,
             child: Consumer<TodoNotifier>(
               builder: (context, value, child) => FloatingActionButton(
                 backgroundColor: whiteColor,
-                onPressed: () {
-                  value.addData();
-                },
+                onPressed: () {},
                 child: Icon(
                   Icons.add,
                   color: blueColor,
