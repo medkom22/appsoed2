@@ -26,9 +26,7 @@ class TodoPage extends StatelessWidget {
                   itemCount: todoProvider.todo.length,
                   itemBuilder: (BuildContext context, int index) {
                     Todo todo = todoProvider.todo[index];
-                    return ListTile(
-                      title: Text(todo.todo),
-                    );
+                    return _buildTodoItem(todo, provider, context);
                   },
                 )
               : _emptyContent(),
@@ -48,7 +46,6 @@ class TodoPage extends StatelessWidget {
                       title: const Text('Buat list mu hari ini'),
                       content: TextField(
                         controller: todoProvider.todoController,
-                        onSubmitted: (value) {},
                       ),
                       actions: [
                         TextButton(
@@ -59,7 +56,6 @@ class TodoPage extends StatelessWidget {
                         ),
                         TextButton(
                           onPressed: () {
-                            debugPrint(todoProvider.todoController.text);
                             provider
                                 .insertTodo(todoProvider.todoController.text)
                                 .then(
@@ -127,6 +123,69 @@ class TodoPage extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  _buildTodoItem(Todo todo, TodoNotifier provider, BuildContext context) {
+    return Card(
+      color: whiteColor,
+      margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+      child: Padding(
+        padding: const EdgeInsets.all(14.0),
+        child: Row(
+          children: [
+            Expanded(
+              child: Text(
+                todo.todo,
+                style: TextStyle(
+                  color: blackColor,
+                  fontSize: 18,
+                  fontWeight: medium,
+                ),
+              ),
+            ),
+            IconButton(
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24),
+                      ),
+                      title: Text('Hapus ${todo.todo}'),
+                      content:
+                          const Text('Apakah kamu yakin ingin menghapusnya?'),
+                      actions: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: const Text('Batal'),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            provider.deleteTodo(todo.id).then(
+                              (_) {
+                                Navigator.pop(context);
+                              },
+                            );
+                          },
+                          child: const Text('Hapus'),
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
+              icon: Icon(
+                Icons.delete,
+                color: redColor,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

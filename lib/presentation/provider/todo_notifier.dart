@@ -38,6 +38,7 @@ class TodoNotifier extends ChangeNotifier {
   Future insertTodo(String todo) async {
     try {
       await _database.insertTodo(todo);
+      todoController.clear();
       getTodo();
     } catch (e) {
       _state = ResultState.Error;

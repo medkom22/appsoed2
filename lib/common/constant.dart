@@ -13,3 +13,4 @@ Color whiteColor = const Color(0xffFFFFFF);
 Color blackColor = Colors.black;
 Color blueColor = const Color(0xffA3D5DE);
 Color darkBlueColor = const Color(0xff73B2BD);
+Color redColor = const Color(0xffFF5C5C);
