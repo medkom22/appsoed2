@@ -7,9 +7,9 @@ class DatabaseHelper {
   static final DatabaseHelper _instance = DatabaseHelper.internal();
   DatabaseHelper.internal();
   factory DatabaseHelper() => _instance;
-  static const String _table = 'todo';
+  static const String _table = 'tableTodo';
   static const String _columnId = 'id';
-  static const String _columnName = 'name';
+  static const String _columnName = 'todo';
 
   static Database? _database;
   Future<Database> get database async {
@@ -27,18 +27,20 @@ class DatabaseHelper {
         await db.execute('''CREATE TABLE $_table (
             $_columnId TEXT PRIMARY KEY,
             $_columnName TEXT
-          )
-            ''');
+          )''');
       },
     );
     return db;
   }
 
-  Future insertTodo(Todo todo) async {
+  Future insertTodo(String todo) async {
     var db = await database;
     var result = await db.insert(
       _table,
-      todo.toJson(),
+      {
+        _columnId: DateTime.now().toString(),
+        _columnName: todo,
+      },
       conflictAlgorithm: ConflictAlgorithm.replace,
     );
     return result;
@@ -48,13 +50,6 @@ class DatabaseHelper {
     var db = await database;
     var result = await db.query(_table);
     return result.map((item) => Todo.fromJson(item)).toList();
-  }
-
-  Future<Map> getTodoById(String id) async {
-    var db = await database;
-    var result =
-        await db.query(_table, where: '$_columnId = ?', whereArgs: [id]);
-    return result.isNotEmpty ? result.first : {};
   }
 
   Future removeTodo(String id) async {

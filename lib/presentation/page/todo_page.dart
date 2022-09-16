@@ -1,4 +1,5 @@
 import 'package:appsoed/common/constant.dart';
+import 'package:appsoed/domain/model/todo.dart';
 import 'package:appsoed/presentation/provider/todo_notifier.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -19,20 +20,65 @@ class TodoPage extends StatelessWidget {
         ),
       ),
       child: Consumer<TodoNotifier>(
-        builder: (context, value, child) => Scaffold(
-          body: _emptyContent(),
+        builder: (context, todoProvider, child) => Scaffold(
+          body: todoProvider.todo.isNotEmpty
+              ? ListView.builder(
+                  itemCount: todoProvider.todo.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    Todo todo = todoProvider.todo[index];
+                    return ListTile(
+                      title: Text(todo.todo),
+                    );
+                  },
+                )
+              : _emptyContent(),
           floatingActionButton: SizedBox(
             height: 75,
             width: 75,
-            child: Consumer<TodoNotifier>(
-              builder: (context, value, child) => FloatingActionButton(
-                backgroundColor: whiteColor,
-                onPressed: () {},
-                child: Icon(
-                  Icons.add,
-                  color: blueColor,
-                  size: 36,
-                ),
+            child: FloatingActionButton(
+              backgroundColor: whiteColor,
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24),
+                      ),
+                      title: const Text('Buat list mu hari ini'),
+                      content: TextField(
+                        controller: todoProvider.todoController,
+                        onSubmitted: (value) {},
+                      ),
+                      actions: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: const Text('Batal'),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            debugPrint(todoProvider.todoController.text);
+                            provider
+                                .insertTodo(todoProvider.todoController.text)
+                                .then(
+                              (_) {
+                                Navigator.pop(context);
+                              },
+                            );
+                          },
+                          child: const Text('Tambah'),
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
+              child: Icon(
+                Icons.add,
+                color: blueColor,
+                size: 36,
               ),
             ),
           ),

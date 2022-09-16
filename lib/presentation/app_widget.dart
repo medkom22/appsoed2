@@ -31,7 +31,7 @@ class AppWidget extends StatelessWidget {
           create: (_) => di.locator<JokesNotifier>(),
         ),
         ChangeNotifierProvider(
-          create: (_) => TodoNotifier(),
+          create: (_) => di.locator<TodoNotifier>(),
         ),
       ],
       child: MaterialApp(

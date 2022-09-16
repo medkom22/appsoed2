@@ -6,7 +6,7 @@ part 'todo.g.dart';
 @freezed
 class Todo with _$Todo {
   factory Todo({
-    @Default(0) int id,
+    required String id,
     required String todo,
   }) = _Todo;
 

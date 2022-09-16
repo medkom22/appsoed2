@@ -20,7 +20,7 @@ Todo _$TodoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Todo {
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   String get todo => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -32,7 +32,7 @@ mixin _$Todo {
 abstract class $TodoCopyWith<$Res> {
   factory $TodoCopyWith(Todo value, $Res Function(Todo) then) =
       _$TodoCopyWithImpl<$Res>;
-  $Res call({int id, String todo});
+  $Res call({String id, String todo});
 }
 
 /// @nodoc
@@ -52,7 +52,7 @@ class _$TodoCopyWithImpl<$Res> implements $TodoCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       todo: todo == freezed
           ? _value.todo
           : todo // ignore: cast_nullable_to_non_nullable
@@ -66,7 +66,7 @@ abstract class _$$_TodoCopyWith<$Res> implements $TodoCopyWith<$Res> {
   factory _$$_TodoCopyWith(_$_Todo value, $Res Function(_$_Todo) then) =
       __$$_TodoCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String todo});
+  $Res call({String id, String todo});
 }
 
 /// @nodoc
@@ -87,7 +87,7 @@ class __$$_TodoCopyWithImpl<$Res> extends _$TodoCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       todo: todo == freezed
           ? _value.todo
           : todo // ignore: cast_nullable_to_non_nullable
@@ -99,13 +99,12 @@ class __$$_TodoCopyWithImpl<$Res> extends _$TodoCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Todo implements _Todo {
-  _$_Todo({this.id = 0, required this.todo});
+  _$_Todo({required this.id, required this.todo});
 
   factory _$_Todo.fromJson(Map<String, dynamic> json) => _$$_TodoFromJson(json);
 
   @override
-  @JsonKey()
-  final int id;
+  final String id;
   @override
   final String todo;
 
@@ -144,12 +143,13 @@ class _$_Todo implements _Todo {
 }
 
 abstract class _Todo implements Todo {
-  factory _Todo({final int id, required final String todo}) = _$_Todo;
+  factory _Todo({required final String id, required final String todo}) =
+      _$_Todo;
 
   factory _Todo.fromJson(Map<String, dynamic> json) = _$_Todo.fromJson;
 
   @override
-  int get id;
+  String get id;
   @override
   String get todo;
   @override
