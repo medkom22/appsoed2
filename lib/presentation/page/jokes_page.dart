@@ -52,7 +52,7 @@ class JokesPage extends StatelessWidget {
                     height: 60,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Colors.red[400],
+                      color: redColor,
                       borderRadius: BorderRadius.circular(18),
                     ),
                     margin: const EdgeInsets.symmetric(
@@ -67,7 +67,7 @@ class JokesPage extends StatelessWidget {
                         onTap: () {
                           jokes.getTextJoke(context);
                         },
-                        splashColor: Colors.white,
+                        splashColor: whiteColor,
                         child: Center(
                           child: Text(
                             'Lelucon Text',
@@ -93,7 +93,7 @@ class JokesPage extends StatelessWidget {
                     height: 60,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Colors.red[400],
+                      color: redColor,
                       borderRadius: BorderRadius.circular(18),
                     ),
                     margin: const EdgeInsets.symmetric(
@@ -108,7 +108,7 @@ class JokesPage extends StatelessWidget {
                         onTap: () {
                           jokes.getImgJokes(context);
                         },
-                        splashColor: Colors.white,
+                        splashColor: whiteColor,
                         child: Center(
                           child: Text(
                             'Lelucon Gambar',
