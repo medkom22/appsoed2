@@ -107,6 +107,15 @@ class HomePage extends StatelessWidget {
               );
             },
             text: 'TodoList',
+          ),
+          ItemWidget(
+            icon: Icons.shopping_cart,
+            onPress: () {
+              // Navigation.push(
+              //   const GensoedMerchPage(),
+              // );
+            },
+            text: 'Merchant',
           )
         ],
       ),

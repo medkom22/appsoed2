@@ -50,19 +50,8 @@ class TodoPage extends StatelessWidget {
                       actions: [
                         TextButton(
                           onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          child: const Text('Batal'),
-                        ),
-                        TextButton(
-                          onPressed: () {
                             provider
-                                .insertTodo(todoProvider.todoController.text)
-                                .then(
-                              (_) {
-                                Navigator.pop(context);
-                              },
-                            );
+                                .insertTodo(todoProvider.todoController.text);
                           },
                           child: const Text('Tambah'),
                         ),
