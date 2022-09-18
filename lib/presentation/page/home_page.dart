@@ -103,18 +103,14 @@ class HomePage extends StatelessWidget {
             icon: Icons.assignment,
             onPress: () {
               Navigation.push(
-                const TodoPage(),
+                TodoPage(),
               );
             },
             text: 'TodoList',
           ),
           ItemWidget(
             icon: Icons.shopping_cart,
-            onPress: () {
-              // Navigation.push(
-              //   const GensoedMerchPage(),
-              // );
-            },
+            onPress: () {},
             text: 'Merchant',
           )
         ],

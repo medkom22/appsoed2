@@ -3,13 +3,18 @@ import 'package:appsoed/domain/model/todo.dart';
 import 'package:appsoed/presentation/provider/todo_notifier.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 class TodoPage extends StatelessWidget {
-  const TodoPage({super.key});
+  TodoPage({super.key});
+  final DateTime now = DateTime.now();
+  //format datetime
 
   @override
   Widget build(BuildContext context) {
+    String today = DateFormat.EEEE().format(now);
+    String date = DateFormat.yMMMMd().format(now);
     var provider = Provider.of<TodoNotifier>(context, listen: false);
     return Container(
       decoration: BoxDecoration(
@@ -21,15 +26,49 @@ class TodoPage extends StatelessWidget {
       ),
       child: Consumer<TodoNotifier>(
         builder: (context, todoProvider, child) => Scaffold(
-          body: todoProvider.todo.isNotEmpty
-              ? ListView.builder(
-                  itemCount: todoProvider.todo.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    Todo todo = todoProvider.todo[index];
-                    return _buildTodoItem(todo, provider, context);
-                  },
-                )
-              : _emptyContent(),
+          body: Container(
+            margin: const EdgeInsets.symmetric(horizontal: 24),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(
+                  height: 12,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      today,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: medium,
+                      ),
+                    ),
+                    Text(
+                      date,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: medium,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                todoProvider.todo.isNotEmpty
+                    ? ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: todoProvider.todo.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          Todo todo = todoProvider.todo[index];
+                          return _buildTodoItem(todo, provider, context);
+                        },
+                      )
+                    : _emptyContent()
+              ],
+            ),
+          ),
           floatingActionButton: SizedBox(
             height: 75,
             width: 75,
@@ -50,8 +89,9 @@ class TodoPage extends StatelessWidget {
                       actions: [
                         TextButton(
                           onPressed: () {
-                            provider
-                                .insertTodo(todoProvider.todoController.text);
+                            provider.insertTodo(
+                              todoProvider.todoController.text,
+                            );
                           },
                           child: const Text('Tambah'),
                         ),
@@ -118,8 +158,8 @@ class TodoPage extends StatelessWidget {
 
   _buildTodoItem(Todo todo, TodoNotifier provider, BuildContext context) {
     return Card(
+      margin: const EdgeInsets.symmetric(vertical: 8),
       color: whiteColor,
-      margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
       child: Padding(
         padding: const EdgeInsets.all(14.0),
         child: Row(
@@ -169,8 +209,8 @@ class TodoPage extends StatelessWidget {
                 );
               },
               icon: Icon(
-                Icons.delete,
-                color: redColor,
+                Icons.clear,
+                color: greenColor,
               ),
             ),
           ],
