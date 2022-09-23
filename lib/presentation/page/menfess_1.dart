@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 void main() {
   runApp(PageSatu());
@@ -8,11 +7,13 @@ void main() {
 class PageSatu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: BaseMenfess());
+    return const MaterialApp(home: BaseMenfess());
   }
 }
 
 class BaseMenfess extends StatelessWidget {
+  //add const
+  const BaseMenfess({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,10 +24,11 @@ class BaseMenfess extends StatelessWidget {
             //NOTE: BACKGROUND COLOR ORANGE
             Container(
               color: const Color(0xffFDB731),
-              width: Get.width,
-              height: 200,
+              width: double.infinity,
+              height: double.infinity,
             ),
             Container(
+              height: double.infinity,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.vertical(
                   top: Radius.circular(30),
@@ -69,33 +71,33 @@ class BaseMenfess extends StatelessWidget {
               margin: const EdgeInsets.only(top: 12),
               alignment: Alignment.topCenter,
               child: Column(
-                children: const [
-                  SizedBox(
+                children: [
+                  const SizedBox(
                     height: 24,
                   ),
-                  Text(
+                  const Text(
                     'Menfess',
                     style: TextStyle(
                         fontSize: 19,
                         fontWeight: FontWeight.bold,
                         color: Color(0xffFFFFFF)),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
-                  // Image.asset(
-                  //   'assets/phone.png',
-                  //   width: 230,
-                  //   height: 262,
-                  //   fit: BoxFit.contain,
-                  // ),
-                  // const SizedBox(
-                  //   height: 24,
-                  // ),
-                  // const Text(
-                  //   'Kirim pesan anonim kepada pengguna Appsoed',
-                  //   style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
-                  // )
+                  Image.asset(
+                    'assets/phone.png',
+                    width: 230,
+                    height: 262,
+                    fit: BoxFit.contain,
+                  ),
+                  const SizedBox(
+                    height: 24,
+                  ),
+                  const Text(
+                    'Kirim pesan anonim kepada pengguna Appsoed',
+                    style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
+                  )
                 ],
               ),
             ),
