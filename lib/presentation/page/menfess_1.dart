@@ -1,3 +1,4 @@
+import 'package:appsoed/presentation/page/menfess_2.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -43,7 +44,30 @@ class BaseMenfess extends StatelessWidget {
                 scrollDirection: Axis.vertical,
                 children: [
                   const SizedBox(
-                    height: 20,
+                    height: 33,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(0),
+                      color: Colors.amber,
+                    ),
+                    child: OutlinedButton.icon(
+                      icon: const Icon(
+                        Icons.back_hand,
+                        color: Colors.white,
+                      ),
+                      onPressed: () {
+                        Navigation.push(const PageDua());
+                      },
+                      label: const Text(
+                        'Kirim menfess',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(10, 60, 0, 0),
