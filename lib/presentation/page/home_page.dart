@@ -108,11 +108,6 @@ class HomePage extends StatelessWidget {
             },
             text: 'TodoList',
           ),
-          ItemWidget(
-            icon: Icons.shopping_cart,
-            onPress: () {},
-            text: 'Merchant',
-          )
         ],
       ),
     );
