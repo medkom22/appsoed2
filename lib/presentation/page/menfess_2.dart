@@ -11,7 +11,7 @@ class PageDua extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: HomePage());
+    return const MaterialApp(home: HomePage());
   }
 }
 
@@ -90,7 +90,7 @@ class HomePage extends StatelessWidget {
                     color: Colors.white,
                   ),
                   onPressed: () {
-                    Navigation.push(PageTiga());
+                    Navigation.push(const PageTiga());
                   },
                   label: const Text(
                     'Submit',
