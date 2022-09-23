@@ -1,3 +1,4 @@
+import 'package:appsoed/common/navigator.dart';
 import 'package:appsoed/presentation/page/menfess_2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -51,7 +52,7 @@ class BaseMenfess extends StatelessWidget {
                     ),
                     child: OutlinedButton.icon(
                       icon: const Icon(
-                        Icons.back_hand,
+                        Icons.navigate_next,
                         color: Colors.white,
                       ),
                       onPressed: () {
@@ -66,6 +67,9 @@ class BaseMenfess extends StatelessWidget {
                         ),
                       ),
                     ),
+                  ),
+                  const SizedBox(
+                    height: 17,
                   ),
                   Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(10, 60, 0, 0),

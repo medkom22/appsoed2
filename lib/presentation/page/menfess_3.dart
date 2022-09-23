@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-// void main() {
-//   runApp(PageTiga());
-// }
-
 class PageTiga extends StatelessWidget {
   const PageTiga({super.key});
 
@@ -28,13 +24,16 @@ class PageTiga extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 40,
+                  height: 68,
                 ),
                 Image.asset(
                   'assets/success.png',
                   width: 230,
                   height: 262,
                   fit: BoxFit.contain,
+                ),
+                const SizedBox(
+                  height: 68,
                 ),
                 Container(
                   decoration: BoxDecoration(
@@ -43,7 +42,7 @@ class PageTiga extends StatelessWidget {
                   ),
                   child: OutlinedButton.icon(
                     icon: const Icon(
-                      Icons.back_hand,
+                      Icons.navigate_before_sharp,
                       color: Colors.white,
                     ),
                     onPressed: () {},

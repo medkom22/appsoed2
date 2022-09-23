@@ -30,12 +30,15 @@ class HomePage extends StatelessWidget {
               ),
               const Text(
                 'Kirim pesan anonimmu',
-                textAlign: TextAlign.left,
+                textAlign: TextAlign.start,
                 style: TextStyle(
                   fontSize: 19,
                   fontWeight: FontWeight.bold,
                   color: Color(0xffFDB731),
                 ),
+              ),
+              const SizedBox(
+                height: 68,
               ),
               ListView(
                 shrinkWrap: true,
@@ -64,6 +67,9 @@ class HomePage extends StatelessWidget {
                       color: Colors.black,
                     ),
                   ),
+                  SizedBox(
+                    height: 24,
+                  ),
                   TextField(
                     decoration: InputDecoration(
                       labelText: 'Pesan',
@@ -81,12 +87,12 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(0),
+                  borderRadius: BorderRadius.circular(25),
                   color: Colors.amber,
                 ),
                 child: OutlinedButton.icon(
                   icon: const Icon(
-                    Icons.back_hand,
+                    Icons.navigate_next,
                     color: Colors.white,
                   ),
                   onPressed: () {
