@@ -8,8 +8,35 @@ import 'package:flutter/material.dart';
 
 import '../widgets/item_widget.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final List<String> imageList = [
+    'assets/fosa.png',
+    'assets/porsoed.png',
+    'assets/desa.png',
+    'assets/S3.png'
+  ];
+  late PageController _pageController;
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController(viewportFraction: 0.8);
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  int activePage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -56,8 +83,33 @@ class HomePage extends StatelessWidget {
   }
 
   _carouselContent() {
-    return const Placeholder(
-      fallbackHeight: 300,
+    return SizedBox(
+      height: 250,
+      child: PageView.builder(
+        padEnds: false,
+        scrollDirection: Axis.horizontal,
+        pageSnapping: true,
+        onPageChanged: (value) {
+          setState(() {
+            activePage = value;
+          });
+        },
+        controller: _pageController,
+        itemBuilder: (context, index) {
+          return Container(
+            margin: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  imageList[index],
+                ),
+                fit: BoxFit.contain,
+              ),
+            ),
+          );
+        },
+        itemCount: imageList.length,
+      ),
     );
   }
 
