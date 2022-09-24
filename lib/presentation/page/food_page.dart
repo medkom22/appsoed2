@@ -1,3 +1,4 @@
+import 'package:appsoed/common/constant.dart';
 import 'package:appsoed/common/navigator.dart';
 import 'package:appsoed/domain/model/food_model.dart';
 import 'package:appsoed/presentation/page/detail_food.dart';
@@ -14,7 +15,10 @@ class FoodPage extends StatelessWidget {
     var provider = Provider.of<FoodNotifier>(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Food Page'),
+        centerTitle: true,
+        title: const Text('Daftar DO'),
+        backgroundColor: greenColor,
+        automaticallyImplyLeading: false,
       ),
       body: StreamBuilder(
         stream: provider.getFood(),
