@@ -65,7 +65,7 @@ class AdkesmaPage extends StatelessWidget {
                                 ),
                               ),
                               onPressed: () {
-                                value.getWALauncher();
+                                value.getWALauncher('89691944030');
                               },
                               icon: const Icon(Icons.message),
                               label: Text(
