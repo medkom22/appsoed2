@@ -1,8 +1,10 @@
 import 'package:appsoed/data/db/database_helper.dart';
 import 'package:appsoed/data/repository/firestore_repository.dart';
+import 'package:appsoed/data/repository/food_repository.dart';
 import 'package:appsoed/data/repository/jokes_repository.dart';
 import 'package:appsoed/data/repository/launcher_repository.dart';
 import 'package:appsoed/presentation/provider/cloud_notifier.dart';
+import 'package:appsoed/presentation/provider/food_notifier.dart';
 import 'package:appsoed/presentation/provider/jokes_notifier.dart';
 import 'package:appsoed/presentation/provider/launcher_notifier.dart';
 import 'package:appsoed/presentation/provider/todo_notifier.dart';
@@ -53,4 +55,12 @@ init() {
       locator(),
     ),
   );
+  locator.registerLazySingleton<FoodRepository>(
+    () => FoodRepository(
+      locator(),
+    ),
+  );
+  locator.registerLazySingleton(() => FoodNotifier(
+        locator(),
+      ));
 }

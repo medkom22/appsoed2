@@ -8,6 +8,7 @@ import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import '../common/navigator.dart';
+import 'provider/food_notifier.dart';
 import 'provider/jokes_notifier.dart';
 import 'provider/main_notifier.dart';
 
@@ -32,6 +33,9 @@ class AppWidget extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (_) => di.locator<TodoNotifier>(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => di.locator<FoodNotifier>(),
         ),
       ],
       child: MaterialApp(

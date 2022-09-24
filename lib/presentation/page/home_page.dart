@@ -1,6 +1,7 @@
 import 'package:appsoed/common/constant.dart';
 import 'package:appsoed/common/navigator.dart';
 import 'package:appsoed/presentation/page/adkesma_page.dart';
+import 'package:appsoed/presentation/page/food_page.dart';
 import 'package:appsoed/presentation/page/jokes_page.dart';
 import 'package:appsoed/presentation/page/titik_pijar_news.dart';
 import 'package:appsoed/presentation/page/todo_page.dart';
@@ -159,6 +160,15 @@ class _HomePageState extends State<HomePage> {
               );
             },
             text: 'TodoList',
+          ),
+          ItemWidget(
+            icon: Icons.restaurant,
+            onPress: () {
+              Navigation.push(
+                const FoodPage(),
+              );
+            },
+            text: 'DO\nMakanan',
           ),
         ],
       ),
