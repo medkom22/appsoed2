@@ -1,3 +1,6 @@
+import 'package:appsoed/common/navigator.dart';
+import 'package:appsoed/domain/model/food_model.dart';
+import 'package:appsoed/presentation/page/detail_food.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -17,13 +20,19 @@ class FoodPage extends StatelessWidget {
         stream: provider.getFood(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           if (snapshot.connectionState == ConnectionState.active) {
-            return GridView.builder(
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-              ),
+            return ListView.builder(
               itemCount: snapshot.data.length,
               itemBuilder: (BuildContext context, int index) {
-                return Text(snapshot.data[index].data()['name']);
+                FoodModel food = FoodModel.fromMap(snapshot.data[index].data());
+                return ListTile(
+                  onTap: () {
+                    Navigation.pushWithData(
+                      const DetailFoodPage(),
+                      food,
+                    );
+                  },
+                  title: Text(food.name.toString()),
+                );
               },
             );
           } else {
