@@ -5,10 +5,10 @@ class LauncherNotifier extends ChangeNotifier {
   LauncherRepository repository;
   LauncherNotifier(this.repository);
   bool isLoading = false;
-  Future getWALauncher() async {
+  Future getWALauncher(String wa) async {
     try {
       isLoading = true;
-      await repository.getLaunchUrl();
+      await repository.getLaunchUrl(wa);
     } catch (e) {
       throw Exception(e);
     } finally {
