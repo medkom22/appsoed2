@@ -24,11 +24,15 @@ class FoodPage extends StatelessWidget {
         stream: provider.getFood(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           if (snapshot.connectionState == ConnectionState.active) {
-            return ListView.builder(
+            return ListView.separated(
+              separatorBuilder: (context, index) => const Divider(
+                color: Colors.black,
+              ),
               itemCount: snapshot.data.length,
               itemBuilder: (BuildContext context, int index) {
                 FoodModel food = FoodModel.fromMap(snapshot.data[index].data());
                 return ListTile(
+                  trailing: const Icon(Icons.chevron_right),
                   onTap: () {
                     Navigation.pushWithData(
                       const DetailFoodPage(),

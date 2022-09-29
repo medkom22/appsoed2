@@ -1,46 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:dropdown_formfield/dropdown_formfield.dart';
 
-
-void main(){
-  runApp(MoneyTracker());
-}
-
-class MoneyTracker extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        home: InputPengeluaran()
-    );
-  }
-}
 class InputPengeluaran extends StatefulWidget {
-
   @override
   _InputPengeluaranState createState() => _InputPengeluaranState();
-
 }
 
-class _InputPengeluaranState extends State<InputPengeluaran>{
-  String _kategoriPengeluaran = '';
-  String _kategoriPengeluaranResult = '';
-  final formkey = new GlobalKey<FormState>();
+class _InputPengeluaranState extends State<InputPengeluaran> {
+  final String _kategoriPengeluaran = '';
+  final String _kategoriPengeluaranResult = '';
+  final formkey = GlobalKey<FormState>();
   final dateController = TextEditingController();
 
   @override
-  void initState(){
-    super.initState();
-   // _kategoriPengeluaran = '';
-    //_kategoriPengeluaranResult = '';
-  }
-
-  void dispose (){
+  void dispose() {
     dateController.dispose();
     super.dispose();
   }
 
-
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
@@ -49,8 +26,8 @@ class _InputPengeluaranState extends State<InputPengeluaran>{
           children: [
             //NOTE: BACKGROUND COLOR
             Container(
-              color: const Color(0xffFFFFF),
-              width: Get.width,
+              color: const Color(0x0fffffff),
+              width: double.infinity,
               height: 200,
             ),
 
@@ -70,102 +47,60 @@ class _InputPengeluaranState extends State<InputPengeluaran>{
                   ),
                   //JUMLAH PENGELUARAN
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(10, 60, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(10, 60, 0, 0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 20),
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                              labelText: 'Jumlah',
-                              labelStyle: TextStyle(color: Colors.black54),
-                              hintText: 'Rp',
-                              icon: Icon(Icons.money, color: Color(0xffFDB731)),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.black54),
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                10, 0, 0, 20),
+                            child: TextFormField(
+                              decoration: const InputDecoration(
+                                labelText: 'Jumlah',
+                                labelStyle: TextStyle(color: Colors.black54),
+                                hintText: 'Rp',
+                                icon:
+                                    Icon(Icons.money, color: Color(0xffFDB731)),
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black54),
+                                ),
                               ),
-                            ),
-                          )
-                        ),
+                            )),
                       ],
                     ),
                   ),
                   //END OF JUMLAH PENGELUARAN
 
                   //DROPDOWN KATEGORI
-                  Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(18, 0, 0, 10),
-                      child: DropDownFormField(
-                        titleText: 'Kategori',
-                        hintText: '(Opsional)',
-                        value: _kategoriPengeluaran,
-                        onSaved: (value) {
-                          setState(() {
-                            _kategoriPengeluaran = value;
-                          });
-                        },
-                        onChanged: (value){
-                          setState(() {
-                            _kategoriPengeluaran = value;
-                          });
-                        },
-                        dataSource: [
-                          {
-                            "display" : "Belanja",
-                            "value" : "Belanja",
-                          },
-                          {
-                            "display" : "Transportasi",
-                            "value": "Transportasi",
-                          },
-                          {
-                            "display" : "Makanan",
-                            "value" : "Makanan",
-                          },
-                          {
-                            "display" : "Hiburan",
-                            "value" : "Hiburan",
-                          },
-                          {
-                            "display" : "Edukasi",
-                            "value" : "Edukasi",
-                          },
-                          {
-                            "display" : "Lainnya",
-                            "value" : "Lainnya",
-                          },
-                          ],
-                        textField: 'display',
-                        valueField: 'value',
-                      )
-                  ),
-                  //END OF DROPDOWN KATEGORI PENGELUARAN
 
                   //EDIT TANGGAL PENGELUARAN
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
                     child: TextFormField(
                       readOnly: true,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         labelText: 'Tanggal',
                         labelStyle: TextStyle(color: Colors.black54),
                         hintText: 'Pilih Tanggal',
-                        icon: Icon(Icons.edit_calendar, color: Color(0xffFDB731)),
+                        icon:
+                            Icon(Icons.edit_calendar, color: Color(0xffFDB731)),
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.black54),
                         ),
-                        suffixIcon: Icon(Icons.arrow_forward_ios, color: Color(0xffFDB731),),
+                        suffixIcon: Icon(
+                          Icons.arrow_forward_ios,
+                          color: Color(0xffFDB731),
+                        ),
                       ),
-                      onTap: () async{
+                      onTap: () async {
                         var date = await showDatePicker(
-                            context: context,
-                            initialDate: DateTime.now(),
-                            firstDate: DateTime(1900),
-                            lastDate: DateTime(2100),
+                          context: context,
+                          initialDate: DateTime.now(),
+                          firstDate: DateTime(1900),
+                          lastDate: DateTime(2100),
                         );
-                        dateController.text = date.toString().substring(0,10);
+                        dateController.text = date.toString().substring(0, 10);
                       },
                     ),
                   ),
@@ -173,30 +108,31 @@ class _InputPengeluaranState extends State<InputPengeluaran>{
 
                   //EDIT NOTE PENGELUARAN
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
                     child: TextFormField(
-                      decoration: InputDecoration(
-                        labelText: 'Note',
-                        labelStyle: TextStyle(color: Colors.black54),
-                        hintText: '(Opsional)',
-                        icon: Icon(Icons.notes,  color: Color(0xffFDB731)),
-                        focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.black54))
-                      ),
+                      decoration: const InputDecoration(
+                          labelText: 'Note',
+                          labelStyle: TextStyle(color: Colors.black54),
+                          hintText: '(Opsional)',
+                          icon: Icon(Icons.notes, color: Color(0xffFDB731)),
+                          focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.black54))),
                     ),
                   ),
                   //END OF EDIT NOTE PENGELUARAN
 
                   //BUTTON SIMPAN
                   Padding(
-                    padding: EdgeInsets.all(30.0),
+                    padding: const EdgeInsets.all(30.0),
                     child: ElevatedButton(
-                      child: Text('Simpan'),
-                      onPressed: (){},
+                      onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xffFDB731),
-                        shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(20.0),
+                        backgroundColor: const Color(0xffFDB731),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
                         ),
                       ),
+                      child: const Text('Simpan'),
                     ),
                   ),
                 ],

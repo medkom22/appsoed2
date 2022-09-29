@@ -3,6 +3,7 @@ import 'package:appsoed/common/navigator.dart';
 import 'package:appsoed/presentation/page/adkesma_page.dart';
 import 'package:appsoed/presentation/page/food_page.dart';
 import 'package:appsoed/presentation/page/jokes_page.dart';
+import 'package:appsoed/presentation/page/tambah_pengeluaran.dart';
 import 'package:appsoed/presentation/page/titik_pijar_news.dart';
 import 'package:appsoed/presentation/page/todo_page.dart';
 import 'package:flutter/material.dart';
@@ -166,6 +167,15 @@ class _HomePageState extends State<HomePage> {
             onPress: () {
               Navigation.push(
                 const FoodPage(),
+              );
+            },
+            text: 'DO\nMakanan',
+          ),
+          ItemWidget(
+            icon: Icons.restaurant,
+            onPress: () {
+              Navigation.push(
+                InputPengeluaran(),
               );
             },
             text: 'DO\nMakanan',
