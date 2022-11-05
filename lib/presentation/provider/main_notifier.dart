@@ -1,3 +1,4 @@
+import 'package:appsoed/presentation/page/menfess_satu.dart';
 import 'package:appsoed/presentation/page/profile_page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,11 +14,7 @@ class MainNotifier extends ChangeNotifier {
 
   final List<Widget> children = [
     const HomePage(),
-    const Scaffold(
-      body: Center(
-        child: Text('Settings'),
-      ),
-    ),
+    const BaseMenfess(),
     const ProfilePage(),
   ];
 }
