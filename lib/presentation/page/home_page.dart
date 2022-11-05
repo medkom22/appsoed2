@@ -2,6 +2,7 @@ import 'package:appsoed/common/constant.dart';
 import 'package:appsoed/common/navigator.dart';
 import 'package:appsoed/presentation/page/adkesma_page.dart';
 import 'package:appsoed/presentation/page/food_page.dart';
+import 'package:appsoed/presentation/page/money_tracker.dart';
 import 'package:appsoed/presentation/page/jokes_page.dart';
 import 'package:appsoed/presentation/page/titik_pijar_news.dart';
 import 'package:appsoed/presentation/page/todo_page.dart';
@@ -169,6 +170,15 @@ class _HomePageState extends State<HomePage> {
               );
             },
             text: 'DO\nMakanan',
+          ),
+          ItemWidget(
+            icon: Icons.attach_money,
+            onPress: () {
+              Navigation.push(
+                 Pengeluaran(),
+              );
+            },
+            text: 'Money\nTracker',
           ),
         ],
       ),
