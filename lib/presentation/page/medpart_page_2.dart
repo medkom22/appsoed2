@@ -1,10 +1,10 @@
 // import 'package:flutter/material.dart';
-
+//
 // import '../../widgets/back_button_widget.dart';
-
+//
 // class RulesMediaView extends StatelessWidget {
 //   const RulesMediaView({Key? key}) : super(key: key);
-
+//
 //   // This widget is the root of your application.
 //   @override
 //   Widget build(BuildContext context) {
