@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:appsoed/presentation/page/tambah_pengeluaran.dart';
 
 class Pengeluaran extends StatefulWidget {
   @override
@@ -8,6 +9,7 @@ class Pengeluaran extends StatefulWidget {
 class _PengeluaranState extends State<Pengeluaran>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
+
 
   @override
   void initState() {
@@ -155,7 +157,13 @@ class _PengeluaranState extends State<Pengeluaran>
                           borderRadius: BorderRadius.circular(20.0),
                         ),
                       ),
-                      child: const Text('Tambah Catatan'),
+                      child:
+                        onPress: () {
+                          Navigation.push(
+                          InputPengeluaran(),
+                        );
+                      },
+                    text('Tambah Catatan'),
                     ),
                   ),
                 ],
