@@ -29,6 +29,7 @@ class BaseMenfess extends StatelessWidget {
               width: double.infinity,
               height: double.infinity,
             ),
+
             Container(
               height: double.infinity,
               decoration: const BoxDecoration(
@@ -54,8 +55,8 @@ class BaseMenfess extends StatelessWidget {
                     ),
                     child: OutlinedButton.icon(
                       icon: const Icon(
-                        Icons.back_hand,
-                        color: Colors.white,
+                        Icons.navigate_next,
+                        color: Colors.amber,
                       ),
                       onPressed: () {
                         Navigation.push(const PageDua());
@@ -87,6 +88,24 @@ class BaseMenfess extends StatelessWidget {
                       ],
                     ),
                   ),
+                  const SizedBox(
+                    height: 24,
+                  ),
+                  Container(
+                    width: 800,
+                    height: 200,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(25),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.4),
+                            spreadRadius: 4,
+                            blurRadius: 5,
+                            offset: const Offset(0, 2),
+                          )
+                        ]),
+                  ),
                 ],
               ),
             ),
@@ -96,32 +115,29 @@ class BaseMenfess extends StatelessWidget {
               margin: const EdgeInsets.only(top: 12),
               alignment: Alignment.topCenter,
               child: Column(
-                children: [
-                  const SizedBox(
+                children: const [
+                  SizedBox(
                     height: 24,
                   ),
-                  const Text(
+                  Text(
                     'Menfess',
                     style: TextStyle(
-                        fontSize: 19,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        color: Color(0xffFFFFFF)),
+                        color: Colors.white),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 24,
                   ),
-                  Image.asset(
-                    'assets/phone.png',
-                    width: 230,
-                    height: 262,
-                    fit: BoxFit.contain,
-                  ),
-                  const SizedBox(
+                  SizedBox(
                     height: 24,
                   ),
-                  const Text(
+                  Text(
                     'Kirim pesan anonim kepada pengguna Appsoed',
-                    style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w300,
+                        color: Color(0x00ffffff)),
                   )
                 ],
               ),

@@ -1,3 +1,5 @@
+import 'package:appsoed/common/navigator.dart';
+import 'package:appsoed/presentation/page/menfess_satu.dart';
 import 'package:flutter/material.dart';
 
 // void main() {
@@ -22,7 +24,7 @@ class PageTiga extends StatelessWidget {
                   'Pesan Berhasil Diposting',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: Color(0xff373737),
                   ),
@@ -38,15 +40,17 @@ class PageTiga extends StatelessWidget {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(0),
+                    borderRadius: BorderRadius.circular(30),
                     color: Colors.amber,
                   ),
                   child: OutlinedButton.icon(
                     icon: const Icon(
-                      Icons.navigate_next,
+                      Icons.navigate_before,
                       color: Colors.white,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigation.push(PageSatu());
+                    },
                     label: const Text(
                       'Kembali ke menu menfess',
                       textAlign: TextAlign.left,

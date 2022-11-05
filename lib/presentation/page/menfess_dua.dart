@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
                 'Kirim pesan anonimmu',
                 textAlign: TextAlign.left,
                 style: TextStyle(
-                  fontSize: 19,
+                  fontSize: 18,
                   fontWeight: FontWeight.bold,
                   color: Color(0xffFDB731),
                 ),
@@ -81,12 +81,12 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(0),
+                  borderRadius: BorderRadius.circular(30),
                   color: Colors.amber,
                 ),
                 child: OutlinedButton.icon(
                   icon: const Icon(
-                    Icons.back_hand,
+                    Icons.navigate_next,
                     color: Colors.white,
                   ),
                   onPressed: () {
