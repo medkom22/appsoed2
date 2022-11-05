@@ -149,14 +149,18 @@ class _PengeluaranState extends State<Pengeluaran>
                   Padding(
                     padding: const EdgeInsets.all(30.0),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => InputPengeluaran()),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xffFDB731),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0),
                         ),
                       ),
-                      child: const Text('Tambah Catatan'),
+                      child: const Text('Tambah Catatan')
                     ),
                   ),
                 ],
