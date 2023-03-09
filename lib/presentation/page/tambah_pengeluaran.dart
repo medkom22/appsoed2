@@ -127,7 +127,7 @@ class _InputPengeluaranState extends State<InputPengeluaran> {
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xffFDB731),
+                        // backgroundColor: const Color(0xffFDB731),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0),
                         ),
